@@ -1,21 +1,47 @@
 <template>
-  <div>home</div>
-</template>
+  <div class="home">
+    <TapTitle :titles="titles"></TapTitle>
+    <MySwiper></MySwiper>
+    <div class="main">
 
+    </div>
+  </div>
+</template>
 <script>
 export default {
-  data() {
-    return {};
+  props:{
+
   },
+  components:{
+    
+  },
+  data(){
+    return {
+      titles: ["今日推荐","纸尿裤","母婴专场","服装","家居","小家电"],
+    }
+  },
+  computed:{
 
-  components: {},
+  },
+  methods:{
+   
+  },
+  created(){
 
-  methods: {},
+  },
+  mounted(){
 
-  created() {}
-};
+  }
+}
 </script>
-
-<style scoped>
+<style scoped lang="">
+.home{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ccc;
+}
 
 </style>

@@ -1,3 +1,6 @@
-<template name="2f6a74d4">
-  <view class="_div data-v-7ec8f392">home</view>
+<import src="/compontents/tap/tapTitle.vue.wxml" />
+<import src="/compontents/mySwiper/mySwiper.vue.wxml" /><template name="2f6a74d4">
+  <view class="_div data-v-7ec8f392 home"><template data="{{...$root[$kk+'0'], $root}}" is="c08a0b3a"></template> <template data="{{...$root[$kk+'1'], $root}}" is="bc733d52"></template>
+    <view class="_div data-v-7ec8f392 main"></view>
+  </view>
 </template>

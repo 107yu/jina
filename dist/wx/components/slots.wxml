@@ -1,1 +1,2 @@
-<import src="/components/card.vue.wxml" />
+<import src="/compontents/tap/tapTitle.vue.wxml" />
+<import src="/compontents/mySwiper/mySwiper.vue.wxml" />

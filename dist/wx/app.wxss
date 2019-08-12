@@ -1,10 +1,29 @@
 
-.container {
+page {
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.header.data-v-618b0468 {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+._li.data-v-618b0468 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+  justify-content: center;
+}
+._b.data-v-618b0468 {
+  width: 50rpx;
+  height: 10rpx;
+  margin: 10rpx auto;
+}
+.strong.data-v-618b0468 {
+  font-weight: 600;
+}
+.show.data-v-618b0468 {
+  background: #56D2BF;
 }
