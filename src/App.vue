@@ -9,25 +9,26 @@ export default {
      * 百度：mpvue === swan, mpvuePlatform === 'swan'
      * 支付宝(蚂蚁)：mpvue === my, mpvuePlatform === 'my'
      */
+    wx.login({
+      success: async (res)=>{
+        if (res.code) {
+          //发起网络请求
+          // let data = await login(res.code);
+          // // console.log('res...', data);
+          // wx.setStorageSync('openid', data.data.openid);
+        } else {
+          // console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
   }
 };
 </script>
 
 <style>
-.container {
+page{
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-}
-/* this rule will be remove */
-* {
-  transition: width 2s;
-  -moz-transition: width 2s;
-  -webkit-transition: width 2s;
-  -o-transition: width 2s;
+  overflow: hidden;
 }
 </style>

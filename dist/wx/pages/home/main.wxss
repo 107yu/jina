@@ -1,0 +1,9 @@
+
+.home.data-v-7ec8f392 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-top: 2rpx solid #ccc;
+}

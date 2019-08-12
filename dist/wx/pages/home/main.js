@@ -94,18 +94,25 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
+  props: {},
+  components: {},
   data: function data() {
-    return {};
+    return {
+      titles: ["今日推荐", "纸尿裤", "母婴专场", "服装", "家居", "小家电"]
+    };
   },
 
-
-  components: {},
-
+  computed: {},
   methods: {},
-
-  created: function created() {}
+  created: function created() {},
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -115,7 +122,20 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v("home")])
+  return _c('div', {
+    staticClass: "home"
+  }, [_c('TapTitle', {
+    attrs: {
+      "titles": _vm.titles,
+      "mpcomid": '0'
+    }
+  }), _vm._v(" "), _c('MySwiper', {
+    attrs: {
+      "mpcomid": '1'
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "main"
+  })], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
