@@ -30,7 +30,7 @@ export default {
   mounted() {}
 };
 </script>
-<style lang="scss">
+<style  lang="scss">
 dl {
   padding: 10px 10px;
   dt {

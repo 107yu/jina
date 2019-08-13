@@ -1,0 +1,7 @@
+<template name="f89ac1f4">
+  <view class="_ul data-v-6e1c0dc0 header">
+    <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{titles}}" wx:for-index="index" wx:for-item="item" class="_li data-v-6e1c0dc0"><label class="_span data-v-6e1c0dc0 {{[index === ind ? 'strong' : '']}}">{{item}}</label>
+      <view class="_b data-v-6e1c0dc0 {{[index === ind ? 'show' : '']}}"></view>
+    </view>
+  </view>
+</template>

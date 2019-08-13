@@ -88,7 +88,7 @@ export default {
   mounted() {}
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 .wrap {
   .head {
     .img {
