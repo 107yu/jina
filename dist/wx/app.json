@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/special/main",
+    "pages/seckillDetail/main",
+    "pages/purchaseDetail/main",
+    "pages/commodityDetail/main",
     "pages/home/main",
     "pages/shoppingcar/main",
     "pages/my/main"

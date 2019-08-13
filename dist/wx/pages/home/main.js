@@ -1,15 +1,15 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([5],{
+global.webpackJsonpMpvue([7],{
 
-/***/ 118:
+/***/ 122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(123);
 
 
 
@@ -25,18 +25,18 @@ app.$mount();
 
 /***/ }),
 
-/***/ 119:
+/***/ 123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_7ec8f392_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_7ec8f392_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(126);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(120)
+  __webpack_require__(124)
 }
-var normalizeComponent = __webpack_require__(1)
+var normalizeComponent = __webpack_require__(0)
 /* script */
 
 /* template */
@@ -79,21 +79,17 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 120:
+/***/ 124:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 121:
+/***/ 125:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(16);
-
 //
 //
 //
@@ -130,131 +126,152 @@ if (false) {(function () {
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  props: {},
-  components: {},
   data: function data() {
-    return {
-      titles: ["今日推荐", "纸尿裤", "母婴专场", "服装", "家居", "小家电"],
-      searchBtn: true
-    };
+    return {};
   },
 
-  computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({
-    homeLists: function homeLists(state) {
-      return state.home.homeLists;
+
+  components: {},
+
+  methods: {
+    show: function show() {
+      wx.showToast({
+        title: "请输入正确的邀请码",
+        icon: "none",
+        duration: 1000
+      });
     }
-  })),
-  methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({
-    search: function search() {
-      this.searchBtn = false;
-    }
-  }, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
-    getProduct: "home/getProductList",
-    getHomeList1: "home/getHomeList",
-    getHomeList: "home/getHomeList1"
-  })),
-  created: function created() {},
-  mounted: function mounted() {
-    this.getProduct();
-    this.getHomeList1();
-    this.getHomeList();
-  }
+  },
+
+  created: function created() {}
 });
 
 /***/ }),
 
-/***/ 128:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "home"
-  }, [_c('div', {
-    staticClass: "input"
+    staticClass: "wrap"
+  }, [_c('image', {
+    attrs: {
+      "src": "/static/images/5.jpg",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "refer"
   }, [_c('input', {
-    staticClass: "search",
     attrs: {
       "type": "text",
+      "placeholder": "请输入邀请码"
+    }
+  }), _vm._v(" "), _c('button', {
+    attrs: {
       "eventid": '0'
     },
     on: {
-      "focus": _vm.search
+      "click": _vm.show
     }
-  }), _vm._v(" "), (_vm.searchBtn) ? _c('img', {
+  }, [_vm._v("提交")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "hint"
+  }, [_vm._v("- 无邀请码可选择以下团队加入 -")]), _vm._v(" "), _c('ul', {
+    staticClass: "list"
+  }, [_c('li', [_c('image', {
     attrs: {
-      "src": "/static/images/搜索.svg",
+      "src": "../../static/images/2.png",
       "alt": ""
     }
-  }) : _vm._e()]), _vm._v(" "), _c('TapTitle', {
+  }), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "name"
+  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
+    staticClass: "group"
+  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
     attrs: {
-      "titles": _vm.titles,
-      "mpcomid": '0'
-    }
-  }), _vm._v(" "), _c('MySwiper', {
-    attrs: {
-      "swiperList": _vm.homeLists[0] && _vm.homeLists[0].items,
-      "mpcomid": '1'
+      "src": "../../static/images/2.png",
+      "alt": ""
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "introduce"
-  }, _vm._l((_vm.homeLists[1] && _vm.homeLists[1].items), function(item, index) {
-    return _c('dl', {
-      key: index
-    }, [_c('dt', [_c('img', {
-      attrs: {
-        "src": item.imgUrl,
-        "alt": ""
-      }
-    })]), _vm._v(" "), _c('dd', [_vm._v(_vm._s(item.title))])], 1)
-  })), _vm._v(" "), _c('HotImg', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "name"
+  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
+    staticClass: "group"
+  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
     attrs: {
-      "hotimg": _vm.homeLists[2] && _vm.homeLists[2],
-      "mpcomid": '2'
-    }
-  }), _vm._v(" "), _c('HotImg', {
-    attrs: {
-      "hotimg": _vm.homeLists[4] && _vm.homeLists[4],
-      "mpcomid": '3'
-    }
-  }), _vm._v(" "), _c('HomeBar', {
-    attrs: {
-      "homeBarHot": "今日秒杀",
-      "describe": "先下单先得",
-      "more": "true",
-      "mpcomid": '4'
+      "src": "../../static/images/2.png",
+      "alt": ""
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "boutique"
-  }, _vm._l((_vm.homeLists[5] && _vm.homeLists[5].items), function(item, index) {
-    return _c('DlList', {
-      key: index,
-      attrs: {
-        "item": item,
-        "mpcomid": '5_' + index
-      }
-    })
-  })), _vm._v(" "), _c('HomeBar', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "name"
+  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
+    staticClass: "group"
+  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
     attrs: {
-      "homeBarHot": "精品好物",
-      "describe": "等你来抢",
-      "more": "true",
-      "mpcomid": '6'
+      "src": "../../static/images/2.png",
+      "alt": ""
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "boutique"
-  }, _vm._l((_vm.homeLists[7] && _vm.homeLists[7].items), function(item, index) {
-    return _c('DlList', {
-      key: index,
-      attrs: {
-        "item": item,
-        "mpcomid": '7_' + index
-      }
-    })
-  }))], 1)
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "name"
+  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
+    staticClass: "group"
+  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+    attrs: {
+      "src": "../../static/images/2.png",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "name"
+  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
+    staticClass: "group"
+  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+    attrs: {
+      "src": "../../static/images/2.png",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, [_c('p', {
+    staticClass: "name"
+  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
+    staticClass: "group"
+  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])])], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -269,4 +286,4 @@ if (false) {
 
 /***/ })
 
-},[118]);
+},[122]);
