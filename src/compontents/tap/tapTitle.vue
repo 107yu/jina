@@ -1,10 +1,14 @@
 <template>
-   <ul class="header">
-        <li v-for="(item,index) in titles" :key="index" @click="changeTitle(index)">
-            <span :class="{'strong':index===ind}">{{item}}</span>
-            <b :class="{'show':index===ind}"></b>
-        </li>
-   </ul>
+    <div class="header">
+        <scroll-view scroll-x>
+            <ul>
+                <li v-for="(item,index) in titles" :key="index" @click="changeTitle(index)">
+                    <span :class="{'strong':index===ind}">{{item.cname}}</span>
+                    <b :class="{'show':index===ind}"></b>
+                </li>
+             </ul>
+        </scroll-view>
+    </div>
 </template>
 <script>
 export default {
@@ -37,16 +41,17 @@ export default {
 <style scoped lang="">
 .header{
   width: 100%;
-  height: 100rpx;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  height:200rpx;
 }
-
+ul{
+    display: flex;
+}
 li{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 10rpx;
+    flex-shrink: 0;
 }
 b{
   width: 50rpx;

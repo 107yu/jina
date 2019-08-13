@@ -3,7 +3,7 @@
     <swiper indicator-dots="true" autoplay="true" interval="2000" duration="2000" indicator-active-color="#fff" class="_swiper data-v-284a3254">
       <block wx:key="index" key="{{index}}" wx:for="{{swiperList}}" wx:for-index="index" wx:for-item="val">
         <swiper-item class="_swiper-item data-v-284a3254">
-          <image src="{{val.imgUrl}}" class="_image data-v-284a3254 slide-image"></image>
+          <image src="{{val.imgUrl}}" class="_image data-v-284a3254 slide-image" style="overflow:show"></image>
         </swiper-item>
       </block>
     </swiper>

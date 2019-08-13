@@ -9,7 +9,7 @@
         >
             <block v-for="(val,index) in swiperList" :key="index">
                 <swiper-item>
-                    <image :src="val.imgUrl" class="slide-image"/>
+                    <image :src="val.imgUrl" class="slide-image" style='overflow:show'/>
                 </swiper-item>
             </block>
         </swiper>
@@ -45,9 +45,10 @@ export default {
 .swiperBox{
     width: 100%;
     height: 300rpx;
+    
 }
 .swiperBox .slide-image{
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 

@@ -12,6 +12,8 @@ import MySwiper from "./compontents/mySwiper/mySwiper.vue"
 import HomeBar from "./compontents/homeBar/homeBar.vue"
 import DlList from "./compontents/dlList/dlList.vue"
 import HotImg from "./compontents/hotImg/hotImg.vue"
+import HomeRecommend from "./compontents/homeRecommend/homeRecommend.vue"
+import MySearch from "./compontents/search/search.vue"
 
 //挂载：
 Vue.component("TapTitle",TapTitle)
@@ -19,6 +21,8 @@ Vue.component("MySwiper",MySwiper)
 Vue.component("HomeBar",HomeBar)
 Vue.component("DlList",DlList)
 Vue.component("HotImg",HotImg)
+Vue.component("HomeRecommend",HomeRecommend)
+Vue.component("MySearch",MySearch)
 
 //挂载store
 Vue.prototype.$store=store

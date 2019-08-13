@@ -1,0 +1,3 @@
+<import src="/compontents/search/search.vue.wxml" /><template name="2106dec6">
+  <view class="_div data-v-62000480 search"><template data="{{...$root[$kk+'0'], $root}}" is="3ae91857"></template></view>
+</template>

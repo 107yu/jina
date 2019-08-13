@@ -1,0 +1,7 @@
+<import src="/compontents/hotImg/hotImg.vue.wxml" />
+<import src="/compontents/homeBar/homeBar.vue.wxml" />
+<import src="/compontents/dlList/dlList.vue.wxml" /><template name="699f8b59">
+  <view class="_div data-v-5cb73510"><template data="{{...$root[$kk+'0'], $root}}" is="1645c6d2"></template> <template homeBarHot="精品好物" describe="等你来抢" more="true" data="{{...$root[$kk+'1'], $root}}" is="44f1c272"></template>
+    <view class="_div data-v-5cb73510 boutique"><template wx:key="index" data="{{...$root[$kk+'2_'+index], $root}}" is="18a1ca97" wx:for="{{homeLi}}" wx:for-index="index" wx:for-item="item"></template></view>
+  </view>
+</template>

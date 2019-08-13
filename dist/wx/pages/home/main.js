@@ -1,15 +1,15 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([4],{
+global.webpackJsonpMpvue([5],{
 
-/***/ 91:
+/***/ 120:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(121);
 
 
 
@@ -25,18 +25,18 @@ app.$mount();
 
 /***/ }),
 
-/***/ 92:
+/***/ 121:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_7ec8f392_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_7ec8f392_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(131);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(93)
+  __webpack_require__(122)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(0)
 /* script */
 
 /* template */
@@ -79,20 +79,20 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 93:
+/***/ 122:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 94:
+/***/ 123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(25);
 
 //
 //
@@ -136,68 +136,55 @@ if (false) {(function () {
   props: {},
   components: {},
   data: function data() {
-    return {
-      titles: ["今日推荐", "纸尿裤", "母婴专场", "服装", "家居", "小家电"],
-      searchBtn: true
-    };
+    return {};
   },
 
   computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapState */])({
     homeLists: function homeLists(state) {
       return state.home.homeLists;
+    },
+    categories: function categories(state) {
+      return state.home.categories;
     }
   })),
-  methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({
-    search: function search() {
-      this.searchBtn = false;
-    }
-  }, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
-    getProduct: "home/getProductList",
-    getHomeList1: "home/getHomeList",
-    getHomeList: "home/getHomeList1"
-  })),
+  methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+    getCategoryLists: "home/getCategoryLists",
+    getProductLists: "home/getProductLists",
+    getHomeList: "home/getHomeList"
+  }), {
+    goToSearch: function goToSearch() {}
+  }),
   created: function created() {},
   mounted: function mounted() {
-    this.getProduct();
-    this.getHomeList1();
+    this.getCategoryLists();
+    this.getProductLists();
     this.getHomeList();
   }
 });
 
 /***/ }),
 
-/***/ 95:
+/***/ 131:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "home"
-  }, [_c('div', {
-    staticClass: "input"
-  }, [_c('input', {
-    staticClass: "search",
+  }, [_c('MySearch', {
     attrs: {
-      "type": "text",
-      "eventid": '0'
-    },
-    on: {
-      "focus": _vm.search
-    }
-  }), _vm._v(" "), (_vm.searchBtn) ? _c('img', {
-    attrs: {
-      "src": "/static/images/搜索.svg",
-      "alt": ""
-    }
-  }) : _vm._e()]), _vm._v(" "), _c('TapTitle', {
-    attrs: {
-      "titles": _vm.titles,
+      "homePage": "1",
       "mpcomid": '0'
+    }
+  }), _vm._v(" "), _c('TapTitle', {
+    attrs: {
+      "titles": _vm.categories,
+      "mpcomid": '1'
     }
   }), _vm._v(" "), _c('MySwiper', {
     attrs: {
       "swiperList": _vm.homeLists[0] && _vm.homeLists[0].items,
-      "mpcomid": '1'
+      "mpcomid": '2'
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "introduce"
@@ -213,48 +200,39 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   })), _vm._v(" "), _c('HotImg', {
     attrs: {
       "hotimg": _vm.homeLists[2] && _vm.homeLists[2],
-      "mpcomid": '2'
-    }
-  }), _vm._v(" "), _c('HotImg', {
-    attrs: {
-      "hotimg": _vm.homeLists[4] && _vm.homeLists[4],
       "mpcomid": '3'
     }
-  }), _vm._v(" "), _c('HomeBar', {
+  }), _vm._v(" "), _c('HomeRecommend', {
     attrs: {
-      "homeBarHot": "今日秒杀",
-      "describe": "先下单先得",
-      "more": "true",
+      "hotimg": _vm.homeLists[4] && _vm.homeLists[4],
+      "homeLi": _vm.homeLists[5] && _vm.homeLists[5].items,
       "mpcomid": '4'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "boutique"
-  }, _vm._l((_vm.homeLists[5] && _vm.homeLists[5].items), function(item, index) {
-    return _c('DlList', {
-      key: index,
-      attrs: {
-        "item": item,
-        "mpcomid": '5_' + index
-      }
-    })
-  })), _vm._v(" "), _c('HomeBar', {
+  }), _vm._v(" "), _c('HomeRecommend', {
     attrs: {
-      "homeBarHot": "精品好物",
-      "describe": "等你来抢",
-      "more": "true",
+      "hotimg": _vm.homeLists[6] && _vm.homeLists[6],
+      "homeLi": _vm.homeLists[7] && _vm.homeLists[7].items,
+      "mpcomid": '5'
+    }
+  }), _vm._v(" "), _c('HomeRecommend', {
+    attrs: {
+      "hotimg": _vm.homeLists[8] && _vm.homeLists[8],
+      "homeLi": _vm.homeLists[9] && _vm.homeLists[9].items,
       "mpcomid": '6'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "boutique"
-  }, _vm._l((_vm.homeLists[7] && _vm.homeLists[7].items), function(item, index) {
-    return _c('DlList', {
-      key: index,
-      attrs: {
-        "item": item,
-        "mpcomid": '7_' + index
-      }
-    })
-  }))], 1)
+  }), _vm._v(" "), _c('HomeRecommend', {
+    attrs: {
+      "hotimg": _vm.homeLists[10] && _vm.homeLists[10],
+      "homeLi": _vm.homeLists[11] && _vm.homeLists[11].items,
+      "mpcomid": '7'
+    }
+  }), _vm._v(" "), _c('HomeRecommend', {
+    attrs: {
+      "hotimg": _vm.homeLists[12] && _vm.homeLists[12],
+      "homeLi": _vm.homeLists[13] && _vm.homeLists[13].items,
+      "mpcomid": '8'
+    }
+  })], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -269,4 +247,4 @@ if (false) {
 
 /***/ })
 
-},[91]);
+},[120]);

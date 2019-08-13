@@ -1,12 +1,9 @@
+<import src="/compontents/search/search.vue.wxml" />
 <import src="/compontents/tap/tapTitle.vue.wxml" />
 <import src="/compontents/mySwiper/mySwiper.vue.wxml" />
 <import src="/compontents/hotImg/hotImg.vue.wxml" />
-<import src="/compontents/homeBar/homeBar.vue.wxml" />
-<import src="/compontents/dlList/dlList.vue.wxml" /><template name="2f6a74d4">
-  <view class="_div data-v-7ec8f392 home">
-    <view class="_div data-v-7ec8f392 input"><input type="text" class="_input data-v-7ec8f392 search" bindfocus="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
-      <image wx:if="{{searchBtn}}" src="/static/images/搜索.svg" alt class="_img data-v-7ec8f392"></image>
-    </view> <template data="{{...$root[$kk+'0'], $root}}" is="c08a0b3a"></template> <template data="{{...$root[$kk+'1'], $root}}" is="bc733d52"></template>
+<import src="/compontents/homeRecommend/homeRecommend.vue.wxml" /><template name="2f6a74d4">
+  <view class="_div data-v-7ec8f392 home"><template homePage="1" data="{{...$root[$kk+'0'], $root}}" is="3ae91857"></template> <template data="{{...$root[$kk+'1'], $root}}" is="c08a0b3a"></template> <template data="{{...$root[$kk+'2'], $root}}" is="bc733d52"></template>
     <view class="_div data-v-7ec8f392 introduce">
       <view wx:key="index" key="{{index}}" wx:for="{{homeLists[1] &&  homeLists[1].items}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-7ec8f392">
         <view class="_dt data-v-7ec8f392">
@@ -14,8 +11,6 @@
         </view>
         <view class="_dd data-v-7ec8f392">{{item.title}}</view>
       </view>
-    </view> <template data="{{...$root[$kk+'2'], $root}}" is="1645c6d2"></template> <template data="{{...$root[$kk+'3'], $root}}" is="1645c6d2"></template> <template homeBarHot="今日秒杀" describe="先下单先得" more="true" data="{{...$root[$kk+'4'], $root}}" is="44f1c272"></template>
-    <view class="_div data-v-7ec8f392 boutique"><template wx:key="index" data="{{...$root[$kk+'5_'+index], $root}}" is="18a1ca97" wx:for="{{homeLists[5] && homeLists[5].items}}" wx:for-index="index" wx:for-item="item"></template></view> <template homeBarHot="精品好物" describe="等你来抢" more="true" data="{{...$root[$kk+'6'], $root}}" is="44f1c272"></template>
-    <view class="_div data-v-7ec8f392 boutique"><template wx:key="index" data="{{...$root[$kk+'7_'+index], $root}}" is="18a1ca97" wx:for="{{homeLists[7] && homeLists[7].items}}" wx:for-index="index" wx:for-item="item"></template></view>
+    </view> <template data="{{...$root[$kk+'3'], $root}}" is="1645c6d2"></template> <template data="{{...$root[$kk+'4'], $root}}" is="699f8b59"></template> <template data="{{...$root[$kk+'5'], $root}}" is="699f8b59"></template> <template data="{{...$root[$kk+'6'], $root}}" is="699f8b59"></template> <template data="{{...$root[$kk+'7'], $root}}" is="699f8b59"></template> <template data="{{...$root[$kk+'8'], $root}}" is="699f8b59"></template>
   </view>
 </template>
