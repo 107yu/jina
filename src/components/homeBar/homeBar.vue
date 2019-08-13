@@ -37,6 +37,7 @@ export default {
     display: flex;
     justify-content:space-between;
     padding: 20rpx;
+    margin:10rpx 0;
 }
 .title div{
     display: flex;

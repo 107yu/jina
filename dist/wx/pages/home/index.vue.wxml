@@ -1,51 +1,17 @@
-<template name="6f1b7f34">
-  <view class="_div data-v-7ec8f392 wrap">
-    <image src="/static/images/5.jpg" alt class="_image data-v-7ec8f392"></image>
-    <view class="_div data-v-7ec8f392 refer"><input type="text" placeholder="请输入邀请码" class="_input data-v-7ec8f392" /> <button bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-7ec8f392">提交</button></view>
-    <view class="_div data-v-7ec8f392 hint">- 无邀请码可选择以下团队加入 -</view>
-    <view class="_ul data-v-7ec8f392 list">
-      <view class="_li data-v-7ec8f392">
-        <image src="../../static/images/2.png" alt class="_image data-v-7ec8f392"></image>
-        <view class="_div data-v-7ec8f392 content">
-          <view class="_p data-v-7ec8f392 name">无敌放屁猫</view>
-          <view class="_p data-v-7ec8f392 group">团队人数:13254651561</view>
-        </view> <label class="_span data-v-7ec8f392">立即加入</label>
+<import src="/components/search/search.vue.wxml" />
+<import src="/components/tap/tapTitle.vue.wxml" />
+<import src="/components/mySwiper/mySwiper.vue.wxml" />
+<import src="/components/hotImg/hotImg.vue.wxml" />
+<import src="/components/homeRecommend/homeRecommend.vue.wxml" /><template name="2f6a74d4">
+  <view class="_div data-v-7ec8f392 home">
+    <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-7ec8f392"><template data="{{...$root[$kk+'0'], $root}}" is="2fe7f2bd"></template></view> <template data="{{...$root[$kk+'1'], $root}}" is="a0378986"></template> <template data="{{...$root[$kk+'2'], $root}}" is="2534ce86"></template>
+    <view class="_div data-v-7ec8f392 introduce">
+      <view wx:key="index" key="{{index}}" wx:for="{{homeLists[1] &&  homeLists[1].items}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-7ec8f392">
+        <view class="_dt data-v-7ec8f392">
+          <image src="{{item.imgUrl}}" alt class="_img data-v-7ec8f392"></image>
+        </view>
+        <view class="_dd data-v-7ec8f392">{{item.title}}</view>
       </view>
-      <view class="_li data-v-7ec8f392">
-        <image src="../../static/images/2.png" alt class="_image data-v-7ec8f392"></image>
-        <view class="_div data-v-7ec8f392 content">
-          <view class="_p data-v-7ec8f392 name">无敌放屁猫</view>
-          <view class="_p data-v-7ec8f392 group">团队人数:13254651561</view>
-        </view> <label class="_span data-v-7ec8f392">立即加入</label>
-      </view>
-      <view class="_li data-v-7ec8f392">
-        <image src="../../static/images/2.png" alt class="_image data-v-7ec8f392"></image>
-        <view class="_div data-v-7ec8f392 content">
-          <view class="_p data-v-7ec8f392 name">无敌放屁猫</view>
-          <view class="_p data-v-7ec8f392 group">团队人数:13254651561</view>
-        </view> <label class="_span data-v-7ec8f392">立即加入</label>
-      </view>
-      <view class="_li data-v-7ec8f392">
-        <image src="../../static/images/2.png" alt class="_image data-v-7ec8f392"></image>
-        <view class="_div data-v-7ec8f392 content">
-          <view class="_p data-v-7ec8f392 name">无敌放屁猫</view>
-          <view class="_p data-v-7ec8f392 group">团队人数:13254651561</view>
-        </view> <label class="_span data-v-7ec8f392">立即加入</label>
-      </view>
-      <view class="_li data-v-7ec8f392">
-        <image src="../../static/images/2.png" alt class="_image data-v-7ec8f392"></image>
-        <view class="_div data-v-7ec8f392 content">
-          <view class="_p data-v-7ec8f392 name">无敌放屁猫</view>
-          <view class="_p data-v-7ec8f392 group">团队人数:13254651561</view>
-        </view> <label class="_span data-v-7ec8f392">立即加入</label>
-      </view>
-      <view class="_li data-v-7ec8f392">
-        <image src="../../static/images/2.png" alt class="_image data-v-7ec8f392"></image>
-        <view class="_div data-v-7ec8f392 content">
-          <view class="_p data-v-7ec8f392 name">无敌放屁猫</view>
-          <view class="_p data-v-7ec8f392 group">团队人数:13254651561</view>
-        </view> <label class="_span data-v-7ec8f392">立即加入</label>
-      </view>
-    </view>
+    </view> <template data="{{...$root[$kk+'3'], $root}}" is="2c481206"></template> <template data="{{...$root[$kk+'4'], $root}}" is="70053b3f"></template> <template data="{{...$root[$kk+'5'], $root}}" is="70053b3f"></template> <template data="{{...$root[$kk+'6'], $root}}" is="70053b3f"></template> <template data="{{...$root[$kk+'7'], $root}}" is="70053b3f"></template> <template data="{{...$root[$kk+'8'], $root}}" is="70053b3f"></template>
   </view>
 </template>

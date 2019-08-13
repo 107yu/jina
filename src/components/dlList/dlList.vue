@@ -38,6 +38,8 @@ export default {
 dl{
     width: 30%;
     margin-top:10rpx;
+    font-size: 28rpx;
+    margin:10rpx 0;
 }
 dt {
     width: 100%;
@@ -48,7 +50,17 @@ img{
     height: 100%;
 }
 p{
+    width: 100%;
+    line-height: 40rpx;
+    text-overflow: -o-ellipsis-lastline;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 24rpx;
+    margin:10rpx 0;
 }
 b{
     color:red;

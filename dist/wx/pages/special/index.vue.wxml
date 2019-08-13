@@ -1,4 +1,4 @@
-<import src="/components/specialItem/index.vue.wxml" /><template name="4ec803ae">
+<template name="06b55f00">
   <view class="_div data-v-15dae277 wrap">
     <view class="_div data-v-15dae277 head">
       <view class="_div data-v-15dae277 img"></view>
@@ -13,26 +13,46 @@
         <view class="_p data-v-15dae277">爆款专区 惊喜特卖</view>
       </view>
       <view class="_div data-v-15dae277 top_count">
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'0'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'1'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'2'], $root}}" is="c1fd7c56"></template></view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
       </view>
       <view class="_div data-v-15dae277 hot">
         <view class="_p data-v-15dae277">爆款专区 惊喜特卖</view>
       </view>
       <view class="_div data-v-15dae277 center_count">
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'3'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'4'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'5'], $root}}" is="c1fd7c56"></template></view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
       </view>
       <view class="_div data-v-15dae277 hot">
         <view class="_p data-v-15dae277">爆款专区 惊喜特卖</view>
       </view>
       <view class="_div data-v-15dae277 center_down">
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'6'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'7'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'8'], $root}}" is="c1fd7c56"></template></view>
-        <view class="_div data-v-15dae277 small_count"><template data="{{...$root[$kk+'9'], $root}}" is="c1fd7c56"></template></view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
+        <view class="_div data-v-15dae277 small_count">
+          <special-item class="_special-item data-v-15dae277"></special-item>
+        </view>
       </view>
     </view>
   </view>
