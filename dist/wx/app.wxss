@@ -27,3 +27,11 @@ page {
 .show.data-v-618b0468 {
   background: #56D2BF;
 }
+.swiperBox.data-v-284a3254 {
+  width: 100%;
+  height: 300rpx;
+}
+.swiperBox .slide-image.data-v-284a3254 {
+  width: 100%;
+  height: 100%;
+}

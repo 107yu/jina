@@ -363,6 +363,10 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: {},
@@ -373,7 +377,7 @@ if (false) {(function () {
             autoplay: true,
             interval: 5000,
             duration: 2000,
-            imgUrls: ["/static/images/Bitmap(1).svg", "/static/images/Bitmap(1).svg", "/static/images/Bitmap(1).svg"]
+            imgUrls: ['https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640', 'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640', 'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640']
         };
     },
 
@@ -390,12 +394,15 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('swiper', {
+  return _c('div', {
+    staticClass: "swiperBox"
+  }, [_c('swiper', {
     attrs: {
       "indicator-dots": "true",
       "autoplay": "true",
       "interval": "1000",
-      "duration": "1000"
+      "duration": "1000",
+      "indicator-active-color": "#fff"
     }
   }, _vm._l((_vm.imgUrls), function(item, index) {
     return _c('block', {
