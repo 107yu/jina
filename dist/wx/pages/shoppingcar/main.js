@@ -1,15 +1,15 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([2],{
+global.webpackJsonpMpvue([3],{
 
-/***/ 101:
+/***/ 134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(135);
 
 
 
@@ -25,18 +25,18 @@ app.$mount();
 
 /***/ }),
 
-/***/ 102:
+/***/ 135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_4c7129ea_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_4c7129ea_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(138);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(103)
+  __webpack_require__(136)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(1)
 /* script */
 
 /* template */
@@ -79,43 +79,62 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 136:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 104:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
+  props: {},
+  components: {},
   data: function data() {
     return {};
   },
 
-
-  components: {},
-
+  computed: {},
   methods: {},
-
-  created: function created() {}
+  created: function created() {},
+  mounted: function mounted() {}
 });
 
 /***/ }),
 
-/***/ 105:
+/***/ 138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v("shop")])
+  return _c('div', {
+    staticClass: "wrap"
+  }, [_c('section', [_c('div', [_c('dl', [_c('dt', [_c('img', {
+    attrs: {
+      "src": "",
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('dd', [_c('h1'), _vm._v(" "), _c('h2', [_vm._v("规格：XL")]), _vm._v(" "), _c('h3', [_vm._v("￥52.50")])], 1)], 1)], 1)])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -130,4 +149,4 @@ if (false) {
 
 /***/ })
 
-},[101]);
+},[134]);

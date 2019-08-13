@@ -1,0 +1,11 @@
+<template name="98c28b58">
+  <view class="_dl data-v-c3a7b040">
+    <view class="_dt data-v-c3a7b040">
+      <image src="{{item.imgUrl}}" alt class="_img data-v-c3a7b040"></image>
+    </view>
+    <view class="_dd data-v-c3a7b040">
+      <view class="_p data-v-c3a7b040">{{item.title}}</view>
+      <view class="_b data-v-c3a7b040">￥{{item.vipPrice}}</view>
+    </view>
+  </view>
+</template>

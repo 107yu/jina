@@ -26,10 +26,32 @@ export default {
 </script>
 
 <style>
-page{
+/* this rule will be remove */
+* {
+  transition: width 2s;
+  -moz-transition: width 2s;
+  -webkit-transition: width 2s;
+  -o-transition: width 2s;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+page {
   width: 100%;
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
+}
+.wrap section {
+  flex: 1;
+  overflow: scroll;
 }
 </style>

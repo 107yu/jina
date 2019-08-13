@@ -1,1 +1,1 @@
-<import src="/pages/shoppingcar/index.vue.wxml" /><template is="09bfdcf3" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/shoppingcar/index.vue.wxml" /><template is="44e37e88" data="{{ ...$root['0'], $root }}"/>

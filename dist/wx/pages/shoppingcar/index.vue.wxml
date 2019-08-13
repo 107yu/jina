@@ -1,3 +1,18 @@
-<template name="09bfdcf3">
-  <view class="_div data-v-4c7129ea">shop</view>
+<template name="44e37e88">
+  <view class="_div data-v-4c7129ea wrap">
+    <view class="_section data-v-4c7129ea">
+      <view class="_div data-v-4c7129ea">
+        <view class="_dl data-v-4c7129ea">
+          <view class="_dt data-v-4c7129ea">
+            <image src alt class="_img data-v-4c7129ea"></image>
+          </view>
+          <view class="_dd data-v-4c7129ea">
+            <view class="_h1 data-v-4c7129ea"></view>
+            <view class="_h2 data-v-4c7129ea">规格：XL</view>
+            <view class="_h3 data-v-4c7129ea">￥52.50</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </template>
