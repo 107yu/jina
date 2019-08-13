@@ -6,7 +6,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#56D2BF",
     "navigationBarTitleText": "积纳有品",
     "navigationBarTextStyle": "black"
   },
@@ -36,5 +36,6 @@
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap40.json"
 }

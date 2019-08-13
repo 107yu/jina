@@ -1,0 +1,5 @@
+<template name="1645c6d2">
+  <view class="_div data-v-3d170b54 hotInfo">
+    <image src="{{hotimg && hotimg.pictUrl}}" alt class="_img data-v-3d170b54"></image>
+  </view>
+</template>

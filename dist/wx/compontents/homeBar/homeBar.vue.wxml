@@ -1,0 +1,7 @@
+<template name="44f1c272">
+  <view class="_div data-v-dc633584 title">
+    <view class="_div data-v-dc633584">
+      <view class="_b data-v-dc633584">{{homeBarHot}}</view> <label class="_span data-v-dc633584">{{describe}}</label>
+    </view> <label wx:if="{{more}}" class="_span data-v-dc633584">更多<view class="_i data-v-dc633584"></view></label>
+  </view>
+</template>
