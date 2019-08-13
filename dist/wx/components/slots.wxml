@@ -1,1 +1,2 @@
 <import src="/components/specialItem/index.vue.wxml" />
+<import src="/components/commodityitem/index.vue.wxml" />

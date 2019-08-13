@@ -1,4 +1,4 @@
-<template name="41209160">
+<template name="fa9682e2">
   <view class="_dl data-v-c3a7b040">
     <view class="_dt data-v-c3a7b040">
       <image src="{{item.imgUrl}}" alt class="_img data-v-c3a7b040"></image>

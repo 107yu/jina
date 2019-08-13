@@ -1,4 +1,4 @@
-<template name="15ee8a27">
+<template name="6f1b7f34">
   <view class="_div data-v-7ec8f392 wrap">
     <image src="/static/images/5.jpg" alt class="_image data-v-7ec8f392"></image>
     <view class="_div data-v-7ec8f392 refer"><input type="text" placeholder="请输入邀请码" class="_input data-v-7ec8f392" /> <button bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-7ec8f392">提交</button></view>
