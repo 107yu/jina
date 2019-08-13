@@ -1,1 +1,1 @@
-<import src="/components/card.vue.wxml" />
+<import src="/components/commodityitem/index.vue.wxml" />

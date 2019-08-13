@@ -1,0 +1,12 @@
+<template name="3e816669">
+  <view class="_li data-v-0cd1f2b4">
+    <image src alt class="_img data-v-0cd1f2b4"></image>
+    <view class="_div data-v-0cd1f2b4">
+      <view class="_p data-v-0cd1f2b4 introduce">雅诗兰黛口红jhdjhdjhasdjhds角色的画风</view> <progress percent="20" show-info color="#fb7992" stroke-width="5" border-radius="8" class="_progress data-v-0cd1f2b4 fontC" font-size="14" />
+      <view class="_div data-v-0cd1f2b4 cost_box">
+        <view class="_p data-v-0cd1f2b4 cost"><label class="_span data-v-0cd1f2b4 price">￥<view class="_b data-v-0cd1f2b4">179</view></label><label class="_span data-v-0cd1f2b4 elide">￥216</label></view>
+        <image class="_img data-v-0cd1f2b4 btn" src="/static/my/sellOut.svg"></image>
+      </view>
+    </view>
+  </view>
+</template>

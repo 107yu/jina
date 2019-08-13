@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/flashSale/main",
+    "pages/my/main",
     "pages/home/main",
-    "pages/shoppingcar/main",
-    "pages/my/main"
+    "pages/shoppingcar/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,6 +37,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap61.json"
+  }
 }
