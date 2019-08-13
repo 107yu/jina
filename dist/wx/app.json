@@ -1,14 +1,14 @@
 {
-  "pages": [
+  "pages": [  
     "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
     "pages/introduceDetail/main",
-    "pages/site/address/main",
+    "pages/site/address/main", 
     "pages/site/sitelist/main",
     "pages/refund/main",
-    "pages/site/delivery/main",
+    "pages/site/delivery/main", 
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
@@ -50,6 +50,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
