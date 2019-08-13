@@ -29,5 +29,24 @@ export default {
   -moz-transition: width 2s;
   -webkit-transition: width 2s;
   -o-transition: width 2s;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+page {
+  width: 100%;
+  height: 100%;
+}
+.wrap section {
+  flex: 1;
+  overflow: scroll;
 }
 </style>

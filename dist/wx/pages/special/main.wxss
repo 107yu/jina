@@ -1,0 +1,145 @@
+
+@charset "UTF-8";
+.wrap .head .img {
+  width: 100%;
+  height: 300rpx;
+  background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
+}
+.wrap .head .nav {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+  padding: 0 20rpx;
+}
+.wrap .head .nav ._p {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: inline-block;
+}
+.wrap .head .nav .active {
+  color: #fc5d7b;
+  border-bottom: 2rpx solid #fc5d7b;
+}
+.wrap ._section {
+  background: #f3f7f7;
+}
+.wrap ._section .hot {
+  width: 100%;
+  height: 140rpx;
+  text-align: center;
+  line-height: 140rpx;
+}
+.wrap ._section .top_count {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap ._section .top_count .small_count {
+  width: 48.5%;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-left: 8rpx;
+  margin-top: 8rpx;
+}
+.wrap ._section .top_count .small_count ._dl ._dt .small_img {
+  width: 300rpx;
+  height: 400rpx;
+}
+.wrap ._section .top_count .small_count ._dl ._dd {
+  padding: 10rpx 0;
+}
+.wrap ._section .top_count .small_count ._dl ._dd ._h1 {
+  font-size: 30rpx;
+}
+.wrap ._section .top_count .small_count ._dl ._dd ._h2 {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.wrap ._section .top_count .small_count ._dl ._dd ._h2 ._h3 {
+  color: #fc5d7b;
+}
+.wrap ._section .top_count .small_count ._dl ._dd ._h2 ._h3 ._span {
+  font-size: 50rpx;
+}
+.wrap ._section .top_count .small_count ._dl ._dd ._h2 ._h4 {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.wrap ._section .center_count .small_count:first-child {
+  margin-top: 0rpx;
+}
+.wrap ._section .center_count .small_count {
+  background: #fff;
+  margin-top: 20rpx;
+}
+.wrap ._section .center_count .small_count ._dl {
+  display: flex;
+}
+.wrap ._section .center_count .small_count ._dl ._dt .small_img {
+  width: 200rpx;
+  height: 250rpx;
+}
+.wrap ._section .center_count .small_count ._dl ._dd {
+  padding: 0 20rpx;
+}
+.wrap ._section .center_count .small_count ._dl ._dd ._h1 {
+  font-size: 30rpx;
+}
+.wrap ._section .center_count .small_count ._dl ._dd ._h2 {
+  display: flex;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.wrap ._section .center_count .small_count ._dl ._dd ._h2 ._h3 {
+  color: #fc5d7b;
+}
+.wrap ._section .center_count .small_count ._dl ._dd ._h2 ._h3 ._span {
+  font-size: 50rpx;
+}
+.wrap ._section .center_count .small_count ._dl ._dd ._h2 ._h4 {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.wrap ._section .center_down {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap ._section .center_down .small_count {
+  width: 32.1%;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-left: 8rpx;
+  margin-top: 8rpx;
+}
+.wrap ._section .center_down .small_count ._dl ._dt .small_img {
+  width: 150rpx;
+  height: 180rpx;
+}
+.wrap ._section .center_down .small_count ._dl ._dd {
+  padding: 10rpx 0;
+}
+.wrap ._section .center_down .small_count ._dl ._dd ._h1 {
+  font-size: 25rpx;
+}
+.wrap ._section .center_down .small_count ._dl ._dd ._h2 {
+  margin-top: 25rpx;
+}
+.wrap ._section .center_down .small_count ._dl ._dd ._h2 ._h3 {
+  font-size: 30rpx;
+}
+.wrap ._section .center_down .small_count ._dl ._dd ._h2 ._h3 ._span {
+  font-size: 35rpx;
+}
+.wrap ._section .center_down .small_count ._dl ._dd ._h2 ._h4 {
+  margin-left: -0rpx;
+}
