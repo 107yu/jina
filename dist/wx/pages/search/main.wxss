@@ -1,0 +1,28 @@
+
+.cancel.data-v-62000480 {
+  padding: 0 20rpx;
+}
+.historyTop.data-v-62000480 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  font-size: 24rpx;
+}
+.historyTop ._img.data-v-62000480 {
+  width: 30rpx;
+  height: 30rpx;
+}
+.historyContent.data-v-62000480 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.historyContent ._span.data-v-62000480 {
+  width: 23%;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #eee;
+  margin-top: 10rpx;
+  margin-right: 6rpx;
+  margin-left: 6rpx;
+}

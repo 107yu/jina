@@ -11,3 +11,4 @@
 <import src="/compontents/mySwiper/mySwiper.vue.wxml" />
 <import src="/compontents/hotImg/hotImg.vue.wxml" />
 <import src="/compontents/homeRecommend/homeRecommend.vue.wxml" />
+<template name="data-v-62000480-default-0"><label class="_span data-v-62000480 cancel">取消</label></template>

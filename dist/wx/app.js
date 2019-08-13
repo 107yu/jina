@@ -702,7 +702,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "indicator-dots": "true",
       "autoplay": "true",
       "interval": "2000",
-      "duration": "2000",
+      "duration": "1000",
       "indicator-active-color": "#fff"
     }
   }, _vm._l((_vm.swiperList), function(val, index) {
@@ -1266,25 +1266,24 @@ if (false) {(function () {
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: ["homePage"],
     components: {},
     data: function data() {
-        return {
-            searchBtn: true
-        };
+        return {};
     },
 
     computed: {},
     methods: {
-        search: function search() {
-            this.searchBtn = false;
-        },
         goToSearch: function goToSearch() {
-            wx.navigateTo({
-                url: '/pages/search/main'
-            });
+            if (this.homePage === "1") {
+                wx.navigateTo({
+                    url: '/pages/search/main'
+                });
+                this.homePage = "0";
+            }
         }
     },
     created: function created() {},
@@ -1310,12 +1309,14 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     attrs: {
       "type": "text"
     }
-  }), _vm._v(" "), (_vm.searchBtn) ? _c('img', {
+  }), _vm._v(" "), _c('img', {
     attrs: {
       "src": "/static/images/搜索.svg",
       "alt": ""
     }
-  }) : _vm._e()])
+  }), _vm._v(" "), _vm._t("default", null, {
+    mpcomid: '0'
+  })], 2)
 }
 var staticRenderFns = []
 render._withStripped = true

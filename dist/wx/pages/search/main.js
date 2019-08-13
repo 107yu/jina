@@ -95,6 +95,17 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   props: {},
@@ -122,9 +133,24 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     attrs: {
       "mpcomid": '0'
     }
-  })], 1)
+  }, [_c('span', {
+    staticClass: "cancel"
+  }, [_vm._v("取消")])]), _vm._v(" "), _vm._m(0)], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "historySearch"
+  }, [_c('div', {
+    staticClass: "historyTop"
+  }, [_c('span', [_vm._v("历史记录")]), _vm._v(" "), _c('span', [_c('img', {
+    attrs: {
+      "src": "/static/images/删除.svg",
+      "alt": ""
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "historyContent"
+  })])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

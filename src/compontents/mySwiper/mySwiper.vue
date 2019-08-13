@@ -4,7 +4,7 @@
            indicator-dots="true" 
            autoplay="true" 
            interval="2000" 
-           duration="2000"
+           duration="1000"
            indicator-active-color="#fff"
         >
             <block v-for="(val,index) in swiperList" :key="index">
@@ -48,7 +48,7 @@ export default {
     
 }
 .swiperBox .slide-image{
-    width: 90%;
+    width: 100%;
     height: 100%;
 }
 

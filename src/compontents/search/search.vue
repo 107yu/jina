@@ -1,7 +1,8 @@
 <template>
     <div class="input"  @click="goToSearch">
       <input type="text" class="search">
-      <img v-if="searchBtn" src="/static/images/搜索.svg" alt="">
+      <img  src="/static/images/搜索.svg" alt="">
+      <slot></slot>
     </div>
 </template>
 <script>
@@ -12,20 +13,20 @@ export default {
     },
     data(){
         return {
-            searchBtn:true,
+           
         }
     },
     computed:{
 
     },
     methods:{
-        search(){
-            this.searchBtn = false;
-        },
         goToSearch(){
-            wx.navigateTo({
-                url: '/pages/search/main',
-            })
+            if(this.homePage === "1"){
+                 wx.navigateTo({
+                    url: '/pages/search/main',
+                })
+                this.homePage = "0"
+            }
         }
     },
     created(){
@@ -39,21 +40,24 @@ export default {
 <style scoped lang="">
 .input{
   margin-bottom: 20rpx;
-  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top:10rpx;
 }
 .search{
+  flex: 1;
   height: 60rpx;
   background: #fff;
   border:1px solid #ccc;
   border-radius: 30rpx;
-  padding-left: 30rpx;
+  padding-left: 60rpx;
   margin:0 auto;
 }
 .input img{
   width: 40rpx;
   height: 40rpx;
   position: absolute;
-  top:10rpx;
-  left:30rpx;
+  top:20rpx;
+  left:20rpx;
 }
 </style>
