@@ -1,0 +1,18 @@
+<template name="d6772406">
+  <view class="_div data-v-6abdbd0c outbox">
+    <view class="_div data-v-6abdbd0c chagne_add_data">
+      <view class="_div data-v-6abdbd0c user_change_data"><input class="_input data-v-6abdbd0c user_address_data" type="text" placeholder="收货人" /> <label class="_span data-v-6abdbd0c user_address_right">
+          <image src="/static/images/lt.svg" alt class="_img data-v-6abdbd0c"></image>
+        </label></view>
+      <view class="_div data-v-6abdbd0c user_change_data"><input class="_input data-v-6abdbd0c user_address_data" type="text" placeholder="手机号码" /> <label class="_span data-v-6abdbd0c user_address_right user_address_right2">
+          <view class="_i data-v-6abdbd0c">+ 86</view>
+          <image src="/static/images/lt.svg" alt class="_img data-v-6abdbd0c"></image>
+        </label></view>
+      <view class="_view data-v-6abdbd0c user_change_data">
+        <picker class="_picker data-v-6abdbd0c">
+          <view class="_view data-v-6abdbd0c user_change_data"><input class="_input data-v-6abdbd0c user_address_data" type="text" placeholder="所在地区" /> <label class="_span data-v-6abdbd0c user_address_right">
+              <image src="/static/images/lt.svg" alt class="_img data-v-6abdbd0c"></image>
+            </label></view>
+        </picker>
+      </view>
+      <view class="_div data-v-6abdbd0c user_change_data user_textarea"><textarea placeholder="详细地址：如道路、门牌号、小区、楼栋号、单元 室等" class="_textarea data-v-6abdbd0c" /></view></view> <view class="_div data-v-6abdbd0c user_data_title"><view class="_div data-v-6abdbd0c user_title_type"><view class="_p data-v-6abdbd0c title_type_tit">标签</view> <view class="_div data-v-6abdbd0c user_every_type"><label class="_span data-v-6abdbd0c">家</label> <label class="_span data-v-6abdbd0c">公司</label> <label class="_span data-v-6abdbd0c">学校</label> <label class="_span data-v-6abdbd0c">其他</label></view></view> <view class="_div data-v-6abdbd0c user_default_address"><view class="_p data-v-6abdbd0c set_default_address">设为默认地址</view> <switch class="_switch data-v-6abdbd0c" /></view></view> <view class="_div data-v-6abdbd0c user_change_button"><button class="_button data-v-6abdbd0c">删除收货信息</button> <button class="_button data-v-6abdbd0c btn_action">保存</button></view> <button class="_button data-v-6abdbd0c">保存</button></view></template>

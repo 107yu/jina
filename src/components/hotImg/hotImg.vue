@@ -1,5 +1,5 @@
 <template>
-    <div class="hotInfo">
+    <div class="hotInfo" @click="showhotImg">
       <img :src="hotimg && hotimg.pictUrl" alt="">
     </div>
 </template>
@@ -18,7 +18,11 @@ export default {
 
     },
     methods:{
-
+         showhotImg(){
+            wx.navigateTo({
+                url: '/pages/hotimgDetail/main',
+            })  
+        }
     },
     created(){
 

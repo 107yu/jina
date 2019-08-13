@@ -1,4 +1,4 @@
-<import src="/components/dlList/dlList.vue.wxml" /><template name="19ab70f0">
+<import src="/components/dlList/dlList.vue.wxml" /><template name="766669b1">
   <scroll-view scroll-y style="height:100%" bindscroll="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_scroll-view data-v-194b9a7e">
     <view class="_div data-v-194b9a7e content" wx:if="{{swiperDetailInfo.res_code===1}}">
       <view class="_div data-v-194b9a7e">
@@ -7,7 +7,7 @@
       <view class="_div data-v-194b9a7e {{['title', [flag ? 'fixed' : '']]}}"><label class="_span data-v-194b9a7e">{{swiperDetailInfo.result.specialName}}</label></view>
       <view class="_div data-v-194b9a7e main">
         <view class="_div data-v-194b9a7e hint">-------{{swiperDetailInfo.result.specialName}}-------</view>
-        <view class="_div data-v-194b9a7e list"><template wx:key="index" data="{{...$root[$kk+'0_'+index], $root, $for:{default:'data-v-194b9a7e-default-0_+index'},$slotdefault:'data-v-194b9a7e-default-0_+index'}}" is="fa9682e2" wx:for="{{swiperDetailInfo.result.anchors[0].products}}" wx:for-index="index" wx:for-item="item"></template></view>
+        <view class="_div data-v-194b9a7e list"><template wx:key="index" data="{{...$root[$kk+'0_'+index], $root, $for:{default:'data-v-194b9a7e-default-0_+index'},$slotdefault:'data-v-194b9a7e-default-0_+index'}}" is="41209160" wx:for="{{swiperDetailInfo.result.anchors[0].products}}" wx:for-index="index" wx:for-item="item"></template></view>
       </view>
     </view>
     <view wx:if="{{swiperDetailInfo.res_code===1004}}" class="_div data-v-194b9a7e noGoods">

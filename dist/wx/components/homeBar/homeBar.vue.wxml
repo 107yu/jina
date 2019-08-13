@@ -1,4 +1,4 @@
-<template name="0eacf4bf">
+<template name="288cc140">
   <view class="_div data-v-86853e6c title">
     <view class="_div data-v-86853e6c">
       <view class="_b data-v-86853e6c">{{homeBarHot}}</view> <label class="_span data-v-86853e6c">{{describe}}</label>

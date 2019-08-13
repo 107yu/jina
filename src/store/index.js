@@ -8,6 +8,7 @@ import special from './modules/special'
 import search from "./modules/search"
 import orider from "./modules/orider"
 import sepcialList from './modules/sepcialList'
+import productCoupon from './modules/productCoupon'
 
 Vue.use(Vuex)
 
@@ -17,7 +18,8 @@ export default new Vuex.Store({
         special,
         search,
         orider,
-        sepcialList
+        sepcialList,
+        productCoupon
     },
     plugins: [CreateLogger()]
 })

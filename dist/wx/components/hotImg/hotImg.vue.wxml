@@ -1,5 +1,5 @@
-<template name="5ef0108f">
-  <view class="_div data-v-7a6779e0 hotInfo">
+<template name="88a9ed60">
+  <view class="_div data-v-7a6779e0 hotInfo" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
     <image src="{{hotimg && hotimg.pictUrl}}" alt class="_img data-v-7a6779e0"></image>
   </view>
 </template>

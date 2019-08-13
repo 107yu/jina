@@ -1,0 +1,54 @@
+<template name="07b5cd2e">
+  <view class="_div data-v-3d9280ab bigbox">
+    <view class="_div data-v-3d9280ab addbigbox">
+      <view class="_div data-v-3d9280ab addressbox">
+        <view class="_div data-v-3d9280ab addlittle">
+          <view class="_p data-v-3d9280ab char name">李小冉</view>
+          <view class="_p data-v-3d9280ab char phone">15825478997</view>
+          <view class="_div data-v-3d9280ab addlebox">
+            <view class="_div data-v-3d9280ab addimgbox">
+              <image class="_img data-v-3d9280ab addimg" src="/static/images/Group 39.svg" alt></image>
+            </view>
+            <view class="_p data-v-3d9280ab char addresstag">[家]</view>
+            <view class="_p data-v-3d9280ab char address">北京市朝阳区焦化工厂小区3号楼2单元1005</view>
+          </view>
+        </view>
+        <view class="_div data-v-3d9280ab addribox"><label class="_span data-v-3d9280ab borders"></label>
+          <view class="_p data-v-3d9280ab char redact">编辑</view>
+        </view>
+      </view>
+      <view class="_div data-v-3d9280ab addressbox">
+        <view class="_div data-v-3d9280ab addlittle">
+          <view class="_p data-v-3d9280ab char name">李小冉</view>
+          <view class="_p data-v-3d9280ab char phone">15825478997</view>
+          <view class="_div data-v-3d9280ab addlebox">
+            <view class="_div data-v-3d9280ab addimgbox">
+              <image class="_img data-v-3d9280ab addimg" src="/static/images/Group 39.svg" alt></image>
+            </view>
+            <view class="_p data-v-3d9280ab char addresstag">[家]</view>
+            <view class="_p data-v-3d9280ab char address">北京市朝阳区焦化工厂小区3号楼2单元1005</view>
+          </view>
+        </view>
+        <view class="_div data-v-3d9280ab addribox"><label class="_span data-v-3d9280ab borders"></label>
+          <view class="_p data-v-3d9280ab char redact">编辑</view>
+        </view>
+      </view>
+      <view class="_div data-v-3d9280ab addressbox">
+        <view class="_div data-v-3d9280ab addlittle">
+          <view class="_p data-v-3d9280ab char name">李小冉</view>
+          <view class="_p data-v-3d9280ab char phone">15825478997</view>
+          <view class="_div data-v-3d9280ab addlebox">
+            <view class="_div data-v-3d9280ab addimgbox">
+              <image class="_img data-v-3d9280ab addimg" src="/static/images/Group 39.svg" alt></image>
+            </view>
+            <view class="_p data-v-3d9280ab char addresstag">[家]</view>
+            <view class="_p data-v-3d9280ab char address">北京市朝阳区焦化工厂小区3号楼2单元1005</view>
+          </view>
+        </view>
+        <view class="_div data-v-3d9280ab addribox"><label class="_span data-v-3d9280ab borders"></label>
+          <view class="_p data-v-3d9280ab char redact">编辑</view>
+        </view>
+      </view>
+    </view> <button class="_button data-v-3d9280ab addbtn">新增收货地址</button>
+  </view>
+</template>
