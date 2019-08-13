@@ -90,6 +90,10 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(126);
+
 //
 //
 //
@@ -99,20 +103,65 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   props: {},
   components: {},
   data: function data() {
     return {
-      titles: ["今日推荐", "纸尿裤", "母婴专场", "服装", "家居", "小家电"]
+      titles: ["今日推荐", "纸尿裤", "母婴专场", "服装", "家居", "小家电"],
+      searchBtn: true
     };
   },
 
-  computed: {},
-  methods: {},
+  computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapState */])({
+    homeLists: function homeLists(state) {
+      return state.home.homeLists;
+    }
+  })),
+  methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({
+    search: function search() {
+      this.searchBtn = false;
+    }
+  }, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+    getProduct: "home/getProductList",
+    getHomeList1: "home/getHomeList",
+    getHomeList: "home/getHomeList1"
+  })),
   created: function created() {},
-  mounted: function mounted() {}
+  mounted: function mounted() {
+    this.getProduct();
+    this.getHomeList1();
+    this.getHomeList();
+  }
 });
 
 /***/ }),
@@ -124,18 +173,88 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "home"
-  }, [_c('TapTitle', {
+  }, [_c('div', {
+    staticClass: "input"
+  }, [_c('input', {
+    staticClass: "search",
+    attrs: {
+      "type": "text",
+      "eventid": '0'
+    },
+    on: {
+      "focus": _vm.search
+    }
+  }), _vm._v(" "), (_vm.searchBtn) ? _c('img', {
+    attrs: {
+      "src": "/static/images/搜索.svg",
+      "alt": ""
+    }
+  }) : _vm._e()]), _vm._v(" "), _c('TapTitle', {
     attrs: {
       "titles": _vm.titles,
       "mpcomid": '0'
     }
   }), _vm._v(" "), _c('MySwiper', {
     attrs: {
+      "swiperList": _vm.homeLists[0] && _vm.homeLists[0].items,
       "mpcomid": '1'
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "main"
-  })], 1)
+    staticClass: "introduce"
+  }, _vm._l((_vm.homeLists[1] && _vm.homeLists[1].items), function(item, index) {
+    return _c('dl', {
+      key: index
+    }, [_c('dt', [_c('img', {
+      attrs: {
+        "src": item.imgUrl,
+        "alt": ""
+      }
+    })]), _vm._v(" "), _c('dd', [_vm._v(_vm._s(item.title))])], 1)
+  })), _vm._v(" "), _c('HotImg', {
+    attrs: {
+      "hotimg": _vm.homeLists[2] && _vm.homeLists[2],
+      "mpcomid": '2'
+    }
+  }), _vm._v(" "), _c('HotImg', {
+    attrs: {
+      "hotimg": _vm.homeLists[4] && _vm.homeLists[4],
+      "mpcomid": '3'
+    }
+  }), _vm._v(" "), _c('HomeBar', {
+    attrs: {
+      "homeBarHot": "今日秒杀",
+      "describe": "先下单先得",
+      "more": "true",
+      "mpcomid": '4'
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "boutique"
+  }, _vm._l((_vm.homeLists[5] && _vm.homeLists[5].items), function(item, index) {
+    return _c('DlList', {
+      key: index,
+      attrs: {
+        "item": item,
+        "mpcomid": '5_' + index
+      }
+    })
+  })), _vm._v(" "), _c('HomeBar', {
+    attrs: {
+      "homeBarHot": "精品好物",
+      "describe": "等你来抢",
+      "more": "true",
+      "mpcomid": '6'
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "boutique"
+  }, _vm._l((_vm.homeLists[7] && _vm.homeLists[7].items), function(item, index) {
+    return _c('DlList', {
+      key: index,
+      attrs: {
+        "item": item,
+        "mpcomid": '7_' + index
+      }
+    })
+  }))], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

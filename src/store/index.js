@@ -3,8 +3,8 @@ import Vuex from 'vuex'
 import CreateLogger from 'vuex/dist/logger'
 
 //引入模块：
-
 import home from './modules/home'
+
 
 Vue.use(Vuex)
 
