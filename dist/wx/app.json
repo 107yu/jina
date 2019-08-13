@@ -1,12 +1,12 @@
 {
-  "pages": [   
+  "pages": [
+    "pages/my/main",
     "pages/flashSale/main",
     "pages/home/main",
     "pages/special/main",
     "pages/seckillDetail/main",
     "pages/purchaseDetail/main",
     "pages/commodityDetail/main",
-    "pages/my/main",
     "pages/shoppingcar/main"
   ],
   "window": {
