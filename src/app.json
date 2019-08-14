@@ -1,6 +1,11 @@
 {
-  "pages": [   
-    "pages/home/main",
+  "pages": [
+    "pages/site/address/main", 
+    "pages/site/sitelist/main",
+    "pages/refund/main",
+    
+    "pages/site/delivery/main", 
+    "pages/home/main",  
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
