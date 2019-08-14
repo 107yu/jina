@@ -7,15 +7,17 @@ import home from './modules/home'
 import special from './modules/special'
 import search from "./modules/search"
 import orider from "./modules/orider"
+import sepcialList from './modules/sepcialList'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    modules:{
+    modules: {
         home,
         special,
         search,
-        orider
+        orider,
+        sepcialList
     },
-    plugins:[CreateLogger()]
+    plugins: [CreateLogger()]
 })

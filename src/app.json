@@ -3,6 +3,8 @@
     "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
+    "pages/gopay/main",
+    "pages/introduceDetail/main",
     "pages/flashSale/main",
     "pages/special/main",
     "pages/seckillDetail/main",
@@ -10,8 +12,7 @@
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
-    "pages/shoppingcar/main"
- 
+    "pages/shoppingcar/main",
   ],
   "window": {
     "backgroundTextStyle": "light",

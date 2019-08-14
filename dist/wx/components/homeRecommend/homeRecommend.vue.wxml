@@ -1,7 +1,7 @@
 <import src="/components/hotImg/hotImg.vue.wxml" />
 <import src="/components/homeBar/homeBar.vue.wxml" />
-<import src="/components/dlList/dlList.vue.wxml" /><template name="70053b3f">
-  <view class="_div data-v-79ad3e9c"><template data="{{...$root[$kk+'0'], $root}}" is="2c481206"></template> <template homeBarHot="精品好物" describe="等你来抢" more="true" data="{{...$root[$kk+'1'], $root}}" is="e38e10a6"></template>
-    <view class="_div data-v-79ad3e9c boutique"><template wx:key="index" data="{{...$root[$kk+'2_'+index], $root}}" is="0da0a4fd" wx:for="{{homeLi}}" wx:for-index="index" wx:for-item="item"></template></view>
+<import src="/components/dlList/dlList.vue.wxml" /><template name="1e9c2d51">
+  <view class="_div data-v-79ad3e9c"><template data="{{...$root[$kk+'0'], $root}}" is="5ef0108f"></template> <template homeBarHot="精品好物" describe="等你来抢" more="true" data="{{...$root[$kk+'1'], $root}}" is="0eacf4bf"></template>
+    <view class="_div data-v-79ad3e9c boutique"><template wx:key="index" data="{{...$root[$kk+'2_'+index], $root}}" is="fa9682e2" wx:for="{{homeLi}}" wx:for-index="index" wx:for-item="item"></template></view>
   </view>
 </template>
