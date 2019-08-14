@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-<import src="/components/search/search.vue.wxml" /><template name="2106dec6">
+<import src="/components/search/search.vue.wxml" /><template name="65bfbfaf">
   <view class="_div data-v-62000480 search">
     <scroll-view scroll-y style="height:100%" bindscroll="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_scroll-view data-v-62000480">
-      <view class="_div data-v-62000480 main"><template searchPage="searchPage" data="{{...$root[$kk+'0'], $root}}" is="2fe7f2bd"></template>
+      <view class="_div data-v-62000480 main"><template searchPage="searchPage" data="{{...$root[$kk+'0'], $root, $for:{default:'data-v-62000480-default-0'},$slotdefault:'data-v-62000480-default-0'}}" is="b607e762"></template>
         <view class="_div data-v-62000480 historySearch" wx:if="{{!searchVal}}">
           <view class="_div data-v-62000480 historyTop"><label class="_span data-v-62000480">历史记录</label> <label class="_span data-v-62000480">
               <image src="/static/images/删除.svg" alt class="_img data-v-62000480"></image>
@@ -31,15 +30,5 @@
         </view>
       </view>
     </scroll-view>
-=======
-<import src="/components/search/search.vue.wxml" /><template name="65bfbfaf">
-  <view class="_div data-v-62000480 search"><template data="{{...$root[$kk+'0'], $root, $for:{default:'data-v-62000480-default-0'},$slotdefault:'data-v-62000480-default-0'}}" is="b607e762"></template>
-    <view class="_div data-v-62000480 historySearch">
-      <view class="_div data-v-62000480 historyTop"><label class="_span data-v-62000480">历史记录</label> <label class="_span data-v-62000480">
-          <image src="/static/images/删除.svg" alt class="_img data-v-62000480"></image>
-        </label></view>
-      <view class="_div data-v-62000480 historyContent"></view>
-    </view>
->>>>>>> hn
   </view>
 </template>

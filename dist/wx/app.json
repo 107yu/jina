@@ -1,27 +1,18 @@
 {
-  "pages": [
+  "pages": [  
     "pages/home/main",
-<<<<<<< HEAD
     "pages/search/main",
     "pages/myOrder/main",
-=======
     "pages/gopay/main",
     "pages/introduceDetail/main",
->>>>>>> hn
     "pages/flashSale/main",
     "pages/special/main",
     "pages/seckillDetail/main",
     "pages/purchaseDetail/main",
     "pages/commodityDetail/main",
-<<<<<<< HEAD
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main"
-=======
-    "pages/shoppingcar/main",
-    "pages/my/main",
-    "pages/search/main"
->>>>>>> hn
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -55,6 +46,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap79.json"
+  }
 }

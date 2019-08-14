@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<import src="/components/slots" /><template name="0da0a4fd">
+<import src="/components/slots" /><template name="fa9682e2">
   <view class="_dl data-v-c3a7b040"><template name="default"></template>
-=======
-<template name="fa9682e2">
-  <view class="_dl data-v-c3a7b040">
->>>>>>> hn
     <view class="_dt data-v-c3a7b040">
       <image src="{{img}}" alt class="_img data-v-c3a7b040"></image>
     </view>

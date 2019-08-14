@@ -1,15 +1,9 @@
 <template>
-<<<<<<< HEAD
   <div  class="wrap">
     <scroll-view scroll-y style="height:100%">
     <div class="search">
       <MySearch></MySearch>
       <p @click="goToSearch"></p>
-=======
-  <div class="home">
-    <div @click="goToSearch">
-      <MySearch></MySearch>
->>>>>>> hn
     </div>
     <TapTitle :titles="categories"></TapTitle>
     <MySwiper :swiperList="homeLists[0] && homeLists[0].items"></MySwiper>
@@ -102,19 +96,10 @@ export default {
 };
 </script>
 <style scoped lang="">
-<<<<<<< HEAD
 .wrap{
   width: 100%;
   height: 100%;
   overflow: hidden;
-=======
-.home {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
->>>>>>> hn
 }
 .introduce {
   display: flex;
