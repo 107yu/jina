@@ -5,10 +5,10 @@
     </view>
     <view class="_div data-v-2f49bc7e item">
       <view class="_div data-v-2f49bc7e money">
-        <view class="_div data-v-2f49bc7e">订单应付金额(含邮)</view>
+        <view class="_div data-v-2f49bc7e div">订单应付金额(含邮)</view>
         <view class="_div data-v-2f49bc7e"> ￥ <label class="_span data-v-2f49bc7e">123</label></view>
-        <view class="_div data-v-2f49bc7e"> 订单总计 <label class="_span data-v-2f49bc7e">￥123</label></view>
-        <view class="_div data-v-2f49bc7e"> 满减活动 <label class="_span data-v-2f49bc7e">-￥5</label></view>
+        <view class="_div data-v-2f49bc7e"> 订单总计: <label class="_span data-v-2f49bc7e">￥123</label></view>
+        <view class="_div data-v-2f49bc7e"> 满减活动: <label class="_span data-v-2f49bc7e">-￥5</label></view>
       </view>
       <view class="_div data-v-2f49bc7e payment">
         <view class="_div data-v-2f49bc7e">

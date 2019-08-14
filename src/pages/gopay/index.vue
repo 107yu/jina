@@ -3,17 +3,17 @@
     <header class="header"><img src="/static/my/remind.svg" alt=""/>请在29:2内付款</header>
     <div class="item">
       <div class="money">
-        <div>订单应付金额(含邮)</div>
+        <div class="div">订单应付金额(含邮)</div>
         <div>
           ￥
           <span>123</span>
         </div>
         <div>
-          订单总计
+          订单总计:
           <span>￥123</span>
         </div>
         <div>
-          满减活动
+          满减活动:
           <span>-￥5</span>
         </div>
       </div>

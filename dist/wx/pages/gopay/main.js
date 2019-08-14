@@ -190,7 +190,9 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
 },function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "money"
-  }, [_c('div', [_vm._v("订单应付金额(含邮)")]), _vm._v(" "), _c('div', [_vm._v("\n        ￥\n        "), _c('span', [_vm._v("123")])]), _vm._v(" "), _c('div', [_vm._v("\n        订单总计\n        "), _c('span', [_vm._v("￥123")])]), _vm._v(" "), _c('div', [_vm._v("\n        满减活动\n        "), _c('span', [_vm._v("-￥5")])])])
+  }, [_c('div', {
+    staticClass: "div"
+  }, [_vm._v("订单应付金额(含邮)")]), _vm._v(" "), _c('div', [_vm._v("\n        ￥\n        "), _c('span', [_vm._v("123")])]), _vm._v(" "), _c('div', [_vm._v("\n        订单总计:\n        "), _c('span', [_vm._v("￥123")])]), _vm._v(" "), _c('div', [_vm._v("\n        满减活动:\n        "), _c('span', [_vm._v("-￥5")])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }

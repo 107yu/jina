@@ -36,6 +36,27 @@
   line-height: 70rpx;
   font-size: 32rpx;
 }
+.item .money ._div.data-v-2f49bc7e:nth-child(1) {
+  font-weight: bold;
+}
+.item .money ._div.data-v-2f49bc7e:nth-child(2) {
+  font-size: 30rpx;
+  color: #fc5d7b;
+}
+.item .money ._div:nth-child(2) ._span.data-v-2f49bc7e {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.item .money ._div.data-v-2f49bc7e:nth-child(3) {
+  font-weight: bold;
+  color: #999999;
+  font-size: 30rpx;
+}
+.item .money ._div.data-v-2f49bc7e:nth-child(4) {
+  font-weight: bold;
+  color: #999999;
+  font-size: 30rpx;
+}
 .item .payment.data-v-2f49bc7e {
   margin: 16rpx;
   background-color: #fff;

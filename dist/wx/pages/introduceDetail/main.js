@@ -124,32 +124,13 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   props: {},
   components: {
-    hotitem: __WEBPACK_IMPORTED_MODULE_4__components_hotItem__["a" /* default */]
+    HotItem: __WEBPACK_IMPORTED_MODULE_4__components_hotItem__["a" /* default */]
   },
   data: function data() {
     return {
@@ -293,10 +274,9 @@ if (false) {(function () {
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    props: {},
+    props: ["products"],
     components: {},
     data: function data() {
         return {};
@@ -305,6 +285,7 @@ if (false) {(function () {
     computed: {},
     methods: {},
     created: function created() {},
+    onLoad: function onLoad() {},
     mounted: function mounted() {}
 });
 
@@ -315,7 +296,30 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v("\n    opopo\n     ")])
+  return _c('div', _vm._l((_vm.products), function(item, index) {
+    return _c('dl', {
+      key: index
+    }, [_c('dt', [_c('img', {
+      attrs: {
+        "src": item.mainImgUrl,
+        "alt": ""
+      }
+    })]), _vm._v(" "), _c('dd', [_c('p', {
+      staticClass: "titleBox"
+    }, [_vm._v("\n              " + _vm._s(item.title) + "\n              ")]), _vm._v(" "), _c('div', {
+      staticClass: "moneySpanBox"
+    }, [_c('label', {
+      staticClass: "span1",
+      attrs: {
+        "for": ""
+      }
+    }, [_vm._v("\n                      ￥ "), _c('span', [_vm._v(_vm._s(item.salesPrice))])]), _vm._v(" "), _c('label', {
+      staticClass: "span2",
+      attrs: {
+        "for": ""
+      }
+    }, [_vm._v("\n                      赚￥\n                      "), _c('span', [_vm._v(_vm._s(item.memberDiscountPrice))])])], 1)], 1)], 1)
+  }))
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -362,11 +366,12 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }, [_vm._v(_vm._s(item.anchorName))])
   }), _vm._v(" "), _c('span')], 2)]), _vm._v(" "), _c('div', {
     staticClass: "hot"
-  }, [_c('hotItem', {
+  }, [(_vm.list[0].products) ? _c('HotItem', {
     attrs: {
+      "products": _vm.list[0].products,
       "mpcomid": '0'
     }
-  })], 1)])])
+  }) : _vm._e()], 1)])])
 }
 var staticRenderFns = []
 render._withStripped = true

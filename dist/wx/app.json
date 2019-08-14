@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/gopay/main",
     "pages/home/main",
+    "pages/gopay/main",
     "pages/introduceDetail/main",
     "pages/flashSale/main",
     "pages/special/main",
@@ -44,6 +44,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap56.json"
+  }
 }

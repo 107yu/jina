@@ -16,37 +16,18 @@
         </div>
       </div>
       <div class="hot">
-         <hotItem />
-          <!-- <dl v-for="(val,index) in item" :key="index">
-              <dt>
-                  <img src="" alt="">
-              </dt>
-              <dd>
-                  <p class="titleBox">
-                    酒店房间号圣诞节和激发环境恢复到几号放假好看的数据恢复快结婚时肯定会觉得和富人越与业务
-                  </p>
-                  <div class="moneySpanBox">
-                      <label for="" class="span1">
-                          ￥<span>79</span>
-                      </label>
-                      <label for="" class="span2">
-                          赚￥
-                          <span>5.45</span>
-                      </label>
-                  </div>
-              </dd>
-          </dl> -->
+         <HotItem v-if="list[0].products" :products="list[0].products"/>
       </div>
     </div>
   </div>
 </template>
 <script>
 import {mapState,mapActions} from "vuex"
-import hotitem from '@/components/hotItem'
+import HotItem from '@/components/hotItem'
 export default {
   props: {},
   components: {
-    hotitem
+    HotItem
   },
   data() {
     return {

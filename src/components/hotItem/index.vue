@@ -1,32 +1,29 @@
 <template>
     <div>
-        opopo
-         <!-- <dl>
+         <dl v-for="(item,index) in products" :key="index">
               <dt>
-                  <img src="" alt="">
+                  <img :src="item.mainImgUrl" alt="">
               </dt>
               <dd>
                   <p class="titleBox">
-                    酒店房间号圣诞节和激发环境恢复到几号放假好看的数据恢复快结婚时肯定会觉得和富人越与业务
+                  {{item.title}}
                   </p>
                   <div class="moneySpanBox">
                       <label for="" class="span1">
-                          ￥<span>79</span>
+                          ￥ <span>{{item.salesPrice}}</span>
                       </label>
                       <label for="" class="span2">
                           赚￥
-                          <span>5.45</span>
+                          <span>{{item.memberDiscountPrice}}</span>
                       </label>
                   </div>
               </dd>
-          </dl> -->
+          </dl>
     </div>
 </template>
 <script>
 export default {
-    props:{
-
-    },
+    props:["products"],
     components:{
 
     },
@@ -44,8 +41,11 @@ export default {
     created(){
 
     },
-    mounted(){
+    onLoad(){
 
+    },
+    mounted(){
+    
     }
 }
 </script>
