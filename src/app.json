@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/shoppingcar/main",
     "pages/recommend/main",
     "pages/special/main",
     "pages/home/main",
-    "pages/shoppingcar/main",
     "pages/my/main"
   ],
   "window": {

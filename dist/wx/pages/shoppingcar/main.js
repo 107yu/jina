@@ -106,6 +106,31 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   props: {},
@@ -116,7 +141,18 @@ if (false) {(function () {
 
   computed: {},
   methods: {},
-  created: function created() {},
+  created: function created() {
+    //改变导航栏
+    wx.setNavigationBarTitle({ title: "购物车" });
+    wx.setNavigationBarColor({
+      frontColor: "#ffffff",
+      backgroundColor: "#56D2BF",
+      animation: {
+        duration: 400,
+        timingFunc: "easeIn"
+      }
+    });
+  },
   mounted: function mounted() {}
 });
 
@@ -129,12 +165,31 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrap"
-  }, [_c('section', [_c('div', [_c('dl', [_c('dt', [_c('img', {
+  }, [_c('section', [_c('div', {
+    staticClass: "shop_box"
+  }, [_c('div', {
+    staticClass: "left_box"
+  }, [_c('img', {
     attrs: {
-      "src": "",
+      "src": "/static/images/meigou.svg",
       "alt": ""
     }
-  })]), _vm._v(" "), _c('dd', [_c('h1'), _vm._v(" "), _c('h2', [_vm._v("规格：XL")]), _vm._v(" "), _c('h3', [_vm._v("￥52.50")])], 1)], 1)], 1)])], 1)
+  })]), _vm._v(" "), _c('dl', [_c('dt', [_c('div', {
+    staticClass: "small_img"
+  })]), _vm._v(" "), _c('dd', [_c('h1', [_vm._v("帮宝适数据的飞鸟时代就发你说的九年四季度v从")]), _vm._v(" "), _c('h2', [_vm._v("规格：XL")]), _vm._v(" "), _c('h3', [_c('span', [_vm._v("￥52.50")]), _vm._v(" "), _c('div', {
+    staticClass: "edit_count"
+  }, [_c('p', [_vm._v("-")]), _vm._v(" "), _c('span', [_vm._v("1")]), _vm._v(" "), _c('p', [_vm._v("+")])], 1)])], 1)], 1)], 1)]), _vm._v(" "), _c('footer', [_c('div', {
+    staticClass: "lt"
+  }, [_c('img', {
+    attrs: {
+      "src": "/static/images/meigou.svg",
+      "alt": ""
+    }
+  }), _vm._v("全选\n    ")]), _vm._v(" "), _c('div', {
+    staticClass: "rt"
+  }, [_c('div', [_c('span', [_vm._v("总计:")]), _vm._v(" "), _c('span', [_vm._v("￥198.8")])]), _vm._v(" "), _c('p', {
+    staticClass: "edit"
+  }, [_vm._v("编辑")]), _vm._v(" "), _c('p', [_vm._v("去结算")])], 1)])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

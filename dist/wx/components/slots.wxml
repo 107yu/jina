@@ -1,7 +1,7 @@
+<import src="/components/recommendItem/index.vue.wxml" />
+<import src="/components/specialItem/index.vue.wxml" />
 <import src="/components/tap/tapTitle.vue.wxml" />
 <import src="/components/mySwiper/mySwiper.vue.wxml" />
 <import src="/components/hotImg/hotImg.vue.wxml" />
 <import src="/components/homeBar/homeBar.vue.wxml" />
 <import src="/components/dlList/dlList.vue.wxml" />
-<import src="/components/recommendItem/index.vue.wxml" />
-<import src="/components/specialItem/index.vue.wxml" />
