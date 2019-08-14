@@ -950,6 +950,12 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -1009,7 +1015,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     return _c('DlList', {
       key: index,
       attrs: {
-        "item": item,
+        "img": item.imgUrl,
+        "title": item.title,
+        "price": item.vipPrice,
         "mpcomid": '2_' + index
       }
     })
