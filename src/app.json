@@ -1,7 +1,8 @@
 {
-  "pages": [ 
-    "pages/introduceDetail/main",
+  "pages": [
+    "pages/gopay/main",
     "pages/home/main",
+    "pages/introduceDetail/main",
     "pages/flashSale/main",
     "pages/special/main",
     "pages/seckillDetail/main",
@@ -10,7 +11,6 @@
     "pages/shoppingcar/main",
     "pages/my/main",
     "pages/search/main"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",

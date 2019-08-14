@@ -5,10 +5,38 @@
   height: 100%;
   background: rgba(243, 247, 247, 1);
   .sessionCont {
-    .imgs {
+    #actives {
+      width: 100%;
+      height: 1296rpx;
+    }
+    #banners {
       height: 400rpx;
       width: 100%;
-      background: #fc5d7b;
+    }
+    .nav {
+      width: 100%;
+      height: 92rpx;
+      line-height: 92px;
+      display: flex;
+      white-space: nowrap;
+      border-bottom: 1px solid rgb(236, 236, 236);
+      justify-content: space-between
+    }
+  
+    // .nav .title {
+    //   color: #fc5d7b;
+    //   height: 80rpx;
+    //   line-height: 80rpx;
+    //   background: #fff;
+    //   padding-left: 20rpx;
+    //   margin: 0 20rpx;
+    //   flex: 1;
+    //   display: inline-block;
+    // }
+  
+    .active {
+      color: #f00;
+      border-bottom: 4rpx solid #f00;
     }
     .title {
       color: #fc5d7b;
@@ -26,9 +54,9 @@
     .cake {
       width: 100%;
       display: flex;
-      height: 150rpx;
+      height: 130rpx;
       box-sizing: border-box;
-      padding: 0 150rpx;
+      padding: 0 130rpx;
       justify-content: space-between;
       p {
         width: 300rpx;
@@ -52,13 +80,7 @@
     }
     .hot {
       width: 100%;
-      li {
-        display: flex;
-        height: 282rpx;
-        background: #fff;
-        border-radius: 10rpx;
-        margin-top: 20rpx;
-      }
+     
     }
   }
 }

@@ -1,22 +1,17 @@
 <template name="c1ef54f6">
   <view class="_div data-v-da578f64 wrap">
     <view class="_div data-v-da578f64 sessionCont">
-      <image src alt class="_img data-v-da578f64 imgs"></image>
-      <view class="_p data-v-da578f64 title">南靖特此钻取</view>
+      <image id="{{scal === true ? 'actives':'banners'}}" src="{{banner}}" alt mode="widthFix" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_img data-v-da578f64"></image>
+      <view class="_p data-v-da578f64 title">{{title}}</view>
     </view>
     <view class="_div data-v-da578f64 listWrap">
       <view class="_div data-v-da578f64">
         <view class="_div data-v-da578f64 cake"><label class="_span data-v-da578f64"></label>
-          <view class="_p data-v-da578f64">南靖特产钻取</view> <label class="_span data-v-da578f64"></label>
+          <view wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_p data-v-da578f64">{{item.anchorName}}</view> <label class="_span data-v-da578f64"></label>
         </view>
       </view>
       <view class="_div data-v-da578f64 hot">
-        <view class="_dl data-v-da578f64">
-          <view class="_dt data-v-da578f64">
-            <image src alt class="_img data-v-da578f64"></image>
-          </view>
-          <view class="_dd data-v-da578f64"></view>
-        </view>
+        <hot-item class="_hot-item data-v-da578f64"></hot-item>
       </view>
     </view>
   </view>
