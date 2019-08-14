@@ -16,7 +16,8 @@
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
-    "pages/shoppingcar/main"
+    "pages/shoppingcar/main",
+    "pages/recommend/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -50,6 +51,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

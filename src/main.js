@@ -15,6 +15,9 @@ import HomeRecommend from "./components/homeRecommend/homeRecommend.vue"
 import MySearch from "./components/search/search.vue"
 import OriderList from "./components/oriderList/oriderList.vue"
 import OriderDl from "./components/oriderList/oriderDl.vue"
+import specialItem from './components/specialItem'
+import recommendItem from './components/recommendItem'
+
 
 //挂载：
 Vue.component("TapTitle",TapTitle)
@@ -26,6 +29,9 @@ Vue.component("HomeRecommend",HomeRecommend)
 Vue.component("MySearch",MySearch)
 Vue.component("OriderList",OriderList)
 Vue.component("OriderDl",OriderDl)
+Vue.component('specialItem', specialItem)
+Vue.component('recommendItem', recommendItem)
+
 
 //挂载store
 Vue.prototype.$store=store

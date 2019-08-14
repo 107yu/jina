@@ -1,0 +1,36 @@
+<import src="/components/recommendItem/index.vue.wxml" /><template name="8281f5e0">
+  <view class="_div data-v-4a74440c box">
+    <scroll-view scroll-x class="_scroll-view data-v-4a74440c">
+      <view class="_div data-v-4a74440c box_nav">
+        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_p data-v-4a74440c">
+          <navigator url="/pages/home/main" class="_navigator data-v-4a74440c">今日推荐</navigator>
+        </view>
+        <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{navData}}" wx:for-index="index" wx:for-item="item" class="_p data-v-4a74440c {{index === ind ? 'active' : null}}">{{item.cname}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y bindscroll="handleProxy" class="_scroll-view data-v-4a74440c section" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+      <view class="_div data-v-4a74440c head">
+        <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}" wx:for="{{headData}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-4a74440c">
+          <view class="_dt data-v-4a74440c">
+            <image src="{{item.imgUrl}}" alt class="_img data-v-4a74440c"></image>
+          </view>
+          <view class="_dd data-v-4a74440c">{{item.cname}}</view>
+        </view>
+      </view>
+      <view class="_ul data-v-4a74440c">
+        <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" wx:for="{{newNav}}" wx:for-index="index" wx:for-item="item" class="_li data-v-4a74440c">{{item.cname}}</view>
+        <view wx:if="{{newNav[2].sortType===3}}" class="_li data-v-4a74440c">
+          <image src="/static/images/downbg.svg" alt class="_img data-v-4a74440c"></image>
+          <image src="/static/images/down.svg" alt class="_img data-v-4a74440c"></image>
+        </view>
+        <view wx:if="{{newNav[2].sortType===4}}" class="_li data-v-4a74440c">
+          <image src="/static/images/down.svg" alt class="_img data-v-4a74440c"></image>
+          <image src="/static/images/downbg.svg" alt class="_img data-v-4a74440c"></image>
+        </view>
+      </view>
+      <view class="_div data-v-4a74440c count">
+        <view wx:key="index" key="{{index}}" wx:for="{{countData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-4a74440c"><template data="{{...$root[$kk+'0_'+index], $root}}" is="22ae69d9"></template></view>
+      </view>
+    </scroll-view>
+  </view>
+</template>
