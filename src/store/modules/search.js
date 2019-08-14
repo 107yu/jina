@@ -1,56 +1,49 @@
 import {getSearch} from "../../service/index"
 const state = {
-    searchList:{},
-    searchVal: '',
+    searchList:{}, //搜索的数据
+    searchVal: '', //当前长在搜索的值
     page:1,
     searchTitle: [
         {
             "title":"综合",
-            queryType:'0',
+            queryType:0,
         },
         {
             "title":"最新",
-            queryType:'1',
+            queryType:1,
         },
         {
             "title":"价格",
-            queryType:'2',
+            queryType:2,
         }
     ],
-    currenType:'0',
-    currentVal:""
+    currenType:0,
+    currentValue:""
 }
 
 const mutations = {
-    searchList(state,payload){
+    searchList(state,payload){  //获取搜索的列表
         state.searchList = payload
         // console.log(" state.searchList", state.searchList)
     },
-    getSearchVal(state,payload){
+    getSearchVal(state,payload){ //获取正在输入的值---时时触发
         if(!payload){
             state.searchList = {}
         }
         state.searchVal = payload;
 
     },
-    changeTitle(state,payload){
+    changeType(state,payload){  //当前搜索的排序类型
         state.currenType = payload;
     },
-    currentVal(state,payload){
-        state.currentVal = payload;
+    currentVal(state,payload){ //当前搜索的值
+        state.currentValue = payload;
     }
 }
 
 const actions = {
-    async sendSearch({commit},payload){
-        commit("currentVal",payload)
-        let obj ={
-            "queryWord": payload,
-            "queryType": "0",
-            "querySort": "desc",
-            "pageIndex": 1,
-          }
-        let data = await getSearch(obj)
+    async sendSearch({commit},payload){  //发送请求，获取数据
+        let data = await getSearch(payload)
         commit("searchList", data)
     }
 }

@@ -14,3 +14,8 @@ export let getProducts = code =>{
 export let getList = code =>{
     return fly.post('/api/open/page/home/list/1.0.0')
 }
+
+//获取购物车详情
+export let getSwiperDetail = code =>{
+    return fly.post('/api/open/sepcial/query/1.0.0',code)
+}

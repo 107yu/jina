@@ -1,10 +1,6 @@
 <template>
   <div class="search">
-    <scroll-view 
-      scroll-y 
-      style="height:100%"
-      @scroll="scroll"
-    >
+    <scroll-view scroll-y style="height:100%" @scroll="scroll">
       <div class="main">
         <MySearch searchPage="searchPage">
           <span class="cancel">取消</span>
@@ -70,7 +66,8 @@ export default {
       searchList: state=>state.search.searchList,
       searchVal: state=>state.search.searchVal,
       searchTitle :state=>state.search.searchTitle,
-      currenType: state=>state.search. currenType
+      currenType: state=>state.search.currenType,
+      currentValue: state=>state.search.currentValue
     })
   },
   methods:{
@@ -82,8 +79,21 @@ export default {
         }
       },
     ...mapMutations({
-      changeTitle: "search/changeTitle"
-    })
+      changeType: "search/changeType",
+     
+    }),
+    ...mapActions({
+       sendSearch: "search/sendSearch"
+    }),
+    changeTitle(index){
+      this.sendSearch({
+        "queryWord": this.currentValue,
+        "queryType": this.currenType,
+        "querySort": "desc",
+        "pageIndex": 1,
+      })
+      this.changeType(index)
+    }
   },
   created(){
 

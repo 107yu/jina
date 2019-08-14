@@ -1,17 +1,18 @@
 <template>
     <dl>
         <dt>
-            <img :src="item.imgUrl" alt="">
+            <img :src="img" alt="">
         </dt>
         <dd>
-            <p>{{item.title}}</p>
-            <b>￥{{item.vipPrice}}</b>
+            <p>{{title}}</p>
+            <b>￥{{price}}</b>
+            <slot></slot>
         </dd>
     </dl>
 </template>
 <script>
 export default {
-    props:["item"],
+    props:["title","img","price"],
     components:{
 
     },
@@ -37,13 +38,16 @@ export default {
 <style scoped lang="">
 dl{
     width: 30%;
-    margin-top:10rpx;
     font-size: 28rpx;
-    margin:10rpx 0;
+    background: #fff;
+    border-radius: 10rpx;
+    margin:10rpx 0 0 8rpx;
+    padding: 8rpx;
 }
 dt {
     width: 100%;
     height: 200rpx;
+    text-align: center;
 }
 img{
     width: 100%;

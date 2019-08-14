@@ -420,7 +420,10 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(7);
+
 //
 //
 //
@@ -448,7 +451,18 @@ if (false) {(function () {
     },
 
     computed: {},
-    methods: {},
+    methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+        getSwiperDeatil: "home/swiperDetail"
+    }), {
+        goToDetail: function goToDetail(id) {
+            wx.navigateTo({
+                url: '/pages/swiperDetail/main'
+            });
+            this.getSwiperDeatil({
+                siid: id
+            });
+        }
+    }),
     created: function created() {},
     mounted: function mounted() {}
 });
@@ -474,7 +488,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       key: index
     }, [_c('swiper-item', {
       attrs: {
+        "eventid": '0_' + index,
         "mpcomid": '0_' + index
+      },
+      on: {
+        "click": function($event) {
+          _vm.goToDetail(val.contentValue)
+        }
       }
     }, [_c('image', {
       staticClass: "slide-image",
@@ -681,9 +701,10 @@ if (false) {(function () {
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    props: ["item"],
+    props: ["title", "img", "price"],
     components: {},
     data: function data() {
         return {};
@@ -703,10 +724,12 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('dl', [_c('dt', [_c('img', {
     attrs: {
-      "src": _vm.item.imgUrl,
+      "src": _vm.img,
       "alt": ""
     }
-  })]), _vm._v(" "), _c('dd', [_c('p', [_vm._v(_vm._s(_vm.item.title))]), _vm._v(" "), _c('b', [_vm._v("￥" + _vm._s(_vm.item.vipPrice))])], 1)], 1)
+  })]), _vm._v(" "), _c('dd', [_c('p', [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('b', [_vm._v("￥" + _vm._s(_vm.price))]), _vm._v(" "), _vm._t("default", null, {
+    mpcomid: '0'
+  })], 2)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -905,6 +928,8 @@ if (false) {(function () {
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: ["hotimg", "homeLi"],
@@ -943,7 +968,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     return _c('DlList', {
       key: index,
       attrs: {
-        "item": item,
+        "img": item.imgUrl,
+        "title": item.title,
+        "price": item.vipPrice,
         "mpcomid": '2_' + index
       }
     })
@@ -1051,32 +1078,25 @@ if (false) {(function () {
     };
   },
 
-  computed: {
-    page: function page(state) {
-      return state.search.page;
-    }
-  },
+  computed: {},
   methods: __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["b" /* mapActions */])({
     sendSearch: "search/sendSearch"
   }), Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["c" /* mapMutations */])({
-    getSearchVal: "search/getSearchVal"
+    getSearchVal: "search/getSearchVal",
+    currentVal: "search/currentVal"
   }), {
-    inputVal: function inputVal() {
-      this.getSearchVal(this.value);
-    },
-    search: function search() {
-      var _this = this;
-
+    search: function search(value) {
+      this.currentVal(this.value);
       var arr = [];
       wx.getStorage({
         key: 'history',
         success: function success(res) {
           arr = JSON.parse(res.data);
           var ind = arr.findIndex(function (item) {
-            return item === _this.value;
+            return item === value;
           });
           if (ind === -1) {
-            arr.push(_this.value);
+            arr.push(value);
           }
           wx.setStorage({
             key: "history",
@@ -1084,7 +1104,7 @@ if (false) {(function () {
           });
         },
         fail: function fail() {
-          arr.push(_this.value);
+          arr.push(value);
           wx.setStorage({
             key: "history",
             data: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(arr)
@@ -1092,7 +1112,12 @@ if (false) {(function () {
         }
       });
 
-      this.sendSearch(this.value);
+      this.sendSearch({
+        "queryWord": this.value,
+        "queryType": 0,
+        "querySort": "desc",
+        "pageIndex": 1
+      });
     }
   }),
   created: function created() {},
@@ -1138,11 +1163,15 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "value": (_vm.value)
     },
     on: {
-      "blur": _vm.search,
+      "blur": function($event) {
+        _vm.search(_vm.value)
+      },
       "input": [function($event) {
         if ($event.target.composing) { return; }
         _vm.value = $event.target.value
-      }, _vm.inputVal]
+      }, function($event) {
+        _vm.getSearchVal(_vm.value)
+      }]
     }
   }), _vm._v(" "), _c('img', {
     attrs: {

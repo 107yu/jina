@@ -1,6 +1,6 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([6],{
+global.webpackJsonpMpvue([7],{
 
 /***/ 178:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -142,10 +142,6 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -170,6 +166,9 @@ if (false) {(function () {
     },
     currenType: function currenType(state) {
       return state.search.currenType;
+    },
+    currentValue: function currentValue(state) {
+      return state.search.currentValue;
     }
   })),
   methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({
@@ -181,8 +180,21 @@ if (false) {(function () {
       }
     }
   }, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapMutations */])({
-    changeTitle: "search/changeTitle"
-  })),
+    changeType: "search/changeType"
+
+  }), Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+    sendSearch: "search/sendSearch"
+  }), {
+    changeTitle: function changeTitle(index) {
+      this.sendSearch({
+        "queryWord": this.currentValue,
+        "queryType": this.currenType,
+        "querySort": "desc",
+        "pageIndex": 1
+      });
+      this.changeType(index);
+    }
+  }),
   created: function created() {},
   mounted: function mounted() {
     var _this = this;

@@ -1,6 +1,6 @@
 <template>
     <div class="input">
-      <input type="text" class="search" @blur="search" v-model="value" @input="inputVal">
+      <input type="text" class="search" @blur="search(value)" v-model="value" @input="getSearchVal(value)">
       <img  src="/static/images/搜索.svg" alt="">
       <slot></slot>
     </div>
@@ -21,27 +21,26 @@ export default {
         }
     },
     computed:{
-      page: state=>state.search.page
+      
     },
     methods:{
       ...mapActions({
-        sendSearch: "search/sendSearch"
+        sendSearch: "search/sendSearch",
       }),
       ...mapMutations({
-        getSearchVal: "search/getSearchVal"
+        getSearchVal: "search/getSearchVal",
+        currentVal: "search/currentVal"
       }),
-      inputVal(){
-        this.getSearchVal(this.value)
-      },
-       search(){
+       search(value){
+        this.currentVal(this.value)
         let arr = [];
         wx.getStorage({
           key: 'history',
           success: (res)=> {
             arr = JSON.parse(res.data)
-            let ind =arr.findIndex(item=>item===this.value)
+            let ind =arr.findIndex(item=>item===value)
             if(ind === -1){
-              arr.push(this.value)
+              arr.push(value)
             }
             wx.setStorage({
               key: "history",
@@ -49,7 +48,7 @@ export default {
             })
           },
           fail: ()=>{
-            arr.push(this.value)
+            arr.push(value)
             wx.setStorage({
               key: "history",
               data: JSON.stringify(arr)
@@ -57,7 +56,12 @@ export default {
           }
         })
         
-        this.sendSearch(this.value)
+        this.sendSearch({
+          "queryWord": this.value,
+          "queryType": 0,
+          "querySort": "desc",
+          "pageIndex": 1,
+        })
        }
     },
     created(){

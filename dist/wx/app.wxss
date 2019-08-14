@@ -46,12 +46,10 @@ page {
 }
 .swiperBox.data-v-53687ae0 {
   width: 100%;
-  height: 300rpx;
   overflow: hidden;
 }
 .swiperBox .slide-image.data-v-53687ae0 {
   width: 100%;
-  height: 100%;
 }
 .title.data-v-86853e6c {
   display: flex;
@@ -88,13 +86,16 @@ page {
 }
 ._dl.data-v-c3a7b040 {
   width: 30%;
-  margin-top: 10rpx;
   font-size: 28rpx;
-  margin: 10rpx 0;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 10rpx 0 0 8rpx;
+  padding: 8rpx;
 }
 ._dt.data-v-c3a7b040 {
   width: 100%;
   height: 200rpx;
+  text-align: center;
 }
 ._img.data-v-c3a7b040 {
   width: 100%;
