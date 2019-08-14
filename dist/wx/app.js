@@ -311,6 +311,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   return _c('div', {
     staticClass: "header"
   }, [_c('scroll-view', {
+    staticStyle: {
+      "height": "100%"
+    },
     attrs: {
       "scroll-x": ""
     }

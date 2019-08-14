@@ -139,6 +139,8 @@ var _data$components$data;
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = (_data$components$data = {
@@ -180,7 +182,14 @@ var _data$components$data;
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "home"
+    staticClass: "wrap"
+  }, [_c('scroll-view', {
+    staticStyle: {
+      "height": "100%"
+    },
+    attrs: {
+      "scroll-y": ""
+    }
   }, [_c('div', {
     attrs: {
       "eventid": '0'
@@ -248,7 +257,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "homeLi": _vm.homeLists[13] && _vm.homeLists[13].items,
       "mpcomid": '8'
     }
-  })], 1)
+  })], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

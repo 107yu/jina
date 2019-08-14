@@ -12,5 +12,5 @@ export let getProducts = code =>{
 
 //获取首页大部分数据
 export let getList = code =>{
-    return fly.post('/api/open/page/home/list//1.0.0')
+    return fly.post('/api/open/page/home/list/1.0.0')
 }
