@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <scroll-view scroll-x>
+        <scroll-view scroll-x style="height:100%">
             <ul>
                 <li v-for="(item,index) in titles" :key="index" @click="changeTitle(index)">
                     <span :class="{'strong':index===ind}">{{item.cname}}</span>
@@ -41,7 +41,7 @@ export default {
 <style scoped lang="">
 .header{
   width: 100%;
-  height:200rpx;
+  height:100rpx;
 }
 ul{
     display: flex;

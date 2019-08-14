@@ -45,7 +45,7 @@ export default {
 .swiperBox{
     width: 100%;
     height: 300rpx;
-    
+    overflow: hidden;
 }
 .swiperBox .slide-image{
     width: 100%;

@@ -1,5 +1,5 @@
 {
-  "pages": [
+  "pages": [   
     "pages/home/main",
     "pages/flashSale/main",
     "pages/special/main",
@@ -42,6 +42,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap85.json"
+  }
 }
