@@ -7445,11 +7445,11 @@ var Fly = __webpack_require__(91);
 var fly = new Fly();
 
 //定义公共headers
-// fly.config.headers={
-//   "content-type":"application/x-www-form-urlencoded"
-// }
-//设置超时
-fly.config.timeout = 10000;
+fly.config.headers = {
+    "content-type": "application/x-www-form-urlencoded"
+
+    //设置超时
+};fly.config.timeout = 10000;
 //设置请求基地址
 // fly.config.baseURL = "https://sign.jasonandjay.com"
 fly.config.baseURL = "https://upapi.jinaup.com";
@@ -10775,9 +10775,9 @@ var getComNav = function getComNav(code) {
     return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/category/query/1.0.0');
 };
 
-var getCount = function getCount(code) {
-    console.log(code);
-    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/category/productList/1.0.0', { pageIndex: code.pageIndex, cid: code.cid, sortType: code.sortType });
+//获取分类列表
+var getCount = function getCount(params) {
+    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/category/productList/1.0.0', params);
 };
 
 /***/ }),
@@ -10841,12 +10841,18 @@ var getCount = function getCount(code) {
             cname: '价格',
             sortType: 3
         }],
-        countData: []
+        countData: [],
+        current: {
+            pageIndex: 1,
+            cid: 1,
+            sortType: 1
+        }
     },
     mutations: {
-        //tab切换
+        //顶部tab切换
         tabNav: function tabNav(state, payload) {
             state.ind = payload.index;
+            //第二块
             state.headData = state.navData.find(function (item) {
                 return item.cid === payload.id;
             }).childs;
@@ -10856,6 +10862,32 @@ var getCount = function getCount(code) {
         updateNav: function updateNav(state, payload) {
             state.navData = payload;
             state.headData = payload[0].childs;
+        },
+
+        //列表数据
+        updatecountData: function updatecountData(state, payload) {
+            state.countData = payload;
+        },
+
+        //综合价格切换
+        sortTabs: function sortTabs(state, payload) {
+            if (payload.sortType === 3) {
+                payload.sortType = 4;
+                state.newNav[2].sortType = 4;
+            } else if (payload.sortType === 4) {
+                payload.sortType = 3;
+                state.newNav[2].sortType = 3;
+            }
+            state.current.sortType = payload.sortType;
+            state.current.cid = state.navData.find(function (item, index) {
+                return state.ind === index;
+            }).cid;
+            state.current.pageIndex;
+        },
+
+        //上拉加载
+        updatepull: function updatepull(state, payload) {
+            // ++state.current.pageIndex
         }
     },
     getters: {},
@@ -10876,7 +10908,6 @@ var getCount = function getCount(code) {
                             case 2:
                                 data = _context.sent;
 
-                                // console.log(data)
                                 if (data.res_code === 1) {
                                     commit('updateNav', data.result);
                                 }
@@ -10905,10 +10936,9 @@ var getCount = function getCount(code) {
                             case 2:
                                 data = _context2.sent;
 
-                                console.log(data);
-                                // if (data.res_code === 1) {
-                                //     commit('updateNav', data.result)
-                                // }
+                                if (data.res_code === 1) {
+                                    commit('updatecountData', data.result);
+                                }
 
                             case 4:
                             case 'end':

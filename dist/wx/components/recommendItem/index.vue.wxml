@@ -1,15 +1,15 @@
 <template name="5de819dd">
   <view class="_dl data-v-c6695bba">
     <view class="_dt data-v-c6695bba">
-      <view class="_div data-v-c6695bba small_img"></view>
+      <image src="{{item.mainImgUrl}}" alt class="_img data-v-c6695bba"></image>
     </view>
     <view class="_dd data-v-c6695bba">
-      <view class="_h1 data-v-c6695bba">家宝 Gerber HDN+ 益生菌大米米粉4M+ 227g</view>
+      <view class="_h1 data-v-c6695bba">{{item.title}}</view>
       <view class="_p data-v-c6695bba">包税</view>
       <view class="_h2 data-v-c6695bba">
-        <view class="_h3 data-v-c6695bba"><label class="_span data-v-c6695bba">￥22</label></view>
+        <view class="_h3 data-v-c6695bba"><label class="_span data-v-c6695bba">￥{{item.salesPrice}}</label></view>
         <view class="_h4 data-v-c6695bba">
-          <view class="_h5 data-v-c6695bba">￥216</view> <label class="_span data-v-c6695bba">赚￥20</label>
+          <view class="_h5 data-v-c6695bba">￥{{item.vipPrice}}</view> <label class="_span data-v-c6695bba">赚￥{{item.memberDiscountPrice}}</label>
         </view>
       </view>
     </view>

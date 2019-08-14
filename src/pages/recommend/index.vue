@@ -11,9 +11,9 @@
         >{{item.cname}}</p>
       </div>
     </scroll-view>
-    <section>
+    <scroll-view scroll-y @scroll="scrollload" class="section">
       <div class="head">
-        <dl v-for="(item,index) in headData" :key="index">
+        <dl v-for="(item,index) in headData" :key="index" @click="headClick(item.cid)">
           <dt>
             <img :src="item.imgUrl" alt />
           </dt>
@@ -21,20 +21,26 @@
         </dl>
       </div>
       <ul>
-        <li v-for="(item,index) in newNav" :key="index">{{item.cname}}</li>
+        <li
+          v-for="(item,index) in newNav"
+          :key="index"
+          @click="sortTab(item.sortType)"
+        >{{item.cname}}</li>
+        <li v-if="newNav[2].sortType===3">
+          <img src="/static/images/downbg.svg" alt />
+          <img src="/static/images/down.svg" alt />
+        </li>
+        <li v-if="newNav[2].sortType===4">
+          <img src="/static/images/down.svg" alt />
+          <img src="/static/images/downbg.svg" alt />
+        </li>
       </ul>
       <div class="count">
-        <div>
-          <recommendItem />
-        </div>
-         <div>
-          <recommendItem />
-        </div>
-         <div>
-          <recommendItem />
+        <div v-for="(item,index) in countData" :key="index">
+          <recommendItem :item="item" />
         </div>
       </div>
-    </section>
+    </scroll-view>
   </div>
 </template>
 <script>
@@ -50,23 +56,71 @@ export default {
       navData: state => state.recommend.navData,
       ind: state => state.recommend.ind,
       headData: state => state.recommend.headData,
-      newNav: state => state.recommend.newNav
+      newNav: state => state.recommend.newNav,
+      countData: state => state.recommend.countData,
+      current: state => state.recommend.current
     })
   },
   methods: {
     ...mapMutations({
-      tabNav: "recommend/tabNav"
+      tabNav: "recommend/tabNav",
+      sortTabs: "recommend/sortTabs",
+      updatepull: "recommend/updatepull"
     }),
-    tab(index, id) {
-      this.tabNav({ index: index, id: id });
-    },
     ...mapActions({
       getNavData: "recommend/getNavData",
       getCountData: "recommend/getCountData"
-    })
+    }),
+    //顶部tab切换
+    tab(index, id) {
+      this.tabNav({ index: index, id: id });
+      //顶部切换时联动下面数据
+      this.getCountData({
+        pageIndex: this.current.pageIndex,
+        cid: id,
+        sortType: this.current.sortType
+      });
+      this.mask();
+    },
+    //综合价格切换
+    sortTab(sortType) {
+      this.sortTabs({ sortType });
+      this.getCountData({
+        pageIndex: this.current.pageIndex,
+        cid: this.current.cid,
+        sortType: this.current.sortType
+      });
+      this.mask();
+    },
+    //点击head 第二块也切换视图
+    headClick(id) {
+      this.getCountData({
+        pageIndex: this.current.pageIndex,
+        cid: id,
+        sortType: this.current.sortType
+      });
+      this.mask();
+    },
+    mask() {
+      wx.showLoading({
+        title: "加载中",
+        mask: true
+      });
+      setTimeout(function() {
+        wx.hideLoading();
+      }, 500);
+    },
+    //滚动事件
+    scrollload() {
+      // this.updatepull()
+      // ++this.current.pageIndex
+      // console.log(this.current.pageIndex)
+    }
   },
   created() {
+    //头部
     this.getNavData();
+    //列表
     this.getCountData({ pageIndex: 1, cid: 1, sortType: 1 });
   },
   mounted() {}
@@ -102,7 +156,7 @@ export default {
       }
     }
   }
-  section {
+  .section {
     flex: 1;
     overflow: scroll;
     background: #f3f7f7;
@@ -110,6 +164,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       background: #fff;
+      padding: 25rpx 0;
       dl {
         width: 25%;
         height: 25%;
@@ -134,18 +189,30 @@ export default {
       font-size: 32rpx;
       margin-top: 20rpx;
       background: #fff;
-
-      li {
+      position: relative;
+      li:last-child {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 65rpx;
+        img:first-child {
+          transform: rotate(270deg);
+        }
+        img {
+          width: 23rpx;
+          height: 23rpx;
+          transform: rotate(90deg);
+        }
       }
       .bg {
         color: #fc5d7b;
       }
     }
     .count {
-      margin-top: 20rpx;
+      margin-top: 3rpx;
       display: flex;
       flex-wrap: wrap;
-      div{
+      div {
         width: 48.5%;
         background: #fff;
         border-radius: 5px;

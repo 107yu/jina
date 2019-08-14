@@ -138,6 +138,12 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -159,20 +165,75 @@ if (false) {(function () {
     },
     newNav: function newNav(state) {
       return state.recommend.newNav;
+    },
+    countData: function countData(state) {
+      return state.recommend.countData;
+    },
+    current: function current(state) {
+      return state.recommend.current;
     }
   })),
   methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* mapMutations */])({
-    tabNav: "recommend/tabNav"
-  }), {
-    tab: function tab(index, id) {
-      this.tabNav({ index: index, id: id });
-    }
-  }, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+    tabNav: "recommend/tabNav",
+    sortTabs: "recommend/sortTabs",
+    updatepull: "recommend/updatepull"
+  }), Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
     getNavData: "recommend/getNavData",
     getCountData: "recommend/getCountData"
-  })),
+  }), {
+    //顶部tab切换
+    tab: function tab(index, id) {
+      this.tabNav({ index: index, id: id });
+      //顶部切换时联动下面数据
+      this.getCountData({
+        pageIndex: this.current.pageIndex,
+        cid: id,
+        sortType: this.current.sortType
+      });
+      this.mask();
+    },
+
+    //综合价格切换
+    sortTab: function sortTab(sortType) {
+      this.sortTabs({ sortType: sortType });
+      this.getCountData({
+        pageIndex: this.current.pageIndex,
+        cid: this.current.cid,
+        sortType: this.current.sortType
+      });
+      this.mask();
+    },
+
+    //点击head 第二块也切换视图
+    headClick: function headClick(id) {
+      this.getCountData({
+        pageIndex: this.current.pageIndex,
+        cid: id,
+        sortType: this.current.sortType
+      });
+      this.mask();
+    },
+    mask: function mask() {
+      wx.showLoading({
+        title: "加载中",
+        mask: true
+      });
+      setTimeout(function () {
+        wx.hideLoading();
+      }, 500);
+    },
+
+    //滚动事件
+    scrollload: function scrollload() {
+      // this.updatepull()
+      // ++this.current.pageIndex
+      // console.log(this.current.pageIndex)
+    }
+  }),
   created: function created() {
+    //头部
     this.getNavData();
+    //列表
     this.getCountData({ pageIndex: 1, cid: 1, sortType: 1 });
   },
   mounted: function mounted() {}
@@ -206,36 +267,78 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         }
       }
     }, [_vm._v(_vm._s(item.cname))])
-  })], 2)]), _vm._v(" "), _c('section', [_c('div', {
+  })], 2)]), _vm._v(" "), _c('scroll-view', {
+    staticClass: "section",
+    attrs: {
+      "scroll-y": "",
+      "eventid": '3'
+    },
+    on: {
+      "scroll": _vm.scrollload
+    }
+  }, [_c('div', {
     staticClass: "head"
   }, _vm._l((_vm.headData), function(item, index) {
     return _c('dl', {
-      key: index
+      key: index,
+      attrs: {
+        "eventid": '1_' + index
+      },
+      on: {
+        "click": function($event) {
+          _vm.headClick(item.cid)
+        }
+      }
     }, [_c('dt', [_c('img', {
       attrs: {
         "src": item.imgUrl,
         "alt": ""
       }
     })]), _vm._v(" "), _c('dd', [_vm._v(_vm._s(item.cname))])], 1)
-  })), _vm._v(" "), _c('ul', _vm._l((_vm.newNav), function(item, index) {
+  })), _vm._v(" "), _c('ul', [_vm._l((_vm.newNav), function(item, index) {
     return _c('li', {
-      key: index
+      key: index,
+      attrs: {
+        "eventid": '2_' + index
+      },
+      on: {
+        "click": function($event) {
+          _vm.sortTab(item.sortType)
+        }
+      }
     }, [_vm._v(_vm._s(item.cname))])
-  })), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), (_vm.newNav[2].sortType === 3) ? _c('li', [_c('img', {
+    attrs: {
+      "src": "/static/images/downbg.svg",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "/static/images/down.svg",
+      "alt": ""
+    }
+  })]) : _vm._e(), _vm._v(" "), (_vm.newNav[2].sortType === 4) ? _c('li', [_c('img', {
+    attrs: {
+      "src": "/static/images/down.svg",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "/static/images/downbg.svg",
+      "alt": ""
+    }
+  })]) : _vm._e()], 2), _vm._v(" "), _c('div', {
     staticClass: "count"
-  }, [_c('div', [_c('recommendItem', {
-    attrs: {
-      "mpcomid": '0'
-    }
-  })], 1), _vm._v(" "), _c('div', [_c('recommendItem', {
-    attrs: {
-      "mpcomid": '1'
-    }
-  })], 1), _vm._v(" "), _c('div', [_c('recommendItem', {
-    attrs: {
-      "mpcomid": '2'
-    }
-  })], 1)])], 1)], 1)
+  }, _vm._l((_vm.countData), function(item, index) {
+    return _c('div', {
+      key: index
+    }, [_c('recommendItem', {
+      attrs: {
+        "item": item,
+        "mpcomid": '0_' + index
+      }
+    })], 1)
+  }))], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

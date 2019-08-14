@@ -1013,7 +1013,9 @@ if (false) {(function () {
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  props: {},
+  props: {
+    item: Object
+  },
   components: {},
   data: function data() {
     return {};
@@ -1022,9 +1024,11 @@ if (false) {(function () {
   computed: {},
   methods: {},
   created: function created() {
-    wx.setNavigationBarTitle({ title: "惊喜特惠 致敬新年" });
+    // wx.setNavigationBarTitle({ title: "惊喜特惠 致敬新年" });
   },
-  mounted: function mounted() {}
+  mounted: function mounted() {
+    console.log();
+  }
 });
 
 /***/ }),
@@ -1033,9 +1037,12 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('dl', [_c('dt', [_c('div', {
-    staticClass: "small_img"
-  })]), _vm._v(" "), _c('dd', [_c('h1', [_vm._v("家宝 Gerber HDN+ 益生菌大米米粉4M+ 227g")]), _vm._v(" "), _c('p', [_vm._v("包税")]), _vm._v(" "), _c('h2', [_c('h3', [_c('span', [_vm._v("￥22")])]), _vm._v(" "), _c('h4', [_c('h5', [_vm._v("￥216")]), _vm._v(" "), _c('span', [_vm._v("赚￥20")])], 1)], 1)], 1)], 1)
+  return _c('dl', [_c('dt', [_c('img', {
+    attrs: {
+      "src": _vm.item.mainImgUrl,
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('dd', [_c('h1', [_vm._v(_vm._s(_vm.item.title))]), _vm._v(" "), _c('p', [_vm._v("包税")]), _vm._v(" "), _c('h2', [_c('h3', [_c('span', [_vm._v("￥" + _vm._s(_vm.item.salesPrice))])]), _vm._v(" "), _c('h4', [_c('h5', [_vm._v("￥" + _vm._s(_vm.item.vipPrice))]), _vm._v(" "), _c('span', [_vm._v("赚￥" + _vm._s(_vm.item.memberDiscountPrice))])], 1)], 1)], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
