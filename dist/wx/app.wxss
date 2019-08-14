@@ -106,22 +106,32 @@ page {
   margin: 0 2%;
   border-radius: 30rpx;
 }
-._dl {
+._dl.data-v-c6695bba {
   padding: 20rpx 20rpx;
 }
-._dl ._dt .small_img {
+._dl ._dt .small_img.data-v-c6695bba {
   background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
 }
-._dl ._dd ._h1 {
+._dl ._dd ._h1.data-v-c6695bba {
   font-size: 30rpx;
 }
-._dl ._dd ._h2 ._h3 {
+._dl ._dd ._p.data-v-c6695bba {
+  border: 2rpx solid #fc5d7b;
+  display: inline-block;
   color: #fc5d7b;
 }
-._dl ._dd ._h2 ._h4 {
+._dl ._dd ._h2 ._h3.data-v-c6695bba {
+  color: #fc5d7b;
+}
+._dl ._dd ._h2 ._h4.data-v-c6695bba {
   color: #666;
-  text-decoration: line-through;
   font-size: 25rpx;
-  margin-left: 20rpx;
   margin-top: 20rpx;
+  display: flex;
+}
+._dl ._dd ._h2 ._h4 ._h5.data-v-c6695bba {
+  text-decoration: line-through;
+}
+._dl ._dd ._h2 ._h4 ._span.data-v-c6695bba {
+  color: #fc5d7b;
 }

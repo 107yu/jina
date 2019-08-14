@@ -12,6 +12,7 @@ import HomeBar from "./components/homeBar/homeBar.vue"
 import DlList from "./components/dlList/dlList.vue"
 import HotImg from "./components/hotImg/hotImg.vue"
 import specialItem from './components/specialItem'
+import recommendItem from './components/recommendItem'
 
 
 //挂载：
@@ -21,6 +22,7 @@ Vue.component("HomeBar",HomeBar)
 Vue.component("DlList",DlList)
 Vue.component("HotImg",HotImg)
 Vue.component('specialItem', specialItem)
+Vue.component('recommendItem', recommendItem)
 
 
 //挂载store

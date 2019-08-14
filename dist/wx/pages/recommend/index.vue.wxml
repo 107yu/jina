@@ -1,0 +1,28 @@
+<import src="/components/recommendItem/index.vue.wxml" /><template name="65d2808c">
+  <view class="_div data-v-4a74440c box">
+    <scroll-view scroll-x class="_scroll-view data-v-4a74440c">
+      <view class="_div data-v-4a74440c box_nav">
+        <view class="_p data-v-4a74440c">今日推荐</view>
+        <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{navData}}" wx:for-index="index" wx:for-item="item" class="_p data-v-4a74440c {{index === ind ? 'active' : null}}">{{item.cname}}</view>
+      </view>
+    </scroll-view>
+    <view class="_section data-v-4a74440c">
+      <view class="_div data-v-4a74440c head">
+        <view wx:key="index" key="{{index}}" wx:for="{{headData}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-4a74440c">
+          <view class="_dt data-v-4a74440c">
+            <image src="{{item.imgUrl}}" alt class="_img data-v-4a74440c"></image>
+          </view>
+          <view class="_dd data-v-4a74440c">{{item.cname}}</view>
+        </view>
+      </view>
+      <view class="_ul data-v-4a74440c">
+        <view wx:key="index" key="{{index}}" wx:for="{{newNav}}" wx:for-index="index" wx:for-item="item" class="_li data-v-4a74440c">{{item.cname}}</view>
+      </view>
+      <view class="_div data-v-4a74440c count">
+        <view class="_div data-v-4a74440c"><template data="{{...$root[$kk+'0'], $root}}" is="5de819dd"></template></view>
+        <view class="_div data-v-4a74440c"><template data="{{...$root[$kk+'1'], $root}}" is="5de819dd"></template></view>
+        <view class="_div data-v-4a74440c"><template data="{{...$root[$kk+'2'], $root}}" is="5de819dd"></template></view>
+      </view>
+    </view>
+  </view>
+</template>

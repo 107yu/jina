@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/home/main",
+    "pages/recommend/main",
     "pages/special/main",
+    "pages/home/main",
     "pages/shoppingcar/main",
     "pages/my/main"
   ],
@@ -37,5 +38,6 @@
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap77.json"
 }
