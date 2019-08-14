@@ -1,15 +1,15 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([7],{
+global.webpackJsonpMpvue([9],{
 
-/***/ 122:
+/***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(137);
 
 
 
@@ -25,16 +25,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 123:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_7ec8f392_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_7ec8f392_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(150);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(124)
+  __webpack_require__(138)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,39 +79,27 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 124:
+/***/ 138:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 125:
+/***/ 139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex__ = __webpack_require__(16);
+
+
+
+var _data$components$data;
+
 //
 //
 //
@@ -152,126 +140,115 @@ if (false) {(function () {
 //
 //
 
-/* harmony default export */ __webpack_exports__["a"] = ({
+
+/* harmony default export */ __webpack_exports__["a"] = (_data$components$data = {
   data: function data() {
     return {};
   },
 
-
-  components: {},
-
-  methods: {
-    show: function show() {
-      wx.showToast({
-        title: "请输入正确的邀请码",
-        icon: "none",
-        duration: 1000
-      });
-    }
+  components: {}
+}, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default()(_data$components$data, "data", function data() {
+  return {};
+}), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default()(_data$components$data, "computed", __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["d" /* mapState */])({
+  homeLists: function homeLists(state) {
+    return state.home.homeLists;
   },
-
-  created: function created() {}
-});
+  categories: function categories(state) {
+    return state.home.categories;
+  }
+}))), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default()(_data$components$data, "methods", __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["b" /* mapActions */])({
+  getCategoryLists: "home/getCategoryLists",
+  getProductLists: "home/getProductLists",
+  getHomeList: "home/getHomeList"
+}), {
+  goToSearch: function goToSearch() {
+    wx.navigateTo({
+      url: '/pages/search/main'
+    });
+  }
+})), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default()(_data$components$data, "created", function created() {}), __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default()(_data$components$data, "mounted", function mounted() {
+  this.getCategoryLists();
+  this.getProductLists();
+  this.getHomeList();
+}), _data$components$data);
 
 /***/ }),
 
-/***/ 126:
+/***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wrap"
-  }, [_c('image', {
-    attrs: {
-      "src": "/static/images/5.jpg",
-      "alt": ""
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "refer"
-  }, [_c('input', {
-    attrs: {
-      "type": "text",
-      "placeholder": "请输入邀请码"
-    }
-  }), _vm._v(" "), _c('button', {
+    staticClass: "home"
+  }, [_c('div', {
     attrs: {
       "eventid": '0'
     },
     on: {
-      "click": _vm.show
+      "click": _vm.goToSearch
     }
-  }, [_vm._v("提交")])], 1), _vm._v(" "), _c('div', {
-    staticClass: "hint"
-  }, [_vm._v("- 无邀请码可选择以下团队加入 -")]), _vm._v(" "), _c('ul', {
-    staticClass: "list"
-  }, [_c('li', [_c('image', {
+  }, [_c('MySearch', {
     attrs: {
-      "src": "../../static/images/2.png",
-      "alt": ""
+      "mpcomid": '0'
+    }
+  })], 1), _vm._v(" "), _c('TapTitle', {
+    attrs: {
+      "titles": _vm.categories,
+      "mpcomid": '1'
+    }
+  }), _vm._v(" "), _c('MySwiper', {
+    attrs: {
+      "swiperList": _vm.homeLists[0] && _vm.homeLists[0].items,
+      "mpcomid": '2'
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('p', {
-    staticClass: "name"
-  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
-    staticClass: "group"
-  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+    staticClass: "introduce"
+  }, _vm._l((_vm.homeLists[1] && _vm.homeLists[1].items), function(item, index) {
+    return _c('dl', {
+      key: index
+    }, [_c('dt', [_c('img', {
+      attrs: {
+        "src": item.imgUrl,
+        "alt": ""
+      }
+    })]), _vm._v(" "), _c('dd', [_vm._v(_vm._s(item.title))])], 1)
+  })), _vm._v(" "), _c('HotImg', {
     attrs: {
-      "src": "../../static/images/2.png",
-      "alt": ""
+      "hotimg": _vm.homeLists[2] && _vm.homeLists[2],
+      "mpcomid": '3'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('p', {
-    staticClass: "name"
-  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
-    staticClass: "group"
-  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+  }), _vm._v(" "), _c('HomeRecommend', {
     attrs: {
-      "src": "../../static/images/2.png",
-      "alt": ""
+      "hotimg": _vm.homeLists[4] && _vm.homeLists[4],
+      "homeLi": _vm.homeLists[5] && _vm.homeLists[5].items,
+      "mpcomid": '4'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('p', {
-    staticClass: "name"
-  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
-    staticClass: "group"
-  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+  }), _vm._v(" "), _c('HomeRecommend', {
     attrs: {
-      "src": "../../static/images/2.png",
-      "alt": ""
+      "hotimg": _vm.homeLists[6] && _vm.homeLists[6],
+      "homeLi": _vm.homeLists[7] && _vm.homeLists[7].items,
+      "mpcomid": '5'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('p', {
-    staticClass: "name"
-  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
-    staticClass: "group"
-  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+  }), _vm._v(" "), _c('HomeRecommend', {
     attrs: {
-      "src": "../../static/images/2.png",
-      "alt": ""
+      "hotimg": _vm.homeLists[8] && _vm.homeLists[8],
+      "homeLi": _vm.homeLists[9] && _vm.homeLists[9].items,
+      "mpcomid": '6'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('p', {
-    staticClass: "name"
-  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
-    staticClass: "group"
-  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])]), _vm._v(" "), _c('li', [_c('image', {
+  }), _vm._v(" "), _c('HomeRecommend', {
     attrs: {
-      "src": "../../static/images/2.png",
-      "alt": ""
+      "hotimg": _vm.homeLists[10] && _vm.homeLists[10],
+      "homeLi": _vm.homeLists[11] && _vm.homeLists[11].items,
+      "mpcomid": '7'
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('p', {
-    staticClass: "name"
-  }, [_vm._v("无敌放屁猫")]), _vm._v(" "), _c('p', {
-    staticClass: "group"
-  }, [_vm._v("团队人数:13254651561")])], 1), _vm._v(" "), _c('span', [_vm._v("立即加入")])])], 1)], 1)
+  }), _vm._v(" "), _c('HomeRecommend', {
+    attrs: {
+      "hotimg": _vm.homeLists[12] && _vm.homeLists[12],
+      "homeLi": _vm.homeLists[13] && _vm.homeLists[13].items,
+      "mpcomid": '8'
+    }
+  })], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -286,4 +263,4 @@ if (false) {
 
 /***/ })
 
-},[122]);
+},[136]);

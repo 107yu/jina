@@ -43,12 +43,16 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  
 }
 page {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  box-sizing: border-box;
+ box-sizing: border-box
 }
 .wrap section {
   flex: 1;

@@ -1,0 +1,5 @@
+<import src="/components/slots" /><template name="01b70510">
+  <view class="_div data-v-7f1914c0 input"><template name="default"></template><input type="text" class="_input data-v-7f1914c0 search" />
+    <image src="/static/images/搜索.svg" alt class="_img data-v-7f1914c0"></image> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
+  </view>
+</template>

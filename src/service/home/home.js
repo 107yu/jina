@@ -1,16 +1,16 @@
 import fly from '@/utils/request';
 
 //获取首页头部：
-export let getProduct = code=>{
-    return fly.post('/api/open/product/category/sub/1',{parentId:0});
+export let getCategories = code=>{
+    return fly.post('/api/open/product/category/query/1.0.0');
 }
 
-// //获取首页数据
-export let getList1 = code =>{
+//获取首页为你精选的数据
+export let getProducts = code =>{
     return fly.post('/api/open/page/home/products/1.0.0')
 }
 
-
+//获取首页大部分数据
 export let getList = code =>{
     return fly.post('/api/open/page/home/list//1.0.0')
 }

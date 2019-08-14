@@ -1,0 +1,28 @@
+
+.home.data-v-65da811a {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.introduce.data-v-65da811a {
+  display: flex;
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  margin: 20rpx 0;
+}
+.introduce ._dl.data-v-65da811a {
+  flex: 1;
+  text-align: center;
+}
+.introduce ._dt.data-v-65da811a {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.introduce ._dt ._img.data-v-65da811a {
+  width: 100%;
+  height: 100%;
+}

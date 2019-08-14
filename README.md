@@ -1,8 +1,11 @@
-# jina
+# 仿积纳有品小程序
 
-> A Mpvue project
+## 
 
-## Build Setup
+- 首页
+ - 分类
+- 购物车
+- 我的
 
 ``` bash
 # 初始化项目
@@ -33,5 +36,3 @@ npm build:my
 # 生成 bundle 分析报告
 npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

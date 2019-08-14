@@ -1,3 +1,78 @@
 <template name="1f6bc598">
-  <view class="_div data-v-30d2de04">my</view>
+  <view class="_div data-v-30d2de04 wrap">
+    <view class="_header data-v-30d2de04">
+      <view class="_dl data-v-30d2de04">
+        <view class="_dt data-v-30d2de04">
+          <image src="/static/my/user.svg" alt class="_img data-v-30d2de04"></image>
+        </view>
+        <view class="_dd data-v-30d2de04">
+          <view class="_p data-v-30d2de04 name"> dhsjfhjsdhfjd </view>
+          <view class="_p data-v-30d2de04 codeNum"> 邀请码：gfghhhh <label bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_span data-v-30d2de04">复制</label></view>
+        </view>
+      </view>
+    </view>
+    <view class="_section data-v-30d2de04">
+      <view class="_div data-v-30d2de04 sec-top">
+        <view class="_div data-v-30d2de04 top">
+          <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_h3 data-v-30d2de04">我的订单</view>
+          <view class="_div data-v-30d2de04">查看所有的订单<image src="/static/my/next.svg" alt class="_img data-v-30d2de04"></image>
+          </view>
+        </view>
+        <view class="_div data-v-30d2de04 wallet">
+          <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_dl data-v-30d2de04">
+            <view class="_dt data-v-30d2de04">
+              <image src="/static/my/payment.svg" alt class="_img data-v-30d2de04"></image>
+            </view>
+            <view class="_dd data-v-30d2de04">待付款</view>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_dl data-v-30d2de04">
+            <view class="_dt data-v-30d2de04">
+              <image src="/static/my/shipments.svg" alt class="_img data-v-30d2de04"></image>
+            </view>
+            <view class="_dd data-v-30d2de04">待发货</view>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_dl data-v-30d2de04">
+            <view class="_dt data-v-30d2de04">
+              <image src="/static/my/receiving.svg" alt class="_img data-v-30d2de04"></image>
+            </view>
+            <view class="_dd data-v-30d2de04">待收货</view>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_dl data-v-30d2de04">
+            <view class="_dt data-v-30d2de04">
+              <image src="/static/my/refund.svg" alt class="_img data-v-30d2de04"></image>
+            </view>
+            <view class="_dd data-v-30d2de04">退款退货</view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-30d2de04 msg">
+        <view class="_ul data-v-30d2de04">
+          <view bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_li data-v-30d2de04">
+            <view class="_div data-v-30d2de04">
+              <image class="_img data-v-30d2de04 img1" src="/static/my/tp1.svg" alt></image> <label class="_span data-v-30d2de04">我的优惠卷</label>
+            </view>
+            <image class="_img data-v-30d2de04 img2" src="/static/my/next.svg" alt></image>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_li data-v-30d2de04">
+            <view class="_div data-v-30d2de04">
+              <image class="_img data-v-30d2de04 img1" src="/static/my/tp2.svg" alt></image> <label class="_span data-v-30d2de04">收货地址</label>
+            </view>
+            <image class="_img data-v-30d2de04 img2" src="/static/my/next.svg" alt></image>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_li data-v-30d2de04">
+            <view class="_div data-v-30d2de04">
+              <image class="_img data-v-30d2de04 img1" src="/static/my/tp3.svg" alt></image> <label class="_span data-v-30d2de04">联系客服</label>
+            </view>
+            <image class="_img data-v-30d2de04 img2" src="/static/my/next.svg" alt></image>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_li data-v-30d2de04">
+            <view class="_div data-v-30d2de04">
+              <image class="_img data-v-30d2de04 img1" src="/static/my/tp5.svg" alt></image> <label class="_span data-v-30d2de04">实名认证</label>
+            </view>
+            <image class="_img data-v-30d2de04 img2" src="/static/my/next.svg" alt></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </template>

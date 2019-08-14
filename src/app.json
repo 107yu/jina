@@ -1,12 +1,12 @@
 {
-  "pages": [
+  "pages": [   
     "pages/home/main",
+    "pages/flashSale/main",
     "pages/purchaseDetail/main",
-    "pages/seckillDetail/main",
-    "pages/special/main",
     "pages/commodityDetail/main",
+    "pages/my/main",
     "pages/shoppingcar/main",
-    "pages/my/main"
+    "pages/search/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
