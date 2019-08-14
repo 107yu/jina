@@ -1,0 +1,95 @@
+@import "../../common/vendor.wxss";
+
+.box.data-v-4a74440c {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.box scroll-view.data-v-4a74440c {
+  height: 80rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.box scroll-view .box_nav.data-v-4a74440c {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box scroll-view .box_nav ._p.data-v-4a74440c {
+  height: 70rpx;
+  padding: 10rpx;
+  flex-shrink: 0;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 80rpx;
+}
+.box scroll-view .box_nav .active.data-v-4a74440c {
+  color: #56d2bf;
+  border-bottom: 2rpx solid #56d2bf;
+}
+.box .section.data-v-4a74440c {
+  flex: 1;
+  overflow: scroll;
+  background: #f3f7f7;
+}
+.box .section .head.data-v-4a74440c {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 25rpx 0;
+}
+.box .section .head ._dl.data-v-4a74440c {
+  width: 25%;
+  height: 25%;
+  text-align: center;
+}
+.box .section .head ._dl ._dt ._img.data-v-4a74440c {
+  width: 100rpx;
+  height: 100rpx;
+}
+.box .section .head ._dl ._dd.data-v-4a74440c {
+  font-size: 30rpx;
+  color: #666;
+}
+.box .section ._ul.data-v-4a74440c {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  position: relative;
+}
+.box .section ._ul ._li.data-v-4a74440c:last-child {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 65rpx;
+}
+.box .section ._ul ._li:last-child ._img.data-v-4a74440c:first-child {
+  transform: rotate(270deg);
+}
+.box .section ._ul ._li:last-child ._img.data-v-4a74440c {
+  width: 23rpx;
+  height: 23rpx;
+  transform: rotate(90deg);
+}
+.box .section ._ul .bg.data-v-4a74440c {
+  color: #fc5d7b;
+}
+.box .section .count.data-v-4a74440c {
+  margin-top: 3rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box .section .count ._div.data-v-4a74440c {
+  width: 48.5%;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-left: 8rpx;
+  margin-top: 8rpx;
+}

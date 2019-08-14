@@ -1,5 +1,5 @@
 <import src="/components/slots" /><template name="41209160">
-  <view class="_dl data-v-c3a7b040"><template name="default"></template>
+  <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_dl data-v-c3a7b040"><template name="default"></template>
     <view class="_dt data-v-c3a7b040">
       <image src="{{img}}" alt class="_img data-v-c3a7b040"></image>
     </view>

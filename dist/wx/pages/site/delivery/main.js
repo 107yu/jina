@@ -2,14 +2,14 @@ require("../../../common/manifest.js")
 require("../../../common/vendor.js")
 global.webpackJsonpMpvue([7],{
 
-/***/ 221:
+/***/ 237:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(238);
 
 
 
@@ -25,16 +25,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 222:
+/***/ 238:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_6abdbd0c_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_6abdbd0c_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(241);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(223)
+  __webpack_require__(239)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,19 +79,17 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 223:
+/***/ 239:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 224:
+/***/ 240:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
 //
 //
 //
@@ -144,23 +142,52 @@ if (false) {(function () {
     },
 
     computed: {},
-    methods: {},
-    created: function created() {},
-    mounted: function mounted() {}
+    methods: {
+        changbtn: function changbtn() {
+            wx.navigateTo({
+                url: "/pages/site/sitelist/main"
+            });
+        },
+        created: function created() {},
+        mounted: function mounted() {}
+    }
 });
 
 /***/ }),
 
-/***/ 225:
+/***/ 241:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('form', {
+    attrs: {
+      "report-submit": "",
+      "eventid": '1'
+    },
+    on: {
+      "submit": _vm.submit
+    }
+  }, [_c('div', {
     staticClass: "outbox"
   }, [_c('div', {
     staticClass: "chagne_add_data"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "user_change_data"
+  }, [_c('input', {
+    staticClass: "user_address_data",
+    attrs: {
+      "type": "text",
+      "placeholder": "收货人"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "user_address_right"
+  }, [_c('img', {
+    attrs: {
+      "src": "../../../../static/images/lt.svg",
+      "alt": ""
+    }
+  })])]), _vm._v(" "), _c('div', {
     staticClass: "user_change_data"
   }, [_c('input', {
     staticClass: "user_address_data",
@@ -192,52 +219,36 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "src": "../../../../static/images/lt.svg",
       "alt": ""
     }
-  })])])])], 1), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
-    staticClass: "user_data_title"
-  }, [_c('div', {
-    staticClass: "user_title_type"
-  }, [_c('p', {
-    staticClass: "title_type_tit"
-  }, [_vm._v("标签")]), _vm._v(" "), _vm._m(2)], 1), _vm._v(" "), _c('div', {
-    staticClass: "user_default_address"
-  }, [_c('p', {
-    staticClass: "set_default_address"
-  }, [_vm._v("设为默认地址")]), _vm._v(" "), _c('switch')], 1)]), _vm._v(" "), _c('div', {
-    staticClass: "user_change_button"
-  }, [_c('button', [_vm._v("删除收货信息")]), _vm._v(" "), _c('button', {
-    staticClass: "btn_action"
-  }, [_vm._v("保存")])], 1), _vm._v(" "), _c('button', [_vm._v("保存")])], 1)
-}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "user_change_data"
-  }, [_c('input', {
-    staticClass: "user_address_data",
-    attrs: {
-      "type": "text",
-      "placeholder": "收货人"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "user_address_right"
-  }, [_c('img', {
-    attrs: {
-      "src": "../../../../static/images/lt.svg",
-      "alt": ""
-    }
-  })])])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])])])], 1), _vm._v(" "), _c('div', {
     staticClass: "user_change_data user_textarea"
   }, [_c('textarea', {
     attrs: {
       "placeholder": "详细地址：如道路、门牌号、小区、楼栋号、单元 室等"
     }
-  })])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "user_data_title"
+  }, [_c('div', {
+    staticClass: "user_title_type"
+  }, [_c('p', {
+    staticClass: "title_type_tit"
+  }, [_vm._v("标签")]), _vm._v(" "), _c('div', {
     staticClass: "user_every_type"
-  }, [_c('span', [_vm._v("家")]), _vm._v(" "), _c('span', [_vm._v("公司")]), _vm._v(" "), _c('span', [_vm._v("学校")]), _vm._v(" "), _c('span', [_vm._v("其他")])])
-}]
+  }, [_c('span', [_vm._v("家")]), _vm._v(" "), _c('span', [_vm._v("公司")]), _vm._v(" "), _c('span', [_vm._v("学校")]), _vm._v(" "), _c('span', [_vm._v("其他")])])], 1), _vm._v(" "), _c('div', {
+    staticClass: "user_default_address"
+  }, [_c('p', {
+    staticClass: "set_default_address"
+  }, [_vm._v("设为默认地址")]), _vm._v(" "), _c('switch')], 1)]), _vm._v(" "), _c('button', {
+    staticClass: "btn",
+    attrs: {
+      "form-type": "submit",
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.changbtn
+    }
+  }, [_vm._v("保存")])], 1)])
+}
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -250,4 +261,4 @@ if (false) {
 
 /***/ })
 
-},[221]);
+},[237]);

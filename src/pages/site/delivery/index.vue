@@ -1,4 +1,5 @@
 <template>
+<form @submit="submit" report-submit>
     <div class="outbox">
         <div class="chagne_add_data">
             <div class="user_change_data">
@@ -36,12 +37,9 @@
                 <switch/>
             </div>
         </div>
-        <div class="user_change_button">
-            <button >删除收货信息</button>
-            <button class="btn_action">保存</button>
-        </div>
-        <button>保存</button>
+        <button class="btn" @click="changbtn" form-type="submit">保存</button>
     </div>
+</form>
 </template>
 <script>
 export default {
@@ -60,7 +58,10 @@ export default {
 
     },
     methods:{
-
+        changbtn(){
+             wx.navigateTo({
+                url: "/pages/site/sitelist/main"
+            }); 
     },
     created(){
 
@@ -68,7 +69,9 @@ export default {
     mounted(){
 
     }
-}
+
+    }
+    }
 </script>
 <style scoped lang="scss">
     .outbox{
@@ -208,22 +211,13 @@ picker{
     display:flex;
     justify-content:space-around;
     align-items:center;
-
 }
-.user_change_button button{
-    width:288rpx;
-    height:100rpx;
-    border-radius:14rpx;
-    border:2rpx solid #33d6c5;
-    font-size:36rpx;
-    color:#33d6c5;
 
+.btn{
+    margin-top: 50rpx;
+    color: #FFF;
+    background:rgba(51,214,197,1);
 }
-.user_change_button button.btn_action{
-    border:0;
-    color:#fff;
-    background:#33d6c5;
 
-}
 
 </style>

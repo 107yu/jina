@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
 }
-.search>._p.data-v-7ec8f392 {
+.search > ._p.data-v-7ec8f392 {
   width: 100%;
   height: 80rpx;
   position: absolute;
