@@ -1,8 +1,9 @@
 <template>
   <div  class="wrap">
     <scroll-view scroll-y style="height:100%">
-    <div  @click="goToSearch">
+    <div class="search">
       <MySearch></MySearch>
+      <p @click="goToSearch"></p>
     </div>
     <TapTitle :titles="categories"></TapTitle>
     <MySwiper :swiperList="homeLists[0] && homeLists[0].items"></MySwiper>
@@ -87,12 +88,6 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-/* .home{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-} */
 .introduce{
   display: flex;
   padding: 20rpx 0;
@@ -112,5 +107,14 @@ export default {
 .introduce dt img{
   width: 100%;
   height: 100%;
+}
+.search>p{
+  width:100%;
+  height:80rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index:999;
+  opacity: 0;
 }
 </style>

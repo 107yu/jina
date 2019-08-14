@@ -13,6 +13,8 @@ import DlList from "./components/dlList/dlList.vue"
 import HotImg from "./components/hotImg/hotImg.vue"
 import HomeRecommend from "./components/homeRecommend/homeRecommend.vue"
 import MySearch from "./components/search/search.vue"
+import OriderList from "./components/oriderList/oriderList.vue"
+import OriderDl from "./components/oriderList/oriderDl.vue"
 
 //挂载：
 Vue.component("TapTitle",TapTitle)
@@ -22,6 +24,8 @@ Vue.component("DlList",DlList)
 Vue.component("HotImg",HotImg)
 Vue.component("HomeRecommend",HomeRecommend)
 Vue.component("MySearch",MySearch)
+Vue.component("OriderList",OriderList)
+Vue.component("OriderDl",OriderDl)
 
 //挂载store
 Vue.prototype.$store=store

@@ -6,7 +6,7 @@ import CreateLogger from 'vuex/dist/logger'
 import home from './modules/home'
 import special from './modules/special'
 import search from "./modules/search"
-
+import orider from "./modules/orider"
 
 Vue.use(Vuex)
 
@@ -14,7 +14,8 @@ export default new Vuex.Store({
     modules:{
         home,
         special,
-        search
+        search,
+        orider
     },
     plugins:[CreateLogger()]
 })

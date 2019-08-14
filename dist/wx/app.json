@@ -1,6 +1,7 @@
 {
-  "pages": [   
+  "pages": [
     "pages/home/main",
+    "pages/myOrder/main",
     "pages/flashSale/main",
     "pages/special/main",
     "pages/seckillDetail/main",
@@ -42,5 +43,6 @@
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap42.json"
 }

@@ -1,11 +1,13 @@
 <template>
     <div class="input">
-      <input type="text" class="search">
+      <input type="text" class="search" @blur="search" v-model="value" @input="inputVal">
       <img  src="/static/images/搜索.svg" alt="">
       <slot></slot>
     </div>
 </template>
 <script>
+import {mapState,mapMutations,mapActions} from "vuex"
+import indexVue from '../../pages/home/index.vue';
 export default {
     props:{
 
@@ -15,14 +17,48 @@ export default {
     },
     data(){
         return {
-           
+         value: ""  
         }
     },
     computed:{
-
+      page: state=>state.search.page
     },
     methods:{
-       
+      ...mapActions({
+        sendSearch: "search/sendSearch"
+      }),
+      ...mapMutations({
+        getSearchVal: "search/getSearchVal"
+      }),
+      inputVal(){
+        this.getSearchVal(this.value)
+      },
+       search(){
+        let arr = [];
+        wx.getStorage({
+          key: 'history',
+          success: (res)=> {
+            arr = JSON.parse(res.data)
+            let ind =arr.findIndex(item=>item===this.value)
+            if(ind === -1){
+              arr.push(this.value)
+            }
+            wx.setStorage({
+              key: "history",
+              data: JSON.stringify(arr)
+            })
+          },
+          fail: ()=>{
+            arr.push(this.value)
+            wx.setStorage({
+              key: "history",
+              data: JSON.stringify(arr)
+            })
+          }
+        })
+        
+        this.sendSearch(this.value)
+       }
     },
     created(){
 
@@ -38,6 +74,9 @@ export default {
   display: flex;
   align-items: center;
   margin-top:10rpx;
+}
+input{
+  font-size: 26rpx;
 }
 .search{
   flex: 1;
@@ -55,4 +94,5 @@ export default {
   top:20rpx;
   left:20rpx;
 }
+
 </style>
