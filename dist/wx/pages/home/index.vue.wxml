@@ -5,7 +5,9 @@
 <import src="/components/homeRecommend/homeRecommend.vue.wxml" /><template name="2f6a74d4">
   <view class="_div data-v-7ec8f392 wrap">
     <scroll-view scroll-y style="height:100%" class="_scroll-view data-v-7ec8f392">
-      <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-7ec8f392"><template data="{{...$root[$kk+'0'], $root}}" is="2fe7f2bd"></template></view> <template data="{{...$root[$kk+'1'], $root}}" is="a0378986"></template> <template data="{{...$root[$kk+'2'], $root}}" is="2534ce86"></template>
+      <view class="_div data-v-7ec8f392 search"><template data="{{...$root[$kk+'0'], $root}}" is="2fe7f2bd"></template>
+        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_p data-v-7ec8f392"></view>
+      </view> <template data="{{...$root[$kk+'1'], $root}}" is="a0378986"></template> <template data="{{...$root[$kk+'2'], $root}}" is="2534ce86"></template>
       <view class="_div data-v-7ec8f392 introduce">
         <view wx:key="index" key="{{index}}" wx:for="{{homeLists[1] &&  homeLists[1].items}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-7ec8f392">
           <view class="_dt data-v-7ec8f392">

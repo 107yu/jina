@@ -6,7 +6,9 @@
         <DlList 
             v-for="(item,index) in homeLi" 
             :key="index"
-            :item="item"
+            :img="item.imgUrl"
+            :title="item.title"
+            :price="item.vipPrice"
             ></DlList>
         </div>
     </div>

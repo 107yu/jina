@@ -1,3 +1,4 @@
+@import "../../common/vendor.wxss";
 
 .wrap.data-v-30d2de04 {
   position: fixed;
