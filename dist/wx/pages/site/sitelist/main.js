@@ -157,7 +157,13 @@ if (false) {(function () {
     },
 
     computed: {},
-    methods: {},
+    methods: {
+        changeadd: function changeadd() {
+            wx.navigateTo({
+                url: "/pages/site/delivery/main"
+            });
+        }
+    },
     created: function created() {},
     mounted: function mounted() {}
 });
@@ -234,7 +240,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }), _vm._v(" "), _c('p', {
     staticClass: "char redact"
   }, [_vm._v("编辑")])], 1)])]), _vm._v(" "), _c('button', {
-    staticClass: "addbtn"
+    staticClass: "addbtn",
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.changeadd
+    }
   }, [_vm._v("新增收货地址")])], 1)
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

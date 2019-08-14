@@ -133,8 +133,6 @@ if (false) {(function () {
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: {},
@@ -144,9 +142,15 @@ if (false) {(function () {
     },
 
     computed: {},
-    methods: {},
-    created: function created() {},
-    mounted: function mounted() {}
+    methods: {
+        changbtn: function changbtn() {
+            wx.navigateTo({
+                url: "/pages/site/sitelist/main"
+            });
+        },
+        created: function created() {},
+        mounted: function mounted() {}
+    }
 });
 
 /***/ }),
@@ -156,11 +160,34 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('form', {
+    attrs: {
+      "report-submit": "",
+      "eventid": '1'
+    },
+    on: {
+      "submit": _vm.submit
+    }
+  }, [_c('div', {
     staticClass: "outbox"
   }, [_c('div', {
     staticClass: "chagne_add_data"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "user_change_data"
+  }, [_c('input', {
+    staticClass: "user_address_data",
+    attrs: {
+      "type": "text",
+      "placeholder": "收货人"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "user_address_right"
+  }, [_c('img', {
+    attrs: {
+      "src": "../../../../static/images/lt.svg",
+      "alt": ""
+    }
+  })])]), _vm._v(" "), _c('div', {
     staticClass: "user_change_data"
   }, [_c('input', {
     staticClass: "user_address_data",
@@ -192,52 +219,36 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "src": "../../../../static/images/lt.svg",
       "alt": ""
     }
-  })])])])], 1), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
-    staticClass: "user_data_title"
-  }, [_c('div', {
-    staticClass: "user_title_type"
-  }, [_c('p', {
-    staticClass: "title_type_tit"
-  }, [_vm._v("标签")]), _vm._v(" "), _vm._m(2)], 1), _vm._v(" "), _c('div', {
-    staticClass: "user_default_address"
-  }, [_c('p', {
-    staticClass: "set_default_address"
-  }, [_vm._v("设为默认地址")]), _vm._v(" "), _c('switch')], 1)]), _vm._v(" "), _c('div', {
-    staticClass: "user_change_button"
-  }, [_c('button', [_vm._v("删除收货信息")]), _vm._v(" "), _c('button', {
-    staticClass: "btn_action"
-  }, [_vm._v("保存")])], 1), _vm._v(" "), _c('button', [_vm._v("保存")])], 1)
-}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "user_change_data"
-  }, [_c('input', {
-    staticClass: "user_address_data",
-    attrs: {
-      "type": "text",
-      "placeholder": "收货人"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "user_address_right"
-  }, [_c('img', {
-    attrs: {
-      "src": "../../../../static/images/lt.svg",
-      "alt": ""
-    }
-  })])])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])])])], 1), _vm._v(" "), _c('div', {
     staticClass: "user_change_data user_textarea"
   }, [_c('textarea', {
     attrs: {
       "placeholder": "详细地址：如道路、门牌号、小区、楼栋号、单元 室等"
     }
-  })])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "user_data_title"
+  }, [_c('div', {
+    staticClass: "user_title_type"
+  }, [_c('p', {
+    staticClass: "title_type_tit"
+  }, [_vm._v("标签")]), _vm._v(" "), _c('div', {
     staticClass: "user_every_type"
-  }, [_c('span', [_vm._v("家")]), _vm._v(" "), _c('span', [_vm._v("公司")]), _vm._v(" "), _c('span', [_vm._v("学校")]), _vm._v(" "), _c('span', [_vm._v("其他")])])
-}]
+  }, [_c('span', [_vm._v("家")]), _vm._v(" "), _c('span', [_vm._v("公司")]), _vm._v(" "), _c('span', [_vm._v("学校")]), _vm._v(" "), _c('span', [_vm._v("其他")])])], 1), _vm._v(" "), _c('div', {
+    staticClass: "user_default_address"
+  }, [_c('p', {
+    staticClass: "set_default_address"
+  }, [_vm._v("设为默认地址")]), _vm._v(" "), _c('switch')], 1)]), _vm._v(" "), _c('button', {
+    staticClass: "btn",
+    attrs: {
+      "form-type": "submit",
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.changbtn
+    }
+  }, [_vm._v("保存")])], 1)])
+}
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

@@ -997,7 +997,17 @@ if (false) {(function () {
     ProductCouponDetail: function ProductCouponDetail(state) {
       return state.productCoupon.ProductCouponDetail;
     }
-  })),
+  }), {
+    showcommodity: function showcommodity() {
+      wx.navigateTo({
+        url: "/pages/commodityDetail/main"
+      });
+      // this.productCoupon({pid:,bid:,uid:,usiid:})
+      // pid:549
+      // bid:13357
+      // uid:23
+    }
+  }),
   created: function created() {},
   mounted: function mounted() {}
 });
@@ -1021,7 +1031,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "mpcomid": '1'
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "boutique"
+    staticClass: "boutique",
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.showcommodity
+    }
   }, _vm._l((_vm.homeLi), function(item, index) {
     return _c('DlList', {
       key: index,

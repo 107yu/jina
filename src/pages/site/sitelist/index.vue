@@ -53,7 +53,7 @@
         </div>
       </div>
     </div>
-    <button class='addbtn'>新增收货地址</button>
+    <button class='addbtn' @click="changeadd">新增收货地址</button>
   </div>
 </template>
 <script>
@@ -73,7 +73,11 @@ export default {
 
     },
     methods:{
-
+        changeadd(){
+           wx.navigateTo({
+                url: "/pages/site/delivery/main"
+            }); 
+        }
     },
     created(){
 
