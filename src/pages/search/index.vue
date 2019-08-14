@@ -15,6 +15,7 @@
   </div>
 </template>
 <script>
+import {mapState,mapMutations,mapActions} from "vuex"
 export default {
   props:{
 
@@ -31,13 +32,20 @@ export default {
 
   },
   methods:{
-
+    ...mapActions({
+      sendSearch: "search/sendSearch"
+    })
   },
   created(){
 
   },
   mounted(){
-
+    this.sendSearch({
+      "queryWord": "尿不湿",
+      "queryType": 0,
+      "querySort": "asc",
+      "pageIndex": 1,
+    })
   }
 }
 </script>

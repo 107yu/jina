@@ -1,6 +1,8 @@
 <template name="99fa699c">
   <view class="_div data-v-f6962b48 wrap">
-    <view class="_div data-v-f6962b48 swiper"></view>
+    <view class="_div data-v-f6962b48 swiper">
+      <image src="/static/images/1.jpg" alt class="_img data-v-f6962b48"></image>
+    </view>
     <view class="_div data-v-f6962b48 tit">
       <view class="_div data-v-f6962b48 ones">
         <view class="_p data-v-f6962b48">￥</view>
@@ -11,26 +13,15 @@
     </view>
     <view class="_div data-v-f6962b48 title">
       <view class="_div data-v-f6962b48 names">帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤</view>
-      <view class="_p data-v-f6962b48"><label class="_span data-v-f6962b48">快递包邮</label> <label class="_span data-v-f6962b48">仅剩235件</label></view>
-    </view>
-    <view class="_div data-v-f6962b48 hui">
-      <view class="_p data-v-f6962b48">开通会员购买本商品预计可省<label class="_span data-v-f6962b48">￥198</label>元</view>
+      <view class="_p data-v-f6962b48"><label class="_span data-v-f6962b48">快递包邮</label></view>
     </view>
     <view class="_ul data-v-f6962b48 list">
-      <view class="_li data-v-f6962b48 lis"><label class="_span data-v-f6962b48">选择:</label>
-        <view class="_div data-v-f6962b48 rights" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"><label class="_span data-v-f6962b48">颜色 尺码</label></view>
-      </view>
-      <view class="_li data-v-f6962b48 lis"><label class="_span data-v-f6962b48">规格:</label>
-        <view class="_div data-v-f6962b48 rights"><label class="_span data-v-f6962b48">S M XL</label></view>
-      </view>
-      <view class="_li data-v-f6962b48 lis"><label class="_span data-v-f6962b48">领券:</label>
-        <view class="_div data-v-f6962b48 rights"><label class="_span data-v-f6962b48 to2color">每满300减35券 满199减20券</label></view>
+      <view class="_li data-v-f6962b48 lis"><label class="_span data-v-f6962b48">选择 规格</label>
+        <view class="_div data-v-f6962b48 rights" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"><label class="_span data-v-f6962b48">颜色 尺码</label>
+          <image src="/static/images/下一步.svg" alt class="_img data-v-f6962b48"></image>
+        </view>
       </view>
     </view>
-    <view class="_div data-v-f6962b48 footer">
-      <view class="_div data-v-f6962b48 lefts">
-        <view class="_p data-v-f6962b48">收藏</view>
-      </view> <button class="_button data-v-f6962b48">下架</button>
-    </view>
+    <view class="_div data-v-f6962b48 footer"><button bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_button data-v-f6962b48">分享赚1.98</button> <button class="_button data-v-f6962b48">立即购买</button></view>
   </view>
 </template>

@@ -25,6 +25,7 @@ export default {
     actions: {
         async getCategoryLists({commit},payload){  //获取所有的分类标题
             let data = await getCategories(payload)
+          
             if(data.res_code===1){
                 commit("categoryList",data.result)
             }
@@ -37,6 +38,7 @@ export default {
         },
         async getHomeList({commit}){       //获取首页大部分数据
             let data = await getList()
+            console.log(data.result,"404040404")
             if(data.res_code === 1){
                 commit("homeList",data.result)
             }

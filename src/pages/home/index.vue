@@ -1,7 +1,8 @@
 <template>
-  <div class="home">
+  <div  class="wrap">
+    <scroll-view scroll-y style="height:100%">
     <div  @click="goToSearch">
-       <MySearch></MySearch>
+      <MySearch></MySearch>
     </div>
     <TapTitle :titles="categories"></TapTitle>
     <MySwiper :swiperList="homeLists[0] && homeLists[0].items"></MySwiper>
@@ -34,6 +35,7 @@
       :hotimg="homeLists[12] && homeLists[12]"
       :homeLi="homeLists[13] && homeLists[13].items"
     ></HomeRecommend>
+    </scroll-view>
   </div>
 </template>
 
@@ -80,13 +82,17 @@ export default {
 }
 </script>
 <style scoped lang="">
-.home{
+.wrap{
   width: 100%;
   height: 100%;
-  overflow-y:scroll;
+  overflow: hidden;
+}
+/* .home{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-}
+} */
 .introduce{
   display: flex;
   padding: 20rpx 0;

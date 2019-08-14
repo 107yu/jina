@@ -1,0 +1,66 @@
+
+.wrap.data-v-6f3cdac2 {
+  width: 100%;
+  height: 100%;
+}
+.tupian.data-v-6f3cdac2 {
+  width: 100%;
+  height: 400rpx;
+}
+.toy.data-v-6f3cdac2 {
+  width: 100%;
+  height: 180rpx;
+  padding-left: 15rpx;
+  margin-top: 205rpx;
+}
+.toy ._h2.data-v-6f3cdac2 {
+  font-size: 42rpx;
+  color: red;
+}
+.list.data-v-6f3cdac2 {
+  width: 100%;
+  overflow: scroll;
+  height: 100%;
+  background: #f3f7f7;
+}
+.list ._p.data-v-6f3cdac2 {
+  text-align: center;
+  margin-top: 20rpx;
+}
+.list_L.data-v-6f3cdac2 {
+  margin-top: 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15rpx;
+}
+.list_L ._dl.data-v-6f3cdac2 {
+  width: 30%;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  margin: 10rpx 0;
+}
+.list_L ._dt.data-v-6f3cdac2 {
+  width: 100%;
+  height: 200rpx;
+}
+.list_L ._img.data-v-6f3cdac2 {
+  width: 100%;
+  height: 100%;
+}
+.list_L ._p.data-v-6f3cdac2 {
+  width: 100%;
+  line-height: 40rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 24rpx;
+  margin: 10rpx 0;
+}
+.list_L ._b.data-v-6f3cdac2 {
+  color: red;
+}

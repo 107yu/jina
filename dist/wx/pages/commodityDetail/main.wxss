@@ -64,22 +64,6 @@
   font-size: 32rpx;
   color: #999da2;
 }
-.hui {
-  width: 100%;
-  display: flex;
-}
-.hui ._img {
-  width: 50rpx;
-  height: 40rpx;
-  padding-left: 20rpx;
-}
-.hui ._p {
-  font-size: 30rpx;
-  padding-left: 25rpx;
-}
-.hui ._p ._span {
-  color: #a87832;
-}
 .list {
   width: 100%;
   padding: 0 2%;
@@ -126,7 +110,7 @@
   border-top: 1rpx solid #ccc;
   text-align: center;
   display: flex;
-  background: #fff;
+  background: #fc5d7b;
 }
 .footer .lefts {
   width: 30%;
@@ -140,7 +124,7 @@
 }
 .footer ._button {
   width: 70%;
-  background: #ccc;
+  background: #fc5d7b;
   font-size: 38rpx;
   color: #fff;
 }

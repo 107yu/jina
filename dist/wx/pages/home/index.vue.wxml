@@ -3,15 +3,17 @@
 <import src="/components/mySwiper/mySwiper.vue.wxml" />
 <import src="/components/hotImg/hotImg.vue.wxml" />
 <import src="/components/homeRecommend/homeRecommend.vue.wxml" /><template name="15ee8a27">
-  <view class="_div data-v-7ec8f392 home">
-    <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-7ec8f392"><template data="{{...$root[$kk+'0'], $root}}" is="01b70510"></template></view> <template data="{{...$root[$kk+'1'], $root}}" is="5390128a"></template> <template data="{{...$root[$kk+'2'], $root}}" is="41ed4990"></template>
-    <view class="_div data-v-7ec8f392 introduce">
-      <view wx:key="index" key="{{index}}" wx:for="{{homeLists[1] &&  homeLists[1].items}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-7ec8f392">
-        <view class="_dt data-v-7ec8f392">
-          <image src="{{item.imgUrl}}" alt class="_img data-v-7ec8f392"></image>
+  <view class="_div data-v-7ec8f392 wrap">
+    <scroll-view scroll-y style="height:100%" class="_scroll-view data-v-7ec8f392">
+      <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-7ec8f392"><template data="{{...$root[$kk+'0'], $root}}" is="01b70510"></template></view> <template data="{{...$root[$kk+'1'], $root}}" is="5390128a"></template> <template data="{{...$root[$kk+'2'], $root}}" is="41ed4990"></template>
+      <view class="_div data-v-7ec8f392 introduce">
+        <view wx:key="index" key="{{index}}" wx:for="{{homeLists[1] &&  homeLists[1].items}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-7ec8f392">
+          <view class="_dt data-v-7ec8f392">
+            <image src="{{item.imgUrl}}" alt class="_img data-v-7ec8f392"></image>
+          </view>
+          <view class="_dd data-v-7ec8f392">{{item.title}}</view>
         </view>
-        <view class="_dd data-v-7ec8f392">{{item.title}}</view>
-      </view>
-    </view> <template data="{{...$root[$kk+'3'], $root}}" is="88a9ed60"></template> <template data="{{...$root[$kk+'4'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'5'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'6'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'7'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'8'], $root}}" is="099f7f5c"></template>
+      </view> <template data="{{...$root[$kk+'3'], $root}}" is="88a9ed60"></template> <template data="{{...$root[$kk+'4'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'5'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'6'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'7'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'8'], $root}}" is="099f7f5c"></template>
+    </scroll-view>
   </view>
 </template>
