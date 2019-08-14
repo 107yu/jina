@@ -12,7 +12,7 @@
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
-    "pages/shoppingcar/main",
+    "pages/shoppingcar/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
