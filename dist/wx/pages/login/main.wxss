@@ -1,0 +1,47 @@
+@import "../../common/vendor.wxss";
+
+.wrap ._ul ._li.data-v-65b111e7 {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 33rpx;
+  padding: 0 20rpx;
+}
+.wrap ._ul ._li ._input.data-v-65b111e7 {
+  background: none;
+  border: none;
+  font-size: 30rpx;
+  padding: 0 50rpx;
+}
+.wrap ._ul ._li ._span.data-v-65b111e7 {
+  padding: 7rpx 15rpx;
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50rpx;
+  border: 2rpx solid #fc5d7b;
+  color: #fc5d7b;
+  font-size: 30rpx;
+}
+.wrap ._ul ._li.data-v-65b111e7:first-child {
+  border-bottom: 2rpx solid #f8f8f8;
+}
+.wrap ._section.data-v-65b111e7 {
+  background: #f3f7f7;
+}
+.wrap ._section .btn.data-v-65b111e7 {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+.wrap ._section .btn ._button.data-v-65b111e7 {
+  width: 95%;
+  height: 80rpx;
+  background: #35d5ec;
+  color: #fff;
+  font-size: 31rpx;
+  line-height: 80rpx;
+  border: none;
+}

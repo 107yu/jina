@@ -1,6 +1,26 @@
 {
   "pages": [
     "pages/home/main",
+<<<<<<< HEAD
+=======
+    "pages/login/main",
+    "pages/canvas/main",
+    "pages/search/main",
+    "pages/myOrder/main",
+    "pages/gopay/main",
+    "pages/introduceDetail/main",
+    "pages/site/address/main",
+    "pages/site/sitelist/main",
+    "pages/refund/main",
+    "pages/site/delivery/main",
+    "pages/flashSale/main",
+    "pages/hotimgDetail/main",
+    "pages/special/main",
+    "pages/share/main",
+    "pages/commodityDetail/main",
+    "pages/my/main",
+    "pages/swiperDetail/main",
+>>>>>>> jxs
     "pages/shoppingcar/main",
     "pages/my/main"
   ],
