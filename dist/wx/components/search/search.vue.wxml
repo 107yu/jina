@@ -1,4 +1,4 @@
-<import src="/components/slots" /><template name="5433efd8">
+<import src="/components/slots" /><template name="2fe7f2bd">
   <view class="_div data-v-7f1914c0 input"><template name="default"></template><input type="text" class="_input data-v-7f1914c0 search" bindblur="handleProxy" value="{{value}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
     <image src="/static/images/搜索.svg" alt class="_img data-v-7f1914c0"></image> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
   </view>
