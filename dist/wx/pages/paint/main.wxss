@@ -1,0 +1,6 @@
+@import "../../common/vendor.wxss";
+
+._canvas.data-v-184fa6c8 {
+  width: 100%;
+  border: 2rpx solid #000;
+}

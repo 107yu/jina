@@ -2,7 +2,8 @@
 <import src="/components/tap/tapTitle.vue.wxml" />
 <import src="/components/mySwiper/mySwiper.vue.wxml" />
 <import src="/components/hotImg/hotImg.vue.wxml" />
-<import src="/components/homeRecommend/homeRecommend.vue.wxml" /><template name="15ee8a27">
+<import src="/components/homeRecommend/homeRecommend.vue.wxml" />
+<import src="/components/homeList/index.vue.wxml" /><template name="15ee8a27">
   <view class="_div data-v-7ec8f392 wrap">
     <scroll-view scroll-y style="height:100%" class="_scroll-view data-v-7ec8f392">
       <view class="_div data-v-7ec8f392 search"><template data="{{...$root[$kk+'0'], $root}}" is="01b70510"></template>
@@ -15,7 +16,7 @@
           </view>
           <view class="_dd data-v-7ec8f392">{{item.title}}</view>
         </view>
-      </view> <template data="{{...$root[$kk+'3'], $root}}" is="88a9ed60"></template> <template data="{{...$root[$kk+'4'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'5'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'6'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'7'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'8'], $root}}" is="099f7f5c"></template>
+      </view> <template data="{{...$root[$kk+'3'], $root}}" is="88a9ed60"></template> <template data="{{...$root[$kk+'4'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'5'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'6'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'7'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'8'], $root}}" is="099f7f5c"></template> <template data="{{...$root[$kk+'9'], $root}}" is="756d9ccf"></template>
     </scroll-view>
   </view>
 </template>

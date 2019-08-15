@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/main",
+    "pages/paint/main",
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -34,20 +35,20 @@
       {
         "text": "首页",
         "pagePath": "pages/home/main",
-        "iconPath": "static/tabs/home.png",
-        "selectedIconPath": "static/tabs/home-active.png"
+        "iconPath": "/static/tabs/shouye_active.png",
+        "selectedIconPath": "static/tabs/shouye_active.png"
       },
       {
         "text": "购物车",
         "pagePath": "pages/shoppingcar/main",
-        "iconPath": "static/tabs/orders.png",
-        "selectedIconPath": "static/tabs/orders-active.png"
+        "iconPath": "/static/tabs/dsh.png",
+        "selectedIconPath": "static/tabs/dsh.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/my/main",
-        "iconPath": "static/tabs/orders.png",
-        "selectedIconPath": "static/tabs/orders-active.png"
+        "iconPath": "/static/tabs/my_active.png",
+        "selectedIconPath": "static/tabs/my_active.png"
       }
     ],
     "position": "bottom"

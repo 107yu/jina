@@ -40,6 +40,9 @@
         :hotimg="homeLists[12] && homeLists[12]"
         :homeLi="homeLists[13] && homeLists[13].items"
       ></HomeRecommend>
+      <homeList
+          :homeProducts="homeProducts"
+      ></homeList>
     </scroll-view>
   </div>
 </template>
@@ -57,7 +60,8 @@ export default {
   computed: {
     ...mapState({
       homeLists: state => state.home.homeLists,
-      categories: state => state.home.categories
+      categories: state => state.home.categories,
+      homeProducts: state => state.home.homeProducts
     })
   },
   methods: {

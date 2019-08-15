@@ -20,7 +20,7 @@ export default {
         },
         homeProducts(state,payload){
             state.homeProducts = payload
-            // console.log("homeProducts",state.homeProducts)
+            console.log("homeProducts",state.homeProducts)
         },
         swiperDetail(state,payload){   //轮播图的详细信息
             state.swiperDetailInfo = payload;
