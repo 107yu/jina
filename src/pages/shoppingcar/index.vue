@@ -48,7 +48,8 @@ export default {
   },
   computed: {},
   methods: {},
-  created() {
+  created() {},
+  mounted() {
     //改变导航栏
     wx.setNavigationBarTitle({ title: "购物车" });
     wx.setNavigationBarColor({
@@ -59,8 +60,7 @@ export default {
         timingFunc: "easeIn"
       }
     });
-  },
-  mounted() {}
+  }
 };
 </script>
 <style scoped lang="scss">
@@ -165,7 +165,7 @@ export default {
         display: flex;
         font-size: 30rpx;
         padding: 0 20rpx;
-        span:nth-child(2){
+        span:nth-child(2) {
           color: #fb2579;
         }
       }

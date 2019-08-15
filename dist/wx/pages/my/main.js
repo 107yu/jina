@@ -193,7 +193,11 @@ if (false) {(function () {
   methods: {
     copy: function copy() {},
     goTolist: function goTolist() {},
-    goto: function goto() {}
+    goto: function goto() {
+      wx.navigateTo({
+        url: "/pages/site/sitelist/main"
+      });
+    }
   }
 });
 
