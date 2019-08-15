@@ -1,6 +1,6 @@
 <template>
   <div>
-    <dl v-for="(item,index) in products && products" :key="index" @click="showcommodity({img:item.mainImgUrl,title:item.title,price:item.salesPrice,id:item.basePid,earnMoney:item.earnMoney})">
+    <dl v-for="(item,index) in products && products" :key="index" @click="showcommodity(item.basePid)">
       <dt>
         <img :src="item.mainImgUrl" alt />
       </dt>
@@ -29,9 +29,9 @@ export default {
   },
   computed: {},
   methods: {
-    showcommodity() {
+    showcommodity(id) {
       wx.navigateTo({
-        url: "/pages/commodityDetail/main"
+        url: "/pages/commodityDetail/main?id="+id
       });
     }
   },

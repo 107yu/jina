@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="wrap"> -->
   <scroll-view scroll-y="true" class="listWrap">
     <div class="sessionCont">
       <img
@@ -38,7 +37,6 @@
       </div>
     </div>
   </scroll-view>
-  <!-- </div> -->
 </template>
 <script>
 import { mapState, mapActions } from "vuex";

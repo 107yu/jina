@@ -288,9 +288,9 @@ if (false) {(function () {
 
   computed: {},
   methods: {
-    showcommodity: function showcommodity() {
+    showcommodity: function showcommodity(id) {
       wx.navigateTo({
-        url: "/pages/commodityDetail/main"
+        url: "/pages/commodityDetail/main?id=" + id
       });
     }
   },
@@ -314,13 +314,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       },
       on: {
         "click": function($event) {
-          _vm.showcommodity({
-            img: item.mainImgUrl,
-            title: item.title,
-            price: item.salesPrice,
-            id: item.basePid,
-            earnMoney: item.earnMoney
-          })
+          _vm.showcommodity(item.basePid)
         }
       }
     }, [_c('dt', [_c('img', {
