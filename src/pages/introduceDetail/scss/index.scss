@@ -34,10 +34,10 @@
     //   display: inline-block;
     // }
   
-    .active {
-      color: #f00;
-      border-bottom: 4rpx solid #f00;
-    }
+    // .active {
+    //   color: #f00;
+    //   border-bottom: 4rpx solid #f00;
+    // }
     .title {
       color: #fc5d7b;
       height: 80rpx;
@@ -51,6 +51,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     .cake {
       width: 100%;
       display: flex;

@@ -1,11 +1,11 @@
-<import src="/components/slots" /><template name="98c28b58">
+<import src="/components/slots" /><template name="fa9682e2">
   <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_dl data-v-c3a7b040"><template name="default"></template>
     <view class="_dt data-v-c3a7b040">
       <image src="{{img}}" alt class="_img data-v-c3a7b040"></image>
     </view>
     <view class="_dd data-v-c3a7b040">
       <view class="_p data-v-c3a7b040">{{title}}</view>
-      <view class="_b data-v-c3a7b040">￥{{price}}</view> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
+      <view class="_b data-v-c3a7b040">￥{{price}}</view> <label class="_span data-v-c3a7b040">赚{{earnMoney}}</label> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
     </view>
   </view>
 </template>

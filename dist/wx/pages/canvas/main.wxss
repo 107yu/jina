@@ -1,0 +1,14 @@
+@import "../../common/vendor.wxss";
+
+page,div {
+  background: rgba(243, 247, 247, 1);
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100%;
+  border: 1px solid #cccc;
+  margin: 0 auto;
+
+}

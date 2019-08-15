@@ -5,6 +5,7 @@
     "pages/myOrder/main",
     "pages/gopay/main",
     "pages/introduceDetail/main",
+    "pages/remoteRegion/main",
     "pages/site/address/main",
     "pages/site/sitelist/main",
     "pages/refund/main",
@@ -17,7 +18,8 @@
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main",
-    "pages/recommend/main"
+    "pages/recommend/main",
+    "pages/canvas/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -51,5 +53,6 @@
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap90.json"
 }

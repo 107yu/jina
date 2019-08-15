@@ -1,4 +1,4 @@
-<template name="4675cb79">
+<template name="5a204e9e">
   <form bindsubmit="handleProxy" report-submit data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_form data-v-6abdbd0c">
     <view class="_div data-v-6abdbd0c outbox">
       <view class="_div data-v-6abdbd0c chagne_add_data">

@@ -17,8 +17,8 @@
                 :img="item.mainImgUrl"
                 :title="item.title"
                 :price="item.salesPrice"
+                :earnMoney="item.earnMoney"
                 >
-                  <span>赚{{item.earnMoney}}</span>
                 </DlList>
               </div>
           <!-- </scroll-view> -->

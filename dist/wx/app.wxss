@@ -84,39 +84,6 @@ page {
 .title>._span.data-v-86853e6c {
   color: red;
 }
-._dl.data-v-c3a7b040 {
-  width: 30%;
-  font-size: 28rpx;
-  background: #fff;
-  border-radius: 10rpx;
-  margin: 10rpx 0 0 8rpx;
-  padding: 8rpx;
-}
-._dt.data-v-c3a7b040 {
-  width: 100%;
-  height: 200rpx;
-  text-align: center;
-}
-._img.data-v-c3a7b040 {
-  width: 100%;
-  height: 100%;
-}
-._p.data-v-c3a7b040 {
-  width: 100%;
-  line-height: 40rpx;
-  text-overflow: -o-ellipsis-lastline;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  font-size: 24rpx;
-  margin: 10rpx 0;
-}
-._b.data-v-c3a7b040 {
-  color: red;
-}
 .hotInfo.data-v-7a6779e0 {
   width: 100%;
   height: 200rpx;

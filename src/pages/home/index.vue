@@ -11,7 +11,7 @@
         <dl
           v-for="(item,index) in  homeLists[1] &&  homeLists[1].items"
           :key="index"
-          @click="introduceChange(item)"
+          @click="introduceChange(item,index)"
         >
           <dt>
             <img :src="item.imgUrl" alt />
@@ -73,7 +73,7 @@ export default {
       });
     },
     //专题
-    introduceChange(item) {
+    introduceChange(item, index) {
       let str2 = item.jumpUrl.substring(
         item.jumpUrl.indexOf("businessId") + 11
       );
@@ -81,10 +81,23 @@ export default {
       let str3 = item.jumpUrl.substring(item.jumpUrl.indexOf("uiType") + 7);
       let uiType = str3;
       console.log(123, businessId, uiType, 456);
-      wx.navigateTo({
-        url:
-          "/pages/introduceDetail/main?sild=" + businessId + "&uiType=" + uiType
-      });
+      if (index == 3) {
+        wx.navigateTo({
+          url:
+            "/pages/remoteRegion/main?sild=" +
+            businessId +
+            "&uiType=" +
+            uiType
+        });
+      } else {
+        wx.navigateTo({
+          url:
+            "/pages/introduceDetail/main?sild=" +
+            businessId +
+            "&uiType=" +
+            uiType
+        });
+      }
     }
   },
   created() {},
