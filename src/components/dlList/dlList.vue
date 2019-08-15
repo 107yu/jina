@@ -1,5 +1,5 @@
 <template>
-    <dl>
+    <dl @click="showcommodity">
         <dt>
             <img :src="img" alt="">
         </dt>
@@ -25,7 +25,11 @@ export default {
 
     },
     methods:{
-
+        showcommodity() {
+            wx.navigateTo({
+                url: "/pages/commodityDetail/main"
+            });
+        }
     },
     created(){
 

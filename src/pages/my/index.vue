@@ -108,7 +108,9 @@ export default {
      
     },
     goto() {
-     
+       wx.navigateTo({
+          url: "/pages/site/sitelist/main"
+      }); 
     }
   }
 };

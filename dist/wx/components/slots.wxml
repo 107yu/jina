@@ -3,16 +3,16 @@
 <import src="/components/dlList/dlList.vue.wxml" />
 <import src="/components/oriderList/oriderDl.vue.wxml" />
 <import src="/components/slots" />
+<import src="/components/oriderList/oriderList.vue.wxml" />
 <import src="/components/search/search.vue.wxml" />
 <import src="/components/tap/tapTitle.vue.wxml" />
 <import src="/components/mySwiper/mySwiper.vue.wxml" />
 <import src="/components/hotImg/hotImg.vue.wxml" />
 <import src="/components/homeRecommend/homeRecommend.vue.wxml" />
-<import src="/components/recommendItem/index.vue.wxml" />
-<import src="/components/oriderList/oriderList.vue.wxml" />
-<import src="/components/specialItem/index.vue.wxml" />
-<import src="/components/dlList/dlList.vue.wxml" />
 <import src="/components/search/search.vue.wxml" />
+<import src="/components/dlList/dlList.vue.wxml" />
+<import src="/components/specialItem/index.vue.wxml" />
+<import src="/components/recommendItem/index.vue.wxml" />
 <import src="/components/hotItem/index.vue.wxml" />
 <import src="/components/commodityitem/index.vue.wxml" />
 <import src="/components/tap/tapTitle.vue.wxml" />
@@ -25,5 +25,5 @@
 <import src="/components/dlList/dlList.vue.wxml" /><template name="data-v-d2906100-default-0">
   <view class="_div data-v-d2906100 btn"><label class="_span data-v-d2906100">取消订单</label> <label class="_span data-v-d2906100 pay">去付款54.5</label></view>
 </template>
-<template name="data-v-194b9a7e-default-0_+index"><label class="_span data-v-194b9a7e">赚{{item.earnMoney}}</label></template>
 <template name="data-v-62000480-default-0"><label class="_span data-v-62000480 cancel">取消</label></template>
+<template name="data-v-194b9a7e-default-0_+index"><label class="_span data-v-194b9a7e">赚{{item.earnMoney}}</label></template>

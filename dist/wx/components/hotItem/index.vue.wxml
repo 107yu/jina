@@ -1,4 +1,4 @@
-<template name="1479e3ae">
+<template name="404ae0aa">
   <view class="_div data-v-3a51dab4">
     <view wx:key="index" key="{{index}}" wx:for="{{products}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-3a51dab4">
       <view class="_dt data-v-3a51dab4">

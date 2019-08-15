@@ -1,4 +1,4 @@
-<template name="ddc9aad8">
+<template name="41ed4990">
   <view class="_div data-v-53687ae0 swiperBox">
     <swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000" indicator-active-color="#fff" class="_swiper data-v-53687ae0">
       <block wx:key="index" key="{{index}}" wx:for="{{swiperList}}" wx:for-index="index" wx:for-item="val">

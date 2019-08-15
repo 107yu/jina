@@ -1,4 +1,4 @@
-<import src="/components/recommendItem/index.vue.wxml" /><template name="65d2808c">
+<import src="/components/recommendItem/index.vue.wxml" /><template name="8281f5e0">
   <view class="_div data-v-4a74440c box">
     <scroll-view scroll-x class="_scroll-view data-v-4a74440c">
       <view class="_div data-v-4a74440c box_nav">
@@ -29,7 +29,7 @@
         </view>
       </view>
       <view class="_div data-v-4a74440c count">
-        <view wx:key="index" key="{{index}}" wx:for="{{countData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-4a74440c"><template data="{{...$root[$kk+'0_'+index], $root}}" is="5de819dd"></template></view>
+        <view wx:key="index" key="{{index}}" wx:for="{{countData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-4a74440c"><template data="{{...$root[$kk+'0_'+index], $root}}" is="22ae69d9"></template></view>
       </view>
     </scroll-view>
   </view>

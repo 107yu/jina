@@ -122,16 +122,8 @@ picker.data-v-6abdbd0c {
   justify-content: space-around;
   align-items: center;
 }
-.user_change_button ._button.data-v-6abdbd0c {
-  width: 288rpx;
-  height: 100rpx;
-  border-radius: 14rpx;
-  border: 2rpx solid #33d6c5;
-  font-size: 36rpx;
-  color: #33d6c5;
-}
-.user_change_button ._button.btn_action.data-v-6abdbd0c {
-  border: 0;
-  color: #fff;
+.btn.data-v-6abdbd0c {
+  margin-top: 50rpx;
+  color: #FFF;
   background: #33d6c5;
 }

@@ -735,7 +735,13 @@ if (false) {(function () {
     },
 
     computed: {},
-    methods: {},
+    methods: {
+        showcommodity: function showcommodity() {
+            wx.navigateTo({
+                url: "/pages/commodityDetail/main"
+            });
+        }
+    },
     created: function created() {},
     mounted: function mounted() {}
 });
@@ -746,7 +752,14 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('dl', [_c('dt', [_c('img', {
+  return _c('dl', {
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.showcommodity
+    }
+  }, [_c('dt', [_c('img', {
     attrs: {
       "src": _vm.img,
       "alt": ""
@@ -964,6 +977,12 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -1023,7 +1042,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     return _c('DlList', {
       key: index,
       attrs: {
-        "item": item,
+        "img": item.imgUrl,
+        "title": item.title,
+        "price": item.vipPrice,
         "mpcomid": '2_' + index
       }
     })
