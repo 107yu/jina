@@ -1,29 +1,12 @@
 {
   "pages": [
     "pages/home/main",
-    "pages/search/main",
-    "pages/myOrder/main",
-    "pages/gopay/main",
-    "pages/introduceDetail/main",
-    "pages/remoteRegion/main",
-    "pages/site/address/main",
-    "pages/site/sitelist/main",
-    "pages/refund/main",
-    "pages/site/delivery/main",
-    "pages/flashSale/main",
-    "pages/hotimgDetail/main",
-    "pages/special/main",
-    "pages/share/main",
-    "pages/commodityDetail/main",
-    "pages/my/main",
-    "pages/swiperDetail/main",
     "pages/shoppingcar/main",
-    "pages/recommend/main",
-    "pages/canvas/main"
+    "pages/my/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#56D2BF",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "积纳有品",
     "navigationBarTextStyle": "black"
   },
@@ -54,5 +37,5 @@
     ],
     "position": "bottom"
   },
-  "sitemapLocation": "sitemap99.json"
+  "sitemapLocation": "sitemap61.json"
 }

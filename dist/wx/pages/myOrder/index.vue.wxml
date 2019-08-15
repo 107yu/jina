@@ -1,8 +1,0 @@
-<import src="/components/oriderList/oriderList.vue.wxml" /><template name="60b61e92">
-  <scroll-view scroll-y style="height:100%" class="_scroll-view data-v-d2906100">
-    <view class="_div data-v-d2906100 wrap">
-      <view class="_div data-v-d2906100 top"><label wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{title}}" wx:for-index="index" wx:for-item="item" class="_span data-v-d2906100 {{[index === ind ? 'show' : '']}}">{{item}}</label></view>
-      <view class="_div data-v-d2906100 main"><template data="{{...$root[$kk+'0'], $root, $for:{default:'data-v-d2906100-default-0'},$slotdefault:'data-v-d2906100-default-0'}}" is="688cdcaf"></template></view>
-    </view>
-  </scroll-view>
-</template>
