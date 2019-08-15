@@ -115,7 +115,18 @@ if (false) {(function () {
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function data() {
-        return {};
+        return {
+            userInfo: {
+                avtar: 'http://img2.imgtn.bdimg.com/it/u=265535345,1890400617&fm=26&gp=0.jpg',
+                nickName: '姬小胜是小狗',
+                code: 'C5JSKWUU2888',
+                goodsUrl: "https://img.alicdn.com/imgextra/i3/743750137/O1CN01nPCvEA1CsmoHlOLWB_!!0-item_pic.jpg_430x430q90.jpg",
+                title: "美宝莲星钻小灯管口红女持久保湿滋润显白金鱼花火唇膏夏日限量版",
+                vipPrice: "299",
+                salesPrice: "399",
+                qrCode: 'https://upapi.jinaup.com/static/image/QRCode.png'
+            }
+        };
     },
 
     computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({
@@ -126,16 +137,55 @@ if (false) {(function () {
     methods: {},
     created: function created() {},
     mounted: function mounted() {
-        //title  
-        // console.log(this.goodsDetail)
         var context = wx.createCanvasContext('shareCanvas'); //绘制的上下文
-        context.rect(0, 0, 320, 520); //绘制白色背景
-        //填写标题文本：save()	保存当前环境的状态    restore()	返回之前保存过的路径状态和属性
-        // context.setFontSize(20);
-        // context.fillText(`富锦七星伴月月饼 8个/盒`, 10, 30)
-        // context.fillText(`[在售价]199元`, 10, 60)
-        // context.drawImage(this.avatar, 0, 0, 40, 40, 20, 12, 40, 40);
-        context.draw(); //描绘在页面中
+
+        //绘制头像
+        context.drawImage(this.userInfo.avtar, 10, 20, 50, 50);
+        //绘制昵称
+        context.save();
+        context.setFillStyle('#5D9AFC');
+        context.setFontSize(14);
+        context.fillText(this.userInfo.nickName, 70, 40);
+
+        context.setFillStyle('#000');
+        context.fillText('分享给你一个商品', 75 + context.measureText(this.userInfo.nickName).width, 40);
+
+        context.fillText('\u9080\u8BF7\u7801\uFF1A' + this.userInfo.code, 70, 70);
+
+        context.restore();
+
+        //绘制商品图片：
+        context.drawImage(this.userInfo.goodsUrl, 60, 100, 200, 200);
+
+        //绘制介绍文字：
+        context.save();
+        context.setFontSize(16);
+        context.fillText(this.userInfo.title + "顺丰包邮", 10, 340);
+        context.setFillStyle("red");
+        context.setFontSize(16);
+        context.fillText("￥" + this.userInfo.vipPrice + "元", 10, 370);
+        context.setFontSize(12);
+        context.setFillStyle("#333");
+        context.fillText("￥" + this.userInfo.salesPrice + "元", 80, 370);
+        context.restore();
+
+        //一条斜线
+        context.save();
+        context.moveTo(80, 365);
+        context.lineTo(130, 365);
+        context.stroke();
+
+        //二维码文字和图片：
+        context.save();
+        context.setFontSize(16);
+        context.fillText("长按识别二维码访问", 10, 420);
+        context.drawImage(this.userInfo.qrCode, 240, 360, 60, 60);
+        context.restore();
+
+        //生成图片：
+
+
+        context.draw();
     }
 });
 

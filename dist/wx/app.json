@@ -1,7 +1,7 @@
 {
-  "pages": [ 
+  "pages": [
+    "pages/home/main",
     "pages/share/main",
-    "pages/home/main", 
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -13,7 +13,6 @@
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
-  
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
@@ -52,5 +51,6 @@
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap31.json"
 }

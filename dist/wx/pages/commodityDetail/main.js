@@ -238,7 +238,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._v(_vm._s(_vm.goodsDetail.salesPrice))]), _vm._v(" "), _c('s', {
     staticClass: "num"
   }, [_vm._v("￥" + _vm._s(_vm.goodsDetail.vipPrice))])], 1), _vm._v(" "), _c('p', {
-    staticClass: "times"
+    staticClass: "times",
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.changshare
+    }
   }, [_vm._v("分享赚：￥" + _vm._s(_vm.goodsDetail.memberDiscountPrice))])], 1), _vm._v(" "), _c('div', {
     staticClass: "title"
   }, [_c('div', {
@@ -250,7 +256,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_c('span', [_vm._v("选择 规格")]), _vm._v(" "), _c('div', {
     staticClass: "rights",
     attrs: {
-      "eventid": '0'
+      "eventid": '1'
     },
     on: {
       "click": _vm.toShow
@@ -264,7 +270,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "footer"
   }, [_c('button', {
     attrs: {
-      "eventid": '1'
+      "eventid": '2'
     },
     on: {
       "click": _vm.changshare

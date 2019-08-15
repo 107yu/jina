@@ -25,7 +25,7 @@
             <p class="price">{{goodsDetail.salesPrice}}</p>
             <s class="num">￥{{goodsDetail.vipPrice}}</s>
           </div>
-          <p class="times">分享赚：￥{{goodsDetail.memberDiscountPrice}}</p>
+          <p class="times" @click="changshare">分享赚：￥{{goodsDetail.memberDiscountPrice}}</p>
         </div>
         <div class="title">
           <div class="names">{{goodsDetail.title}}</div>

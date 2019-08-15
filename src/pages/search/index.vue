@@ -24,7 +24,7 @@
                >{{item.title}}</span>
             </div>
             <div class="contentList" >
-                <dl v-for="(item,index) in searchList.result" :key="index">
+                <dl v-for="(item,index) in searchList.result" :key="index" @click="goTODetail(item.basePid)">
                   <dt>
                     <img :src="item.mainImgUrl" alt="">
                   </dt>
@@ -93,6 +93,11 @@ export default {
         "pageIndex": 1,
       })
       this.changeType(index)
+    },
+    goTODetail(id){
+      wx.navigateTo({
+          url: `/pages/commodityDetail/main?id=${id}`
+      });
     }
   },
   created(){
