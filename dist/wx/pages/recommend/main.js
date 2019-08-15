@@ -1,6 +1,6 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([13],{
+global.webpackJsonpMpvue([14],{
 
 /***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -95,9 +95,9 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(3);
 
 //
 //
@@ -225,8 +225,8 @@ if (false) {(function () {
 
     //去首页
     gotoHome: function gotoHome() {
-      wx.navigateTo({
-        url: "/pages/home/main"
+      wx.navigateBack({
+        delta: 2
       });
     },
 
@@ -268,11 +268,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.gotoHome
     }
-  }, [_c('navigator', {
-    attrs: {
-      "url": "/pages/home/main"
-    }
-  }, [_vm._v("今日推荐")])], 1), _vm._v(" "), _vm._l((_vm.navData), function(item, index) {
+  }, [_vm._v("今日推荐")]), _vm._v(" "), _vm._l((_vm.navData), function(item, index) {
     return _c('p', {
       key: index,
       class: index === _vm.ind ? 'active' : null,

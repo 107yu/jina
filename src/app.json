@@ -1,10 +1,6 @@
 {
-<<<<<<< HEAD
   "pages": [  
-    "pages/yuCanvas/main",
-=======
-  "pages": [
->>>>>>> b8ad17bfdb0c38e336bff801107764f7eea6972e
+   
     "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
@@ -22,6 +18,7 @@
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main",
+    "pages/yuCanvas/main",
     "pages/recommend/main"
   ],
   "window": {

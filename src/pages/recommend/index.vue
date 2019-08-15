@@ -2,7 +2,7 @@
   <div class="box">
     <scroll-view scroll-x>
       <div class="box_nav">
-        <p @click="gotoHome"><navigator url='/pages/home/main'>今日推荐</navigator></p>
+        <p @click="gotoHome">今日推荐</p>
         <p
           v-for="(item,index) in navData"
           :class="index===ind?'active':null"
@@ -112,8 +112,8 @@ export default {
     },
     //去首页
     gotoHome() {
-      wx.navigateTo({
-        url: "/pages/home/main"
+      wx.navigateBack({
+        delta: 2
       })
     },
     //滚动事件

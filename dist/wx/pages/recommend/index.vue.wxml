@@ -2,9 +2,7 @@
   <view class="_div data-v-4a74440c box">
     <scroll-view scroll-x class="_scroll-view data-v-4a74440c">
       <view class="_div data-v-4a74440c box_nav">
-        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_p data-v-4a74440c">
-          <navigator url="/pages/home/main" class="_navigator data-v-4a74440c">今日推荐</navigator>
-        </view>
+        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_p data-v-4a74440c">今日推荐</view>
         <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{navData}}" wx:for-index="index" wx:for-item="item" class="_p data-v-4a74440c {{index === ind ? 'active' : null}}">{{item.cname}}</view>
       </view>
     </scroll-view>

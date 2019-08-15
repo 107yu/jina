@@ -1,6 +1,5 @@
 {
-  "pages": [  
-    "pages/yuCanvas/main",
+  "pages": [
     "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
@@ -17,13 +16,9 @@
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
-<<<<<<< HEAD
-    "pages/shoppingcar/main"
- 
-=======
     "pages/shoppingcar/main",
+    "pages/yuCanvas/main",
     "pages/recommend/main"
->>>>>>> b8ad17bfdb0c38e336bff801107764f7eea6972e
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -57,10 +52,6 @@
       }
     ],
     "position": "bottom"
-<<<<<<< HEAD
-  }
-=======
   },
-  "sitemapLocation": "sitemap.json"
->>>>>>> b8ad17bfdb0c38e336bff801107764f7eea6972e
+  "sitemapLocation": "sitemap58.json"
 }
