@@ -42,7 +42,7 @@ page {
   font-weight: 600;
 }
 .show.data-v-6e1c0dc0 {
-  background: #56D2BF;
+  background: #56d2bf;
 }
 .swiperBox.data-v-53687ae0 {
   width: 100%;
@@ -243,4 +243,48 @@ page {
 ._dd>._div.data-v-b825702c {
   display: flex;
   justify-content: space-between;
+}
+._dl.data-v-c6695bba {
+  padding: 20rpx 20rpx;
+}
+._dl ._dt.data-v-c6695bba {
+  text-align: center;
+}
+._dl ._dt ._img.data-v-c6695bba {
+  width: 280rpx;
+  height: 260rpx;
+}
+._dl ._dd ._h1.data-v-c6695bba {
+  font-size: 30rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+._dl ._dd ._p.data-v-c6695bba {
+  border: 2rpx solid #fc5d7b;
+  display: inline-block;
+  color: #fc5d7b;
+  font-size: 20rpx;
+  padding: 0 8rpx;
+}
+._dl ._dd ._h2 ._h3.data-v-c6695bba {
+  color: #fc5d7b;
+}
+._dl ._dd ._h2 ._h4.data-v-c6695bba {
+  color: #666;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+}
+._dl ._dd ._h2 ._h4 ._h5.data-v-c6695bba {
+  color: #a87831;
+}
+._dl ._dd ._h2 ._h4 ._span.data-v-c6695bba {
+  color: #fc5d7b;
+  margin-left: 20rpx;
+  background: #fbe1ec;
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
-    <div class="swiper">
-      <!-- <img src="../../../static/images/1.jpg" alt=""> -->
+    <div class="swiper" >
+      <img src="../../../static/images/1.jpg" alt="">
     </div>
     <div class="tit">
       <div class="ones">
@@ -12,44 +12,23 @@
       <p class="times">分享赚：￥499.00</p>
     </div>
     <div class="title">
-      <div class="names">帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤</div>
-      <p>
+       <div class="names">帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤</div>
+    <p>
         <span>快递包邮</span>
-        <span>仅剩235件</span>
-      </p>
-    </div>
-    <div class="hui">
-        <!-- <img src="../../static/images/黑卡icon(1).svg" alt=""> -->
-        <p>开通会员购买本商品预计可省<span>￥198</span>元</p>
+    </p>
     </div>
     <ul class="list">
       <li class="lis">
-        <span>选择:</span>
+        <span>选择 规格</span>
         <div class="rights" @click="toShow">
           <span>颜色 尺码</span>
-          <!-- <img src="../../static/images/下一步.svg" alt=""> -->
-        </div>
-      </li>
-      <li class="lis">
-        <span>规格:</span>
-        <div class="rights">
-          <span>S M XL</span>
-          <!-- <img src="../../static/images/下一步.svg" alt=""> -->
-        </div>
-      </li>
-      <li class="lis">
-        <span>领券:</span>
-        <div class="rights">
-          <span class="to2color">每满300减35券 满199减20券</span>
+          <img src="../../../static/images/下一步.svg" alt="">
         </div>
       </li>
     </ul>
     <div class="footer">
-      <div class="lefts">
-        <!-- <img src="../../static/images/收藏未点击.svg" alt> -->
-        <p>收藏</p>
-      </div>
-      <button>下架</button>
+      <button @click="changshare">分享赚1.98</button>
+      <button>立即购买</button>
     </div>
   </div>
 </template>
@@ -70,7 +49,11 @@ export default {
 
     },
     methods:{
-        // 控制模态框的限时隐藏
+      changshare(){
+           wx.navigateTo({
+                url: "/pages/share/main"
+          });
+      }
     },
     created(){
 
@@ -157,24 +140,6 @@ export default {
     color: #999da2;
   }
 }
-
-.hui{
-    width: 100%;
-    display: flex;
-    img{
-        width: 50rpx;
-        height: 40rpx;
-        padding-left: 20rpx;
-    }
-    p{
-        font-size: 30rpx;
-        padding-left: 25rpx;
-        span{
-            color: rgb(168, 120, 50)
-        }
-    }
-}
-
 .list {
   width: 100%;
   padding: 0 2%;
@@ -229,7 +194,7 @@ export default {
   border-top: 1rpx solid #ccc;
   text-align: center;
   display: flex;
-  background: #fff;
+  background:#fc5d7b ;
 
   .lefts {
     width: 30%;
@@ -244,7 +209,7 @@ export default {
 
   button {
     width: 70%;
-    background: #ccc;
+    background: #fc5d7b;
     font-size: 38rpx;
     color: #fff;
   }

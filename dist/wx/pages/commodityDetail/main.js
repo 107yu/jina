@@ -1,15 +1,19 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
+<<<<<<< HEAD
 global.webpackJsonpMpvue([12],{
+=======
+global.webpackJsonpMpvue([18],{
+>>>>>>> b8ad17bfdb0c38e336bff801107764f7eea6972e
 
-/***/ 148:
+/***/ 163:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(164);
 
 
 
@@ -25,16 +29,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 149:
+/***/ 164:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_f6962b48_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_f6962b48_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(167);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(150)
+  __webpack_require__(165)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,38 +83,17 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 150:
+/***/ 165:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 151:
+/***/ 166:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -155,7 +138,11 @@ if (false) {(function () {
 
     computed: {},
     methods: {
-        // 控制模态框的限时隐藏
+        changshare: function changshare() {
+            wx.navigateTo({
+                url: "/pages/share/main"
+            });
+        }
     },
     created: function created() {},
     mounted: function mounted() {}
@@ -163,16 +150,14 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 152:
+/***/ 167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrap"
-  }, [_c('div', {
-    staticClass: "swiper"
-  }), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "tit"
   }, [_c('div', {
     staticClass: "ones"
@@ -186,13 +171,11 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "title"
   }, [_c('div', {
     staticClass: "names"
-  }, [_vm._v("帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤")]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")]), _vm._v(" "), _c('span', [_vm._v("仅剩235件")])])], 1), _vm._v(" "), _c('div', {
-    staticClass: "hui"
-  }, [_c('p', [_vm._v("开通会员购买本商品预计可省"), _c('span', [_vm._v("￥198")]), _vm._v("元")])], 1), _vm._v(" "), _c('ul', {
+  }, [_vm._v("帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤")]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")])])], 1), _vm._v(" "), _c('ul', {
     staticClass: "list"
   }, [_c('li', {
     staticClass: "lis"
-  }, [_c('span', [_vm._v("选择:")]), _vm._v(" "), _c('div', {
+  }, [_c('span', [_vm._v("选择 规格")]), _vm._v(" "), _c('div', {
     staticClass: "rights",
     attrs: {
       "eventid": '0'
@@ -200,23 +183,32 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.toShow
     }
-  }, [_c('span', [_vm._v("颜色 尺码")])])]), _vm._v(" "), _c('li', {
-    staticClass: "lis"
-  }, [_c('span', [_vm._v("规格:")]), _vm._v(" "), _c('div', {
-    staticClass: "rights"
-  }, [_c('span', [_vm._v("S M XL")])])]), _vm._v(" "), _c('li', {
-    staticClass: "lis"
-  }, [_c('span', [_vm._v("领券:")]), _vm._v(" "), _c('div', {
-    staticClass: "rights"
-  }, [_c('span', {
-    staticClass: "to2color"
-  }, [_vm._v("每满300减35券 满199减20券")])])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('span', [_vm._v("颜色 尺码")]), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "../../../static/images/下一步.svg",
+      "alt": ""
+    }
+  })])])], 1), _vm._v(" "), _c('div', {
     staticClass: "footer"
-  }, [_c('div', {
-    staticClass: "lefts"
-  }, [_c('p', [_vm._v("收藏")])], 1), _vm._v(" "), _c('button', [_vm._v("下架")])], 1)], 1)
+  }, [_c('button', {
+    attrs: {
+      "eventid": '1'
+    },
+    on: {
+      "click": _vm.changshare
+    }
+  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "swiper"
+  }, [_c('img', {
+    attrs: {
+      "src": "../../../static/images/1.jpg",
+      "alt": ""
+    }
+  })])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -229,4 +221,4 @@ if (false) {
 
 /***/ })
 
-},[148]);
+},[163]);

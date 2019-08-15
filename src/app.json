@@ -1,18 +1,28 @@
 {
+<<<<<<< HEAD
   "pages": [  
     "pages/yuCanvas/main",
+=======
+  "pages": [
+>>>>>>> b8ad17bfdb0c38e336bff801107764f7eea6972e
     "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
+    "pages/gopay/main",
+    "pages/introduceDetail/main",
+    "pages/site/address/main",
+    "pages/site/sitelist/main",
+    "pages/refund/main",
+    "pages/site/delivery/main",
     "pages/flashSale/main",
+    "pages/hotimgDetail/main",
     "pages/special/main",
-    "pages/seckillDetail/main",
-    "pages/purchaseDetail/main",
+    "pages/share/main",
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
-    "pages/shoppingcar/main"
- 
+    "pages/shoppingcar/main",
+    "pages/recommend/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

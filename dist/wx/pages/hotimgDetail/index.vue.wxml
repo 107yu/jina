@@ -1,0 +1,78 @@
+<template name="799eb73c">
+  <view class="_div data-v-6f3cdac2 wrap">
+    <view class="_div data-v-6f3cdac2 tupian">
+      <image src="/static/images/1.jpg" alt class="_img data-v-6f3cdac2"></image>
+    </view>
+    <view class="_div data-v-6f3cdac2 toy">
+      <view class="_h2 data-v-6f3cdac2">玩具专区</view>
+    </view>
+    <scroll-view scroll-y class="_scroll-view data-v-6f3cdac2 list">
+      <view class="_p data-v-6f3cdac2">-------● 玩具专区 ●-------</view>
+      <view class="_div data-v-6f3cdac2 list_L" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+        <view class="_dl data-v-6f3cdac2">
+          <view class="_dt data-v-6f3cdac2">
+            <image src="/static/images/2.png" alt class="_img data-v-6f3cdac2"></image>
+          </view>
+          <view class="_dd data-v-6f3cdac2">
+            <view class="_p data-v-6f3cdac2">超级飞侠如玩家较为爱车腐恶啊和覅发挥全程</view>
+            <view class="_b data-v-6f3cdac2">￥25</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

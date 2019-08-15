@@ -1,48 +1,43 @@
 <template>
-    <div>
-        <HotImg :hotimg="hotimg"></HotImg>
-        <HomeBar homeBarHot="精品好物" describe="等你来抢" more="true"></HomeBar>
-        <div class="boutique">
-        <DlList 
-            v-for="(item,index) in homeLi" 
-            :key="index"
-            :img="item.imgUrl"
-            :title="item.title"
-            :price="item.vipPrice"
-            ></DlList>
-        </div>
+  <div>
+    <HotImg :hotimg="hotimg"></HotImg>
+    <HomeBar homeBarHot="精品好物" describe="等你来抢" more="true"></HomeBar>
+    <div class="boutique">
+      <DlList 
+      v-for="(item,index) in homeLi" 
+      :key="index"
+      :img="item.imgUrl"
+      :title="item.title"
+      :price="item.vipPrice"
+      ></DlList>
     </div>
+  </div>
 </template>
 <script>
+import { mapState, mapActions } from "vuex";
 export default {
-    props:[
-        "hotimg",
-        "homeLi"
-    ],
-    components:{
-
-    },
-    data(){
-        return {
-
-        }
-    },
-    computed:{
-
-    },
-    methods:{
-
-    },
-    created(){
-
-    },
-    mounted(){
-
-    }
-}
+  props: ["hotimg", "homeLi"],
+  components: {},
+  data() {
+    return {};
+  },
+  computed: {
+   
+  },
+  methods: {
+    ...mapActions({
+      ProductCouponDetail: state => state.productCoupon.ProductCouponDetail
+    }),
+   
+  },
+  created() {},
+  mounted() {
+     
+  }
+};
 </script>
 <style scoped lang="">
-.boutique{
+.boutique {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

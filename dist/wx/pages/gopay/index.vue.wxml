@@ -1,0 +1,30 @@
+<template name="5f0e1807">
+  <view class="_div data-v-2f49bc7e wrap">
+    <view class="_header data-v-2f49bc7e header">
+      <image src="/static/my/remind.svg" alt class="_img data-v-2f49bc7e"></image>请在29:2内付款
+    </view>
+    <view class="_div data-v-2f49bc7e item">
+      <view class="_div data-v-2f49bc7e money">
+        <view class="_div data-v-2f49bc7e div">订单应付金额(含邮)</view>
+        <view class="_div data-v-2f49bc7e"> ￥ <label class="_span data-v-2f49bc7e">123</label></view>
+        <view class="_div data-v-2f49bc7e"> 订单总计: <label class="_span data-v-2f49bc7e">￥123</label></view>
+        <view class="_div data-v-2f49bc7e"> 满减活动: <label class="_span data-v-2f49bc7e">-￥5</label></view>
+      </view>
+      <view class="_div data-v-2f49bc7e payment">
+        <view class="_div data-v-2f49bc7e">
+          <view class="_p data-v-2f49bc7e">
+            <image src="/static/my/zfb.svg" alt class="_img data-v-2f49bc7e zf"></image>支付宝支付
+          </view>
+          <image src="/static/my/nocheck.svg" alt class="_img data-v-2f49bc7e check"></image>
+        </view>
+        <view class="_div data-v-2f49bc7e">
+          <view class="_p data-v-2f49bc7e">
+            <image src="/static/my/wx.svg" alt class="_img data-v-2f49bc7e zf"></image>微信支付
+          </view>
+          <image src="/static/my/nocheck.svg" alt class="_img data-v-2f49bc7e check"></image>
+        </view>
+      </view>
+    </view>
+    <view bindtap="handleProxy" class="_div data-v-2f49bc7e foot" data-eventid="{{'0'}}" data-comkey="{{$k}}">去支付</view>
+  </view>
+</template>

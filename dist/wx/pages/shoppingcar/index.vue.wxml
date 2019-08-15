@@ -1,17 +1,35 @@
 <template name="09bfdcf3">
   <view class="_div data-v-4c7129ea wrap">
     <view class="_section data-v-4c7129ea">
-      <view class="_div data-v-4c7129ea">
+      <view class="_div data-v-4c7129ea shop_box">
+        <view class="_div data-v-4c7129ea left_box">
+          <image src="/static/images/meigou.svg" alt class="_img data-v-4c7129ea"></image>
+        </view>
         <view class="_dl data-v-4c7129ea">
           <view class="_dt data-v-4c7129ea">
-            <image src alt class="_img data-v-4c7129ea"></image>
+            <view class="_div data-v-4c7129ea small_img"></view>
           </view>
           <view class="_dd data-v-4c7129ea">
-            <view class="_h1 data-v-4c7129ea"></view>
+            <view class="_h1 data-v-4c7129ea">帮宝适数据的飞鸟时代就发你说的九年四季度v从</view>
             <view class="_h2 data-v-4c7129ea">规格：XL</view>
-            <view class="_h3 data-v-4c7129ea">￥52.50</view>
+            <view class="_h3 data-v-4c7129ea"><label class="_span data-v-4c7129ea">￥52.50</label>
+              <view class="_div data-v-4c7129ea edit_count">
+                <view class="_p data-v-4c7129ea">-</view> <label class="_span data-v-4c7129ea">1</label>
+                <view class="_p data-v-4c7129ea">+</view>
+              </view>
+            </view>
           </view>
         </view>
+      </view>
+    </view>
+    <view class="_footer data-v-4c7129ea">
+      <view class="_div data-v-4c7129ea lt">
+        <image src="/static/images/meigou.svg" alt class="_img data-v-4c7129ea"></image>全选
+      </view>
+      <view class="_div data-v-4c7129ea rt">
+        <view class="_div data-v-4c7129ea"><label class="_span data-v-4c7129ea">总计:</label> <label class="_span data-v-4c7129ea">￥198.8</label></view>
+        <view class="_p data-v-4c7129ea edit">编辑</view>
+        <view class="_p data-v-4c7129ea">去结算</view>
       </view>
     </view>
   </view>

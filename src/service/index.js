@@ -1,3 +1,7 @@
 export * from "./login/login"
 export * from "./home/home"
 export * from "./search/search"
+export * from "./sepcialList/sepcialList"
+export * from "./productCoupon/productCoupon"
+export * from "./special/special"
+export * from "./recommend/recommend"
