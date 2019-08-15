@@ -30,32 +30,32 @@ export default {
   mounted() {}
 };
 </script>
-<style  lang="scss">
-dl {
-  padding: 10px 10px;
-  dt {
-    .small_img {
-      background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
-    }
-  }
-  dd {
-    h1 {
-      font-size: 30rpx;
-    }
-    h2 {
-      h3 {
-        color: #fc5d7b;
-        span {
-        }
-      }
-      h4 {
-        color: #666;
-        text-decoration: line-through;
-        font-size: 25rpx;
-        margin-left: 20rpx;
-        margin-top: 20rpx;
-      }
-    }
-  }
-}
+<style scoped lang="scss">
+// dl {
+//   padding: 10px 10px;
+//   dt {
+//     .small_img {
+//       background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
+//     }
+//   }
+//   dd {
+//     h1 {
+//       font-size: 30rpx;
+//     }
+//     h2 {
+//       h3 {
+//         color: #fc5d7b;
+//         span {
+//         }
+//       }
+//       h4 {
+//         color: #666;
+//         text-decoration: line-through;
+//         font-size: 25rpx;
+//         margin-left: 20rpx;
+//         margin-top: 20rpx;
+//       }
+//     }
+//   }
+// }
 </style>

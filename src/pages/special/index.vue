@@ -94,7 +94,7 @@ export default {
     .img {
       width: 100%;
       height: 300rpx;
-     background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
+      background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
     }
     .nav {
       width: 100%;
@@ -135,10 +135,12 @@ export default {
         margin-left: 8rpx;
         margin-top: 8rpx;
         dl {
+          padding: 10px 10px;
           dt {
             .small_img {
               width: 300rpx;
               height: 400rpx;
+              background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
             }
           }
           dd {
@@ -178,10 +180,12 @@ export default {
         margin-top: 20rpx;
         dl {
           display: flex;
+          padding: 10px 10px;
           dt {
             .small_img {
               width: 200rpx;
               height: 250rpx;
+              background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
             }
           }
           dd {
@@ -222,10 +226,12 @@ export default {
         margin-left: 8rpx;
         margin-top: 8rpx;
         dl {
+          padding: 10px 10px;
           dt {
             .small_img {
               width: 150rpx;
               height: 180rpx;
+              background-image: linear-gradient(to right, #26c5fd, #fc5d7b);
             }
           }
           dd {
@@ -236,6 +242,7 @@ export default {
             h2 {
               margin-top: 25rpx;
               h3 {
+                 color: #fc5d7b;
                 font-size: 30rpx;
                 span {
                   font-size: 35rpx;
