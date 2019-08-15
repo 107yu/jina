@@ -74,6 +74,7 @@ export default {
     //顶部tab切换
     tab(index, id) {
       this.tabNav({ index: index, id: id });
+      // console.log(this.current.cid);
       //顶部切换时联动下面数据
       this.getCountData({
         pageIndex: this.current.pageIndex,
@@ -126,8 +127,6 @@ export default {
   created() {
     //头部
     this.getNavData();
-    //列表
-    this.getCountData({ pageIndex: 1, cid: 1, sortType: 1 });
   },
   mounted() {}
 };

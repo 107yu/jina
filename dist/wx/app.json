@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/main",
+    "pages/login/main",
+    "pages/canvas/main",
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",

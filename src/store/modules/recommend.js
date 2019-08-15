@@ -53,9 +53,9 @@ export default {
             state.current.pageIndex
         },
         //上拉加载
-        updatepull(state,payload){
+        updatepull(state, payload) {
             // ++state.current.pageIndex
-        }
+        },
     },
     getters: {
 

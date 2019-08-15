@@ -2,7 +2,7 @@
   <div class="header">
     <scroll-view scroll-x style="height:100%">
       <ul>
-        <li v-for="(item,index) in titles" :key="index" @click="changeTitle(index)">
+        <li v-for="(item,index) in titles" :key="index" @click="changeTitle(index,item.cid)">
           <span :class="{'strong':index===ind}">{{item.cname}}</span>
           <b :class="{'show':index===ind}"></b>
         </li>
@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import { mapMutations, mapActions } from "vuex";
 export default {
   props: ["titles"],
   components: {},
@@ -21,13 +22,23 @@ export default {
   },
   computed: {},
   methods: {
+    ...mapMutations({
+      tabNav: "recommend/tabNav"
+    }),
+    ...mapActions({
+      getCountData: "recommend/getCountData"
+    }),
     //tap切换
-    changeTitle(index) {
+    changeTitle(index, cid) {
+      //首页样式联动分类页样式
+      this.tabNav({ index: index - 1, id: cid });
+      //分类页面列表数据
+      this.getCountData({ pageIndex: 1, cid: cid, sortType: 1 });
       this.ind = index;
       if (index !== 0) {
-          wx.navigateTo({
-              url:'/pages/recommend/main'
-          })
+        wx.navigateTo({
+          url: "/pages/recommend/main"
+        });
       }
     }
   },
