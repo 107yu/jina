@@ -9,6 +9,7 @@
       :img="item.imgUrl"
       :title="item.title"
       :price="item.vipPrice"
+      :url="item.jumpUrl"
       ></DlList>
     </div>
   </div>

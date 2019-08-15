@@ -11,8 +11,9 @@
     </dl>
 </template>
 <script>
+import {mapState,mapMutations,mapActions} from "vuex"
 export default {
-    props:["title","img","price"],
+    props:["title","img","price","url","id"],
     components:{
 
     },
@@ -26,8 +27,21 @@ export default {
     },
     methods:{
         showcommodity() {
+            //处理url地址，获取商品的id
+            //basePid
+            let id = "";
+            if(this.id){
+                id = this.id
+            }else if(this.url){
+                let arr = []
+                this.url.split("//")[1].split("&").forEach((item)=>{
+                    arr.push(item.split("=")) 
+                })
+                let obj= Object.fromEntries(arr)
+                id = obj.businessId
+            }
             wx.navigateTo({
-                url: "/pages/commodityDetail/main"
+                url: `/pages/commodityDetail/main?id=${id}`
             });
         }
     },

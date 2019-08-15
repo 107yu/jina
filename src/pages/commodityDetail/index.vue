@@ -1,38 +1,59 @@
 <template>
     <div class="wrap">
-    <div class="swiper" >
-      <img src="../../../static/images/1.jpg" alt="">
-    </div>
-    <div class="tit">
-      <div class="ones">
-        <p>￥</p>
-        <p class="price">22.9</p>
-        <s class="num">￥18.88</s>
-      </div>
-      <p class="times">分享赚：￥499.00</p>
-    </div>
-    <div class="title">
-       <div class="names">帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤</div>
-    <p>
-        <span>快递包邮</span>
-    </p>
-    </div>
-    <ul class="list">
-      <li class="lis">
-        <span>选择 规格</span>
-        <div class="rights" @click="toShow">
-          <span>颜色 尺码</span>
-          <img src="../../../static/images/下一步.svg" alt="">
+      <scroll-view scroll-y style="height:100%">
+        <div class="swiper" >
+          <!-- <img src="../../../static/images/1.jpg" alt=""> -->
+          <swiper 
+           indicator-dots="true" 
+           autoplay="true" 
+           interval="2000" 
+           duration="1000"
+           indicator-active-color="#fff"
+           v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length>0"
+        >
+            <block v-for="(val,index) in goodsDetail.supplierProductPictureVoList" :key="index">
+                <swiper-item>
+                    <image :src="val.imgUrl" class="slide-image" style='overflow:show'/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <img v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length===0" :src="goodsDetail.mainImgUrl" alt="" >
         </div>
-      </li>
-    </ul>
-    <div class="footer">
-      <button @click="changshare">分享赚1.98</button>
-      <button>立即购买</button>
-    </div>
+        <div class="tit">
+          <div class="ones">
+            <p>￥</p>
+            <p class="price">{{goodsDetail.salesPrice}}</p>
+            <s class="num">￥{{goodsDetail.vipPrice}}</s>
+          </div>
+          <p class="times">分享赚：￥{{goodsDetail.memberDiscountPrice}}</p>
+        </div>
+        <div class="title">
+          <div class="names">{{goodsDetail.title}}</div>
+        <p>
+            <span>快递包邮</span>
+        </p>
+        </div>
+        <ul class="list">
+          <li class="lis">
+            <span>选择 规格</span>
+            <div class="rights" @click="toShow">
+              <span>颜色 尺码</span>
+              <img src="../../../static/images/下一步.svg" alt="">
+            </div>
+          </li>
+          <li>
+            说明:{{goodsDetail.description}}
+          </li>
+        </ul>
+        <div class="footer">
+          <button @click="changshare">分享赚1.98</button>
+          <button>立即购买</button>
+        </div>  
+      </scroll-view>
   </div>
 </template>
 <script>
+import {mapState,mapMutations,mapActions} from "vuex"
 export default {
     props:{
 
@@ -42,13 +63,19 @@ export default {
     },
     data(){
         return {
-
+          //supplierProductPictureVoList   轮播图
+          //warehouseVo   公司信息
         }
     },
     computed:{
-
+      ...mapState({
+        goodsDetail: state=>state.home.goodsDetail
+      })
     },
     methods:{
+      ...mapActions({
+        getGoodsInfo: "home/getGoodsInfo"
+      }),
       changshare(){
            wx.navigateTo({
                 url: "/pages/share/main"
@@ -59,7 +86,9 @@ export default {
 
     },
     mounted(){
-
+      this.getGoodsInfo({
+        pid: this.$root.$root.$mp.query.id
+      })
     }
 }
 </script>
@@ -67,6 +96,7 @@ export default {
 .wrap {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .swiper {

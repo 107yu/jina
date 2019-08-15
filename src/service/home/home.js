@@ -22,5 +22,5 @@ export let getSwiperDetail = code =>{
 
 //获取商品详情：
 export let getGoodsDetail = code =>{
-    return fly.post('/api/open/product/info/1.0.0',{pid:157})
+    return fly.post('/api/open/product/info/1.0.0',code)
 }

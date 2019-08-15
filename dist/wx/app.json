@@ -1,6 +1,7 @@
 {
-  "pages": [
-    "pages/home/main",
+  "pages": [ 
+    "pages/share/main",
+    "pages/home/main", 
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -12,12 +13,11 @@
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
-    "pages/share/main",
+  
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main",
-    "pages/yuCanvas/main",
     "pages/recommend/main"
   ],
   "window": {
@@ -52,6 +52,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap58.json"
+  }
 }

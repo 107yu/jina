@@ -7,6 +7,7 @@ export default {
         homeProducts: [],
         categories: [], //分类标题
         swiperDetailInfo:{}, //轮播图详情
+        goodsid:"",//商品id
         goodsDetail: {}, // 商品详情信息
     },
     mutations: {
@@ -17,7 +18,7 @@ export default {
         },  
         homeList(state,payload){     //获取首页大部分数据
             state.homeLists = payload;
-            console.log("homeLists",state.homeLists)
+            // console.log("homeLists",state.homeLists)
         },
         homeProducts(state,payload){   //获取首页底部数据
             state.homeProducts = payload
@@ -25,10 +26,11 @@ export default {
         },
         swiperDetail(state,payload){   //轮播图的详细信息
             state.swiperDetailInfo = payload;
-            console.log("state.swiperDetailInfo",state.swiperDetailInfo)
+            // console.log("state.swiperDetailInfo",state.swiperDetailInfo)
         },
         goodsDetail(state,payload){  //获取商品详情
             state.goodsDetail = payload
+            // console.log("state.goodsDetail",state.goodsDetail)
         }
     },
     actions: {
@@ -47,7 +49,6 @@ export default {
         },
         async getHomeList({commit}){       //获取首页大部分数据
             let data = await getList()
-            console.log(data.result,"404040404")
             if(data.res_code === 1){
                 commit("homeList",data.result)
             }
@@ -58,7 +59,9 @@ export default {
         },
         async getGoodsInfo({commit},payload){   //获取商品干的详情
             let data = await getGoodsDetail(payload)
-            console.log(data)
+            if(data.res_code===1){
+                commit("goodsDetail",data.result)
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([19],{
+global.webpackJsonpMpvue([18],{
 
 /***/ 163:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -90,6 +90,10 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(2);
+
 //
 //
 //
@@ -124,24 +128,58 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    props: {},
-    components: {},
-    data: function data() {
-        return {};
-    },
+  props: {},
+  components: {},
+  data: function data() {
+    return {
+      //supplierProductPictureVoList   轮播图
+      //warehouseVo   公司信息
+    };
+  },
 
-    computed: {},
-    methods: {
-        changshare: function changshare() {
-            wx.navigateTo({
-                url: "/pages/share/main"
-            });
-        }
-    },
-    created: function created() {},
-    mounted: function mounted() {}
+  computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({
+    goodsDetail: function goodsDetail(state) {
+      return state.home.goodsDetail;
+    }
+  })),
+  methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+    getGoodsInfo: "home/getGoodsInfo"
+  }), {
+    changshare: function changshare() {
+      wx.navigateTo({
+        url: "/pages/share/main"
+      });
+    }
+  }),
+  created: function created() {},
+  mounted: function mounted() {
+    this.getGoodsInfo({
+      pid: this.$root.$root.$mp.query.id
+    });
+  }
 });
 
 /***/ }),
@@ -153,21 +191,59 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrap"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('scroll-view', {
+    staticStyle: {
+      "height": "100%"
+    },
+    attrs: {
+      "scroll-y": ""
+    }
+  }, [_c('div', {
+    staticClass: "swiper"
+  }, [(_vm.goodsDetail.supplierProductPictureVoList && _vm.goodsDetail.supplierProductPictureVoList.length > 0) ? _c('swiper', {
+    attrs: {
+      "indicator-dots": "true",
+      "autoplay": "true",
+      "interval": "2000",
+      "duration": "1000",
+      "indicator-active-color": "#fff"
+    }
+  }, _vm._l((_vm.goodsDetail.supplierProductPictureVoList), function(val, index) {
+    return _c('block', {
+      key: index
+    }, [_c('swiper-item', {
+      attrs: {
+        "mpcomid": '0_' + index
+      }
+    }, [_c('image', {
+      staticClass: "slide-image",
+      staticStyle: {
+        "overflow": "show"
+      },
+      attrs: {
+        "src": val.imgUrl
+      }
+    })])], 1)
+  })) : _vm._e(), _vm._v(" "), (_vm.goodsDetail.supplierProductPictureVoList && _vm.goodsDetail.supplierProductPictureVoList.length === 0) ? _c('img', {
+    attrs: {
+      "src": _vm.goodsDetail.mainImgUrl,
+      "alt": ""
+    }
+  }) : _vm._e()], 1), _vm._v(" "), _c('div', {
     staticClass: "tit"
   }, [_c('div', {
     staticClass: "ones"
   }, [_c('p', [_vm._v("￥")]), _vm._v(" "), _c('p', {
     staticClass: "price"
-  }, [_vm._v("22.9")]), _vm._v(" "), _c('s', {
+  }, [_vm._v(_vm._s(_vm.goodsDetail.salesPrice))]), _vm._v(" "), _c('s', {
     staticClass: "num"
-  }, [_vm._v("￥18.88")])], 1), _vm._v(" "), _c('p', {
+  }, [_vm._v("￥" + _vm._s(_vm.goodsDetail.vipPrice))])], 1), _vm._v(" "), _c('p', {
     staticClass: "times"
-  }, [_vm._v("分享赚：￥499.00")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("分享赚：￥" + _vm._s(_vm.goodsDetail.memberDiscountPrice))])], 1), _vm._v(" "), _c('div', {
     staticClass: "title"
   }, [_c('div', {
     staticClass: "names"
-  }, [_vm._v("帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤")]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")])])], 1), _vm._v(" "), _c('ul', {
+  }, [_vm._v(_vm._s(_vm.goodsDetail.title))]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")])])], 1), _vm._v(" "), _c('ul', {
     staticClass: "list"
   }, [_c('li', {
     staticClass: "lis"
@@ -184,7 +260,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "src": "../../../static/images/下一步.svg",
       "alt": ""
     }
-  })])])], 1), _vm._v(" "), _c('div', {
+  })])]), _vm._v(" "), _c('li', [_vm._v("\n          说明:" + _vm._s(_vm.goodsDetail.description) + "\n        ")])], 1), _vm._v(" "), _c('div', {
     staticClass: "footer"
   }, [_c('button', {
     attrs: {
@@ -193,18 +269,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.changshare
     }
-  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)
+  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)], 1)
 }
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "swiper"
-  }, [_c('img', {
-    attrs: {
-      "src": "../../../static/images/1.jpg",
-      "alt": ""
-    }
-  })])
-}]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

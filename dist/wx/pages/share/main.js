@@ -1,6 +1,6 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([11],{
+global.webpackJsonpMpvue([10],{
 
 /***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -90,10 +90,10 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(2);
+
 //
 //
 //
@@ -112,17 +112,31 @@ if (false) {(function () {
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["a"] = ({
-    props: {},
-    components: {},
     data: function data() {
         return {};
     },
 
-    computed: {},
+    computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({
+        goodsDetail: function goodsDetail(state) {
+            return state.home.goodsDetail;
+        }
+    })),
     methods: {},
     created: function created() {},
-    mounted: function mounted() {}
+    mounted: function mounted() {
+        //title  
+        // console.log(this.goodsDetail)
+        var context = wx.createCanvasContext('shareCanvas'); //绘制的上下文
+        context.rect(0, 0, 320, 520); //绘制白色背景
+        //填写标题文本：save()	保存当前环境的状态    restore()	返回之前保存过的路径状态和属性
+        // context.setFontSize(20);
+        // context.fillText(`富锦七星伴月月饼 8个/盒`, 10, 30)
+        // context.fillText(`[在售价]199元`, 10, 60)
+        // context.drawImage(this.avatar, 0, 0, 40, 40, 20, 12, 40, 40);
+        context.draw(); //描绘在页面中
+    }
 });
 
 /***/ }),
@@ -134,27 +148,33 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "share"
-  }, [_c('div', {
-    staticClass: "share_h2"
-  }, [_c('h2', [_vm._v("超级飞侠如玩家较为爱车腐恶啊和覅发挥全程覅发挥全程")]), _vm._v(" "), _c('span', {
-    staticClass: "pirce"
-  }, [_vm._v("【在售价22元】")])], 1), _vm._v(" "), _c('div', {
-    staticClass: "section"
-  }), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('ul', {
     staticClass: "footer"
-  }, [_c('ul', [_c('li', [_c('img', {
+  }, [_c('li', [_c('img', {
     attrs: {
-      "src": "../../../static/images/保存图片 copy 2.svg",
+      "src": "/static/images/保存图片 copy 2.svg",
       "alt": ""
     }
   }), _vm._v(" "), _c('span', [_vm._v("保存到相册")])]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
-      "src": "../../../static/images/分享微信.svg",
+      "src": "/static/images/分享微信.svg",
       "alt": ""
     }
-  }), _vm._v(" "), _c('span', [_vm._v("分享给朋友")])])], 1)], 1)])
+  }), _vm._v(" "), _c('span', [_vm._v("分享给朋友")])])], 1)], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "picture"
+  }, [_c('canvas', {
+    staticStyle: {
+      "width": "100%",
+      "height": "100%"
+    },
+    attrs: {
+      "canvas-id": "shareCanvas"
+    }
+  })])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
