@@ -24,7 +24,7 @@ export default {
         },
         homeProducts(state,payload){   //获取首页底部数据
             state.homeProducts = payload
-            // console.log("homeProducts",state.homeProducts)
+            console.log("homeProducts",state.homeProducts)
         },
         swiperDetail(state,payload){   //轮播图的详细信息
             state.swiperDetailInfo = payload;
