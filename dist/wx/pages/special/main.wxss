@@ -1,3 +1,4 @@
+@import "../../common/vendor.wxss";
 
 @charset "UTF-8";
 .wrap .head .img.data-v-15dae277 {

@@ -1,0 +1,12 @@
+<import src="/components/commodityitem/index.vue.wxml" /><template name="206c9667">
+  <view class="_div data-v-d5401856 wrap">
+    <view class="_section data-v-d5401856 imgtitle">
+      <image src alt class="_img data-v-d5401856"></image>
+      <view class="_p data-v-d5401856 activity"><label class="_span data-v-d5401856">正在疯抢</label> <label class="_span data-v-d5401856">明日11:00</label></view>
+      <view class="_div data-v-d5401856 flash">本场还剩 03 :28：39</view>
+    </view>
+    <view class="_div data-v-d5401856 commodity">
+      <view class="_ul data-v-d5401856 commodity_list"><template data="{{...$root[$kk+'0'], $root}}" is="64228b24"></template></view>
+    </view>
+  </view>
+</template>

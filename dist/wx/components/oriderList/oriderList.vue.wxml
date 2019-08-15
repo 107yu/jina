@@ -1,0 +1,11 @@
+<import src="/components/oriderList/oriderDl.vue.wxml" />
+<import src="/components/slots" /><template name="5c157918">
+  <view class="_div data-v-7393e680 list"><template name="default"></template>
+    <view class="_div data-v-7393e680 top"><label class="_span data-v-7393e680">2019-01-17 17:18:50</label> <label class="_span data-v-7393e680">待付款</label></view>
+    <view class="_div data-v-7393e680 menu"><template data="{{...$root[$kk+'0'], $root}}" is="612951de"></template> <template data="{{...$root[$kk+'1'], $root}}" is="612951de"></template></view>
+    <view class="_div data-v-7393e680 computed"> 共计；2件商品，合计：￥53.5 </view>
+    <view class="_div data-v-7393e680 btn">
+      <view class="_p data-v-7393e680"></view> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
+    </view>
+  </view>
+</template>

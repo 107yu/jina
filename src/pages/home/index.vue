@@ -1,157 +1,133 @@
 <template>
-  <div class="home">
-    <div class="input">
-      <input type="text" class="search" @focus="search">
-      <img v-if="searchBtn" src="/static/images/搜索.svg" alt="">
+  <div  class="wrap">
+    <scroll-view scroll-y style="height:100%">
+    <div class="search">
+      <MySearch></MySearch>
+      <p @click="goToSearch"></p>
     </div>
-    <TapTitle :titles="titles"></TapTitle>
+    <TapTitle :titles="categories"></TapTitle>
     <MySwiper :swiperList="homeLists[0] && homeLists[0].items"></MySwiper>
     <div class="introduce">
-      <dl v-for="(item,index) in  homeLists[1] &&  homeLists[1].items" :key="index">
+      <dl
+        v-for="(item,index) in  homeLists[1] &&  homeLists[1].items"
+        :key="index"
+        @click="introduceChange(item)"
+      >
         <dt>
-          <img :src="item.imgUrl" alt="">
+          <img :src="item.imgUrl" alt />
         </dt>
         <dd>{{item.title}}</dd>
       </dl>
     </div>
     <HotImg :hotimg="homeLists[2] && homeLists[2]"></HotImg>
-    <HotImg :hotimg="homeLists[4] && homeLists[4]"></HotImg>
-    <HomeBar homeBarHot="今日秒杀" describe="先下单先得" more="true"></HomeBar>
-    <div class="boutique">
-      <DlList 
-      v-for="(item,index) in homeLists[5] && homeLists[5].items" 
-      :key="index"
-      :item="item"
-      ></DlList>
-    </div>
-    <HomeBar homeBarHot="精品好物" describe="等你来抢" more="true"></HomeBar>
-    <div class="boutique">
-       <DlList 
-        v-for="(item,index) in homeLists[7] && homeLists[7].items" 
-        :key="index"
-        :item="item"
-        ></DlList>
-    </div>
+    <HomeRecommend
+      :hotimg="homeLists[4] && homeLists[4]"
+      :homeLi="homeLists[5] && homeLists[5].items"
+    ></HomeRecommend>
+    <HomeRecommend
+      :hotimg="homeLists[6] && homeLists[6]"
+      :homeLi="homeLists[7] && homeLists[7].items"
+    ></HomeRecommend>
+    <HomeRecommend
+      :hotimg="homeLists[8] && homeLists[8]"
+      :homeLi="homeLists[9] && homeLists[9].items"
+    ></HomeRecommend>
+    <HomeRecommend
+      :hotimg="homeLists[10] && homeLists[10]"
+      :homeLi="homeLists[11] && homeLists[11].items"
+    ></HomeRecommend>
+    <HomeRecommend
+      :hotimg="homeLists[12] && homeLists[12]"
+      :homeLi="homeLists[13] && homeLists[13].items"
+    ></HomeRecommend>
+    </scroll-view>
   </div>
 </template>
-<script>
-import {mapState,mapMutations,mapActions} from "vuex"
-export default {
-  props:{
 
+<script>
+import { mapState, mapMutations, mapActions } from "vuex";
+export default {
+  data() {
+    return {};
   },
-  components:{
-    
+  components: {},
+  data() {
+    return {};
   },
-  data(){
-    return {
-      titles: ["今日推荐","纸尿裤","母婴专场","服装","家居","小家电"],
-      searchBtn:true,
-    }
-  },
-  computed:{
+  computed: {
     ...mapState({
-      homeLists: state=>state.home.homeLists
+      homeLists: state => state.home.homeLists,
+      categories: state => state.home.categories
     })
   },
-  methods:{
-   search(){
-     this.searchBtn = false;
-   },
-   ...mapActions({
-     getProduct: "home/getProductList",
-     getHomeList1: "home/getHomeList",
-     getHomeList: "home/getHomeList1"
-   })
+  methods: {
+    ...mapActions({
+      getCategoryLists: "home/getCategoryLists",
+      getProductLists: "home/getProductLists",
+      getHomeList: "home/getHomeList",
+      getSepcialData: "sepcialList/getSepcialData"
+    }),
+    goToSearch() {
+      wx.navigateTo({
+        url: "/pages/search/main"
+      });
+    },
+    //专题
+    introduceChange(item) {
+      let str2 = item.jumpUrl.substring(
+        item.jumpUrl.indexOf("businessId") + 11
+      );
+      let businessId = str2.substring(0, str2.indexOf("&"));
+      let str3 = item.jumpUrl.substring(item.jumpUrl.indexOf("uiType") + 7);
+      let uiType = str3;
+      console.log(123,businessId, uiType, 456);
+      wx.navigateTo({
+        url:
+          "/pages/introduceDetail/main?sild=" + businessId + "&uiType=" + uiType
+      });
+    }
   },
-  created(){
-
-  },
-  mounted(){
-    this.getProduct()
-    this.getHomeList1()
-    this.getHomeList()
+  created() {},
+  mounted() {
+    this.getCategoryLists();
+    this.getProductLists();
+    this.getHomeList();
   }
-}
+};
 </script>
 <style scoped lang="">
-.home{
+.wrap{
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow: hidden;
+}
+.introduce {
   display: flex;
-  flex-direction: column;
-  /* padding-top: 60rpx; */
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  margin: 20rpx 0;
 }
-/* .input{
-  width: 100%;
-  position: fixed;
-  top:0;
-  left:0;
-} */
-.input{
-  margin-bottom: 10rpx;
-}
-.search{
-  width: 90%;
-  height: 60rpx;
-  background: #fff;
-  border:1px solid #ccc;
-  border-radius: 30rpx;
-  padding-left: 30rpx;
-  margin:0 auto;
-}
-.input img{
-  width: 40rpx;
-  height: 40rpx;
-  position: absolute;
-  top:10rpx;
-  left:30rpx;
-}
-.introduce{
-  display: flex;
-   padding: 20rpx 0;
-}
-.introduce dl{
+.introduce dl {
   flex: 1;
   text-align: center;
 }
-.introduce dt{
+.introduce dt {
   width: 100rpx;
   height: 100rpx;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 50%;
 }
-.introduce dt img{
+.introduce dt img {
   width: 100%;
   height: 100%;
 }
-/* .hotInfo{
-  width: 100%;
-  height: 200rpx;
-
-}
-.hotInfo img{
-  width: 96%;
-  height: 100%;
-  margin: 0 2%;
-  border-radius: 30rpx;
-
-} */
-.recommend{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.recommend li{
-  width: 48%;
-  height: 200rpx;
-  background: pink;
-  margin:5rpx 0;
-}
-.boutique{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.search>p{
+  width:100%;
+  height:80rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index:999;
+  opacity: 0;
 }
 </style>

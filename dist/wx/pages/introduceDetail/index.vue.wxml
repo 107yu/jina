@@ -1,0 +1,16 @@
+<import src="/components/hotItem/index.vue.wxml" /><template name="681bf0c0">
+  <view class="_div data-v-da578f64 wrap">
+    <view class="_div data-v-da578f64 sessionCont">
+      <image id="{{scal === true ? 'actives':'banners'}}" src="{{banner}}" alt mode="widthFix" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_img data-v-da578f64"></image>
+      <view class="_p data-v-da578f64 title">{{title}}</view>
+    </view>
+    <view class="_div data-v-da578f64 listWrap">
+      <view class="_div data-v-da578f64">
+        <view class="_div data-v-da578f64 cake"><label class="_span data-v-da578f64"></label>
+          <view wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_p data-v-da578f64">{{item.anchorName}}</view> <label class="_span data-v-da578f64"></label>
+        </view>
+      </view>
+      <view class="_div data-v-da578f64 hot"><template wx:if="{{list[0].products}}" data="{{...$root[$kk+'0'], $root}}" is="1479e3ae"></template></view>
+    </view>
+  </view>
+</template>

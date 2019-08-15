@@ -1,0 +1,55 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(243, 247, 247, 1);
+  .imgtitle {
+    height: 540rpx;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+    img {
+      flex: 1;
+    }
+    .activity {
+      height: 76rpx;
+      background: #fff;
+      line-height: 76rpx;
+      display: flex;
+      color: #fff;
+      font-weight: bold;
+      span{
+        width: 50%;
+        background: #323a45;
+        text-align: center;
+      }
+      .span2{
+        background: #e2be98;
+      }
+    }
+    .flash {
+      height: 94rpx;
+      width: 100%;
+      background: #fff;
+      align-items: center;
+      line-height: 94rpx;
+      text-align: center;
+      color: #434a54;
+      font-size: 30rpx;
+      font-weight: bold;
+    }
+  }
+  .commodity {
+    flex: 1;
+    width: 100%;
+    .commodity_list {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+     
+    }
+  }
+ 
+}

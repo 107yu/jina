@@ -1,0 +1,144 @@
+.wrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(243, 247, 247, 1);
+}
+header {
+  width: 100%;
+  height: 280rpx;
+  background-image: linear-gradient(to right, #8beadd, #8beadd);
+  display: flex;
+  dl {
+    display: flex;
+  }
+  dl dt {
+    background: #ffd0da;
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+    margin: 0 38rpx;
+  }
+  dl dt img {
+    width: 100%;
+    height: 100%;
+    // margin: 38rpx;
+   
+  }
+  dl dd {
+    margin: 22rpx 20rpx 0 20rpx;
+    .name {
+      font-size: 40rpx;
+      line-height: 2;
+    }
+    .codeNum {
+      font-size: 28rpx;
+    }
+    .codeNum span {
+      margin-left: 10rpx;
+      line-height: 2;
+      font-size: 20rpx;
+      background: #3cced1;
+      color: #fff;
+      padding: 10rpx 10rpx;
+      box-sizing: border-box;
+      border-radius: 10rpx;
+      opacity: 0.7239;
+    }
+  }
+}
+section {
+  width: 100%;
+  position: absolute;
+  top: 180rpx;
+}
+section .sec-top {
+  width: 96%;
+  margin: 0 2%;
+  height: 220rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  .top {
+    widows: 100%;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      width: 230rpx;
+      padding-right: 20rpx;
+      font-size: 32rpx;
+      color: #9a9ea3;
+      line-height: 2;
+      img {
+        width: 16rpx;
+        height: 24rpx;
+        margin: 18rpx 0;
+      }
+    }
+    h3 {
+      line-height: 2;
+      padding-left: 10px;
+      box-sizing: border-box;
+      font-size: 32rpx;
+      font-weight: 600;
+      color: #323a45;
+    }
+  }
+  .wallet {
+    display: flex;
+    justify-content: space-around;
+    dl dt {
+      position: relative;
+      img {
+        width: 80rpx;
+        height: 80rpx;
+        box-sizing: border-box;
+      }
+      .num {
+        position: absolute;
+        left: 60rpx;
+        top: -10rpx;
+        padding: 2rpx;
+        font-size: 20rpx;
+        border: 1px solid rgba(252, 93, 123, 1);
+        border-radius: 50%;
+        color: #fc5d7b;
+      }
+    }
+    dl dd {
+      font-size: 24rpx;
+      color: #323a45;
+      text-align: center;
+    }
+  }
+}
+section .msg {
+  width: 96%;
+  margin: 0 2%;
+  margin-top: 20rpx;
+  ul {
+    background: #fff;
+    li {
+      display: flex;
+      height: 96rpx;
+      justify-content: space-between;
+      div {
+        display: flex;
+        span {
+          font-size: 28rpx;
+          margin: 30rpx 30rpx 0 0;
+        }
+      }
+    }
+  }
+}
+section .msg ul li div .img1 {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 30rpx;
+}
+section .msg ul li .img2 {
+  width: 16rpx;
+  height: 24rpx;
+  margin: 34rpx 36rpx 0 0;
+}
