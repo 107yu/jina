@@ -11036,12 +11036,12 @@ var mutations = {
     searchList: function searchList(state, payload) {
         //获取搜索的列表
         state.searchList = payload;
-        console.log(" state.searchList", state.searchList);
     },
     getSearchVal: function getSearchVal(state, payload) {
         //获取正在输入的值---时时触发
         if (!payload) {
             state.searchList = {};
+            state.currenType = 0;
         }
         state.searchVal = payload;
     },

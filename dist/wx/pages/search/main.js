@@ -188,7 +188,7 @@ if (false) {(function () {
     changeTitle: function changeTitle(index) {
       this.sendSearch({
         "queryWord": this.currentValue,
-        "queryType": this.currenType,
+        "queryType": index,
         "querySort": "desc",
         "pageIndex": 1
       });

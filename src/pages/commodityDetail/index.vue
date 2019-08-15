@@ -63,8 +63,7 @@ export default {
     },
     data(){
         return {
-          //supplierProductPictureVoList   轮播图
-          //warehouseVo   公司信息
+          
         }
     },
     computed:{

@@ -154,10 +154,7 @@ if (false) {(function () {
   props: {},
   components: {},
   data: function data() {
-    return {
-      //supplierProductPictureVoList   轮播图
-      //warehouseVo   公司信息
-    };
+    return {};
   },
 
   computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({

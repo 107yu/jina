@@ -155,24 +155,24 @@ if (false) {(function () {
         context.restore();
 
         //绘制商品图片：
-        context.drawImage(this.userInfo.goodsUrl, 60, 100, 200, 200);
+        context.drawImage(this.goodsDetail.mainImgUrl, 60, 100, 200, 200);
 
         //绘制介绍文字：
         context.save();
         context.setFontSize(16);
-        context.fillText(this.userInfo.title + "顺丰包邮", 10, 340);
+        context.fillText(this.goodsDetail.title + "顺丰包邮", 10, 340);
         context.setFillStyle("red");
         context.setFontSize(16);
-        context.fillText("￥" + this.userInfo.vipPrice + "元", 10, 370);
+        context.fillText("￥" + this.goodsDetail.vipPrice + "元", 10, 370);
         context.setFontSize(12);
         context.setFillStyle("#333");
-        context.fillText("￥" + this.userInfo.salesPrice + "元", 80, 370);
+        context.fillText("￥" + this.goodsDetail.salesPrice + "元", 70 + context.measureText(this.goodsDetail.vipPrice).width, 370);
         context.restore();
 
         //一条斜线
         context.save();
-        context.moveTo(80, 365);
-        context.lineTo(130, 365);
+        context.moveTo(70 + context.measureText(this.goodsDetail.vipPrice).width, 365);
+        context.lineTo(120 + context.measureText(this.goodsDetail.vipPrice).width, 365);
         context.stroke();
 
         //二维码文字和图片：
