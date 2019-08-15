@@ -9,12 +9,12 @@
         <view class="_dd data-v-375803ba">
           <block wx:if="{{onSku}}">
             <view wx:if="{{isMiaoSha}}" class="_p data-v-375803ba">￥399.50</view>
-            <view wx:else class="_view data-v-375803ba _view data-v-375803ba _p data-v-375803ba">￥399.50</view>
+            <view wx:else class="_p data-v-375803ba">￥399.50</view>
             <view class="_p data-v-375803ba">库存：4999</view>
           </block>
           <block wx:else>
-            <view class="_view data-v-375803ba _view data-v-375803ba _p data-v-375803ba">￥399.50</view>
-            <view class="_view data-v-375803ba _view data-v-375803ba _p data-v-375803ba">库存：4999</view>
+            <view class="_p data-v-375803ba">￥399.50</view>
+            <view class="_p data-v-375803ba">库存：4999</view>
           </block>
         </view>
       </view>

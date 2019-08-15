@@ -1,5 +1,6 @@
 {
-  "pages": [
+  "pages": [  
+    "pages/yuCanvas/main",
     "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
@@ -11,6 +12,7 @@
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main"
+ 
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -44,6 +46,5 @@
       }
     ],
     "position": "bottom"
-  },
-  "sitemapLocation": "sitemap79.json"
+  }
 }

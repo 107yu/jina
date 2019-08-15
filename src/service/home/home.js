@@ -19,3 +19,8 @@ export let getList = code =>{
 export let getSwiperDetail = code =>{
     return fly.post('/api/open/sepcial/query/1.0.0',code)
 }
+
+//获取商品详情：
+export let getGoodsDetail = code =>{
+    return fly.post('/api/open/product/info/1.0.0',{pid:157})
+}

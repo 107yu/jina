@@ -1,0 +1,1 @@
+<import src="/pages/yuCanvas/index.vue.wxml" /><template is="d7f7bc6e" data="{{ ...$root['0'], $root }}"/>
