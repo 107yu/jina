@@ -225,8 +225,8 @@ if (false) {(function () {
 
     //去首页
     gotoHome: function gotoHome() {
-      wx.navigateTo({
-        url: "/pages/home/main"
+      wx.navigateBack({
+        delta: 2
       });
     },
 
@@ -268,11 +268,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.gotoHome
     }
-  }, [_c('navigator', {
-    attrs: {
-      "url": "/pages/home/main"
-    }
-  }, [_vm._v("今日推荐")])], 1), _vm._v(" "), _vm._l((_vm.navData), function(item, index) {
+  }, [_vm._v("今日推荐")]), _vm._v(" "), _vm._l((_vm.navData), function(item, index) {
     return _c('p', {
       key: index,
       class: index === _vm.ind ? 'active' : null,

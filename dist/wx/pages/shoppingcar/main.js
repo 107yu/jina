@@ -141,7 +141,8 @@ if (false) {(function () {
 
   computed: {},
   methods: {},
-  created: function created() {
+  created: function created() {},
+  mounted: function mounted() {
     //改变导航栏
     wx.setNavigationBarTitle({ title: "购物车" });
     wx.setNavigationBarColor({
@@ -152,8 +153,7 @@ if (false) {(function () {
         timingFunc: "easeIn"
       }
     });
-  },
-  mounted: function mounted() {}
+  }
 });
 
 /***/ }),
