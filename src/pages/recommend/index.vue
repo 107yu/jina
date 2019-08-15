@@ -115,7 +115,11 @@ export default {
     gotoHome() {
       wx.navigateBack({
         delta: 2
+<<<<<<< HEAD
       });
+=======
+      })
+>>>>>>> yu
     },
     //滚动事件
     scrollload() {

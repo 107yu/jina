@@ -5878,6 +5878,7 @@ return Vue$3;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 1 */
 /***/ (function(module, exports) {
 
@@ -5908,6 +5909,8 @@ module.exports = function normalizeComponent (
     ? scriptExports.options
     : scriptExports
 =======
+=======
+>>>>>>> yu
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6912,8 +6915,13 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 var store = __webpack_require__(39)('wks');
 var uid = __webpack_require__(40);
+=======
+var store = __webpack_require__(38)('wks');
+var uid = __webpack_require__(39);
+>>>>>>> yu
 var Symbol = __webpack_require__(4).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
 
@@ -7254,7 +7262,45 @@ module.exports = {};
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 19 */
+=======
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_login__ = __webpack_require__(90);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(92);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getCategories", function() { return __WEBPACK_IMPORTED_MODULE_1__home_home__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getGoodsDetail", function() { return __WEBPACK_IMPORTED_MODULE_1__home_home__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getList", function() { return __WEBPACK_IMPORTED_MODULE_1__home_home__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getProducts", function() { return __WEBPACK_IMPORTED_MODULE_1__home_home__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getSwiperDetail", function() { return __WEBPACK_IMPORTED_MODULE_1__home_home__["e"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_search__ = __webpack_require__(93);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getSearch", function() { return __WEBPACK_IMPORTED_MODULE_2__search_search__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sepcialList_sepcialList__ = __webpack_require__(94);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getSepcial", function() { return __WEBPACK_IMPORTED_MODULE_3__sepcialList_sepcialList__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__productCoupon_productCoupon__ = __webpack_require__(95);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getProductCoupon", function() { return __WEBPACK_IMPORTED_MODULE_4__productCoupon_productCoupon__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__special_special__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__special_special___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__special_special__);
+/* harmony namespace reexport (by used) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_5__special_special__, "getComNav")) __webpack_require__.d(__webpack_exports__, "getComNav", function() { return __WEBPACK_IMPORTED_MODULE_5__special_special__["getComNav"]; });
+/* harmony namespace reexport (by used) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_5__special_special__, "getCount")) __webpack_require__.d(__webpack_exports__, "getCount", function() { return __WEBPACK_IMPORTED_MODULE_5__special_special__["getCount"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__recommend_recommend__ = __webpack_require__(97);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getComNav", function() { return __WEBPACK_IMPORTED_MODULE_6__recommend_recommend__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "getCount", function() { return __WEBPACK_IMPORTED_MODULE_6__recommend_recommend__["b"]; });
+
+
+
+
+
+
+
+
+/***/ }),
+/* 18 */
+>>>>>>> yu
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -7311,6 +7357,54 @@ module.exports = function (it) {
 
 
 /***/ }),
+<<<<<<< HEAD
+=======
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_home__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_special__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_search__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_orider__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_sepcialList__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_productCoupon__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__modules_recommend__ = __webpack_require__(109);
+
+
+
+
+//引入模块：
+
+
+
+
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
+    modules: {
+        home: __WEBPACK_IMPORTED_MODULE_3__modules_home__["a" /* default */],
+        special: __WEBPACK_IMPORTED_MODULE_4__modules_special__["a" /* default */],
+        search: __WEBPACK_IMPORTED_MODULE_5__modules_search__["a" /* default */],
+        orider: __WEBPACK_IMPORTED_MODULE_6__modules_orider__["a" /* default */],
+        sepcialList: __WEBPACK_IMPORTED_MODULE_7__modules_sepcialList__["a" /* default */],
+        productCoupon: __WEBPACK_IMPORTED_MODULE_8__modules_productCoupon__["a" /* default */],
+        recommend: __WEBPACK_IMPORTED_MODULE_9__modules_recommend__["a" /* default */]
+    },
+    plugins: [__WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger___default()()]
+}));
+
+/***/ }),
+>>>>>>> yu
 /* 23 */
 /***/ (function(module, exports) {
 
@@ -7357,7 +7451,11 @@ module.exports = function (exec) {
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 var isObject = __webpack_require__(17);
+=======
+var isObject = __webpack_require__(15);
+>>>>>>> yu
 var document = __webpack_require__(4).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
@@ -7393,8 +7491,13 @@ module.exports = function (key) {
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 var def = __webpack_require__(16).f;
 var has = __webpack_require__(21);
+=======
+var def = __webpack_require__(14).f;
+var has = __webpack_require__(20);
+>>>>>>> yu
 var TAG = __webpack_require__(5)('toStringTag');
 
 module.exports = function (it, tag, stat) {
@@ -7648,7 +7751,11 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
+<<<<<<< HEAD
 var cof = __webpack_require__(22);
+=======
+var cof = __webpack_require__(21);
+>>>>>>> yu
 var TAG = __webpack_require__(5)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
@@ -7678,7 +7785,11 @@ module.exports = function (it) {
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
 var anObject = __webpack_require__(9);
+<<<<<<< HEAD
 var aFunction = __webpack_require__(20);
+=======
+var aFunction = __webpack_require__(19);
+>>>>>>> yu
 var SPECIES = __webpack_require__(5)('species');
 module.exports = function (O, D) {
   var C = anObject(O).constructor;
@@ -8916,7 +9027,11 @@ module.exports = Object.getPrototypeOf || function (O) {
 __webpack_require__(71);
 var global = __webpack_require__(4);
 var hide = __webpack_require__(12);
+<<<<<<< HEAD
 var Iterators = __webpack_require__(18);
+=======
+var Iterators = __webpack_require__(16);
+>>>>>>> yu
 var TO_STRING_TAG = __webpack_require__(5)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
@@ -8999,8 +9114,13 @@ module.exports = function (done, value) {
 
 var LIBRARY = __webpack_require__(25);
 var global = __webpack_require__(4);
+<<<<<<< HEAD
 var ctx = __webpack_require__(19);
 var classof = __webpack_require__(44);
+=======
+var ctx = __webpack_require__(18);
+var classof = __webpack_require__(43);
+>>>>>>> yu
 var $export = __webpack_require__(11);
 var isObject = __webpack_require__(17);
 var aFunction = __webpack_require__(20);
@@ -9349,7 +9469,11 @@ module.exports = function (iterator, fn, value, entries) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
+<<<<<<< HEAD
 var Iterators = __webpack_require__(18);
+=======
+var Iterators = __webpack_require__(16);
+>>>>>>> yu
 var ITERATOR = __webpack_require__(5)('iterator');
 var ArrayProto = Array.prototype;
 
@@ -9362,9 +9486,15 @@ module.exports = function (it) {
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 var classof = __webpack_require__(44);
 var ITERATOR = __webpack_require__(5)('iterator');
 var Iterators = __webpack_require__(18);
+=======
+var classof = __webpack_require__(43);
+var ITERATOR = __webpack_require__(5)('iterator');
+var Iterators = __webpack_require__(16);
+>>>>>>> yu
 module.exports = __webpack_require__(6).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
@@ -9399,7 +9529,11 @@ module.exports = function (fn, args, that) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(4);
+<<<<<<< HEAD
 var macrotask = __webpack_require__(46).set;
+=======
+var macrotask = __webpack_require__(45).set;
+>>>>>>> yu
 var Observer = global.MutationObserver || global.WebKitMutationObserver;
 var process = global.process;
 var Promise = global.Promise;
@@ -9551,8 +9685,13 @@ module.exports = function (exec, skipClosing) {
 var $export = __webpack_require__(11);
 var core = __webpack_require__(6);
 var global = __webpack_require__(4);
+<<<<<<< HEAD
 var speciesConstructor = __webpack_require__(45);
 var promiseResolve = __webpack_require__(48);
+=======
+var speciesConstructor = __webpack_require__(44);
+var promiseResolve = __webpack_require__(47);
+>>>>>>> yu
 
 $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
   var C = speciesConstructor(this, core.Promise || global.Promise);
@@ -9731,26 +9870,36 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
         homeLists: [],
         homeProducts: [],
         categories: [], //分类标题
-        swiperDetailInfo: {} //轮播图详情
+        swiperDetailInfo: {}, //轮播图详情
+        goodsid: "", //商品id
+        goodsDetail: {} // 商品详情信息
     },
     mutations: {
         categoryList: function categoryList(state, payload) {
+            //获取首页专题的头部信息
             payload.unshift({ cname: "今日推荐" });
             state.categories = payload;
             // console.log(" categories",state.categories)
         },
         homeList: function homeList(state, payload) {
+            //获取首页大部分数据
             state.homeLists = payload;
-            console.log("homeLists", state.homeLists);
+            // console.log("homeLists",state.homeLists)
         },
         homeProducts: function homeProducts(state, payload) {
+            //获取首页底部数据
             state.homeProducts = payload;
             // console.log("homeProducts",state.homeProducts)
         },
         swiperDetail: function swiperDetail(state, payload) {
             //轮播图的详细信息
             state.swiperDetailInfo = payload;
-            console.log("state.swiperDetailInfo", state.swiperDetailInfo);
+            // console.log("state.swiperDetailInfo",state.swiperDetailInfo)
+        },
+        goodsDetail: function goodsDetail(state, payload) {
+            //获取商品详情
+            state.goodsDetail = payload;
+            // console.log("state.goodsDetail",state.goodsDetail)
         }
     },
     actions: {
@@ -9827,12 +9976,11 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
                             case 2:
                                 data = _context3.sent;
 
-                                console.log(data.result, "404040404");
                                 if (data.res_code === 1) {
                                     commit("homeList", data.result);
                                 }
 
-                            case 5:
+                            case 4:
                             case "end":
                                 return _context3.stop();
                         }
@@ -9864,6 +10012,34 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
                         }
                     }
                 }, _callee4, _this4);
+            }))();
+        },
+        getGoodsInfo: function getGoodsInfo(_ref5, payload) {
+            var _this5 = this;
+
+            var commit = _ref5.commit;
+            return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee5() {
+                var data;
+                return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+                    while (1) {
+                        switch (_context5.prev = _context5.next) {
+                            case 0:
+                                _context5.next = 2;
+                                return Object(__WEBPACK_IMPORTED_MODULE_2__service_index__["getGoodsDetail"])(payload);
+
+                            case 2:
+                                data = _context5.sent;
+
+                                if (data.res_code === 1) {
+                                    commit("goodsDetail", data.result);
+                                }
+
+                            case 4:
+                            case "end":
+                                return _context5.stop();
+                        }
+                    }
+                }, _callee5, _this5);
             }))();
         }
     }
@@ -10710,10 +10886,18 @@ module.exports = function (engine) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getCategories; });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getProducts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getSwiperDetail; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(15);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getProducts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getSwiperDetail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getGoodsDetail; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(13);
+>>>>>>> yu
 
 
 //获取首页头部：
@@ -10734,6 +10918,11 @@ var getList = function getList(code) {
 //获取购物车详情
 var getSwiperDetail = function getSwiperDetail(code) {
     return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/sepcial/query/1.0.0', code);
+};
+
+//获取商品详情：
+var getGoodsDetail = function getGoodsDetail(code) {
+    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/info/1.0.0', code);
 };
 
 /***/ }),
@@ -10878,12 +11067,12 @@ var mutations = {
     searchList: function searchList(state, payload) {
         //获取搜索的列表
         state.searchList = payload;
-        // console.log(" state.searchList", state.searchList)
     },
     getSearchVal: function getSearchVal(state, payload) {
         //获取正在输入的值---时时触发
         if (!payload) {
             state.searchList = {};
+            state.currenType = 0;
         }
         state.searchVal = payload;
     },

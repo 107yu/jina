@@ -99,12 +99,66 @@ if (false) {(function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(2);
 
+<<<<<<< HEAD:dist/wx/pages/canvas/main.js
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> yu:dist/wx/pages/commodityDetail/main.js
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
 //
 //
 
+
+<<<<<<< HEAD:dist/wx/pages/canvas/main.js
 
 var userInfo = {
   avatar: 'https://avatars2.githubusercontent.com/u/8192412?s=40&v=4',
@@ -135,6 +189,34 @@ var userInfo = {
     context.save();
 
     context.draw();
+=======
+/* harmony default export */ __webpack_exports__["a"] = ({
+  props: {},
+  components: {},
+  data: function data() {
+    return {};
+  },
+
+  computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({
+    goodsDetail: function goodsDetail(state) {
+      return state.home.goodsDetail;
+    }
+  })),
+  methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+    getGoodsInfo: "home/getGoodsInfo"
+  }), {
+    changshare: function changshare() {
+      wx.navigateTo({
+        url: "/pages/share/main"
+      });
+    }
+  }),
+  created: function created() {},
+  mounted: function mounted() {
+    this.getGoodsInfo({
+      pid: this.$root.$root.$mp.query.id
+    });
+>>>>>>> yu:dist/wx/pages/commodityDetail/main.js
   }
 });
 
@@ -145,6 +227,7 @@ var userInfo = {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+<<<<<<< HEAD:dist/wx/pages/canvas/main.js
   return _vm._m(0)
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -160,6 +243,97 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     }
   })])
 }]
+=======
+  return _c('div', {
+    staticClass: "wrap"
+  }, [_c('scroll-view', {
+    staticStyle: {
+      "height": "100%"
+    },
+    attrs: {
+      "scroll-y": ""
+    }
+  }, [_c('div', {
+    staticClass: "swiper"
+  }, [(_vm.goodsDetail.supplierProductPictureVoList && _vm.goodsDetail.supplierProductPictureVoList.length > 0) ? _c('swiper', {
+    attrs: {
+      "indicator-dots": "true",
+      "autoplay": "true",
+      "interval": "2000",
+      "duration": "1000",
+      "indicator-active-color": "#fff"
+    }
+  }, _vm._l((_vm.goodsDetail.supplierProductPictureVoList), function(val, index) {
+    return _c('block', {
+      key: index
+    }, [_c('swiper-item', {
+      attrs: {
+        "mpcomid": '0_' + index
+      }
+    }, [_c('image', {
+      staticClass: "slide-image",
+      staticStyle: {
+        "overflow": "show"
+      },
+      attrs: {
+        "src": val.imgUrl
+      }
+    })])], 1)
+  })) : _vm._e(), _vm._v(" "), (_vm.goodsDetail.supplierProductPictureVoList && _vm.goodsDetail.supplierProductPictureVoList.length === 0) ? _c('img', {
+    attrs: {
+      "src": _vm.goodsDetail.mainImgUrl,
+      "alt": ""
+    }
+  }) : _vm._e()], 1), _vm._v(" "), _c('div', {
+    staticClass: "tit"
+  }, [_c('div', {
+    staticClass: "ones"
+  }, [_c('p', [_vm._v("￥")]), _vm._v(" "), _c('p', {
+    staticClass: "price"
+  }, [_vm._v(_vm._s(_vm.goodsDetail.salesPrice))]), _vm._v(" "), _c('s', {
+    staticClass: "num"
+  }, [_vm._v("￥" + _vm._s(_vm.goodsDetail.vipPrice))])], 1), _vm._v(" "), _c('p', {
+    staticClass: "times",
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.changshare
+    }
+  }, [_vm._v("分享赚：￥" + _vm._s(_vm.goodsDetail.memberDiscountPrice))])], 1), _vm._v(" "), _c('div', {
+    staticClass: "title"
+  }, [_c('div', {
+    staticClass: "names"
+  }, [_vm._v(_vm._s(_vm.goodsDetail.title))]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")])])], 1), _vm._v(" "), _c('ul', {
+    staticClass: "list"
+  }, [_c('li', {
+    staticClass: "lis"
+  }, [_c('span', [_vm._v("选择 规格")]), _vm._v(" "), _c('div', {
+    staticClass: "rights",
+    attrs: {
+      "eventid": '1'
+    },
+    on: {
+      "click": _vm.toShow
+    }
+  }, [_c('span', [_vm._v("颜色 尺码")]), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "../../../static/images/下一步.svg",
+      "alt": ""
+    }
+  })])]), _vm._v(" "), _c('li', [_vm._v("\n          说明:" + _vm._s(_vm.goodsDetail.description) + "\n        ")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "footer"
+  }, [_c('button', {
+    attrs: {
+      "eventid": '2'
+    },
+    on: {
+      "click": _vm.changshare
+    }
+  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)], 1)
+}
+var staticRenderFns = []
+>>>>>>> yu:dist/wx/pages/commodityDetail/main.js
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

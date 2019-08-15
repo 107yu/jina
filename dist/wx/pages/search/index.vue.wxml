@@ -1,0 +1,34 @@
+<import src="/components/search/search.vue.wxml" /><template name="2106dec6">
+  <view class="_div data-v-62000480 search">
+    <scroll-view scroll-y style="height:100%" bindscroll="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_scroll-view data-v-62000480">
+      <view class="_div data-v-62000480 main"><template searchPage="searchPage" data="{{...$root[$kk+'0'], $root, $for:{default:'data-v-62000480-default-0'},$slotdefault:'data-v-62000480-default-0'}}" is="2fe7f2bd"></template>
+        <view class="_div data-v-62000480 historySearch" wx:if="{{!searchVal}}">
+          <view class="_div data-v-62000480 historyTop"><label class="_span data-v-62000480">历史记录</label> <label class="_span data-v-62000480">
+              <image src="/static/images/删除.svg" alt class="_img data-v-62000480"></image>
+            </label></view>
+          <view class="_div data-v-62000480 historyContent"><label wx:key="index" key="{{index}}" wx:for="{{history}}" wx:for-index="index" wx:for-item="item" class="_span data-v-62000480">{{item}}</label></view>
+        </view>
+        <view class="_div data-v-62000480 content " wx:if="{{searchList.message==='成功' && searchVal}}">
+          <view class="_div data-v-62000480 {{['title', [flag ? 'fixed' : '']]}}"><label wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{searchTitle}}" wx:for-index="index" wx:for-item="item" class="_span data-v-62000480 {{[index === currenType ? 'titleShow' : '']}}">{{item.title}}</label></view>
+          <view class="_div data-v-62000480 contentList">
+            <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{searchList.result}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-62000480">
+              <view class="_dt data-v-62000480">
+                <image src="{{item.mainImgUrl}}" alt class="_img data-v-62000480"></image>
+              </view>
+              <view class="_dd data-v-62000480">
+                <view class="_p data-v-62000480">{{item.title}}</view>
+                <view class="_div data-v-62000480">
+                  <view class="_b data-v-62000480">￥{{item.salesPrice}}</view> <label class="_span data-v-62000480">￥{{item.vipPrice}}</label>
+                </view>
+              </view>
+              <view class="_strong data-v-62000480 newBtn">NEW</view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-62000480 noGoods" wx:if="{{searchList.message==='未查询到' && searchVal}}">
+          <image src="/static/images/nogoods.png" alt class="_img data-v-62000480"></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

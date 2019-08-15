@@ -188,11 +188,16 @@ if (false) {(function () {
     changeTitle: function changeTitle(index) {
       this.sendSearch({
         "queryWord": this.currentValue,
-        "queryType": this.currenType,
+        "queryType": index,
         "querySort": "desc",
         "pageIndex": 1
       });
       this.changeType(index);
+    },
+    goTODetail: function goTODetail(id) {
+      wx.navigateTo({
+        url: "/pages/commodityDetail/main?id=" + id
+      });
     }
   }),
   created: function created() {},
@@ -224,7 +229,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     },
     attrs: {
       "scroll-y": "",
-      "eventid": '1'
+      "eventid": '2'
     },
     on: {
       "scroll": _vm.scroll
@@ -278,7 +283,15 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "contentList"
   }, _vm._l((_vm.searchList.result), function(item, index) {
     return _c('dl', {
-      key: index
+      key: index,
+      attrs: {
+        "eventid": '1_' + index
+      },
+      on: {
+        "click": function($event) {
+          _vm.goTODetail(item.basePid)
+        }
+      }
     }, [_c('dt', [_c('img', {
       attrs: {
         "src": item.mainImgUrl,

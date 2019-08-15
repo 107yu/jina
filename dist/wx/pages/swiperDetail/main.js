@@ -125,6 +125,7 @@ if (false) {(function () {
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -197,9 +198,10 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         "img": item.mainImgUrl,
         "title": item.title,
         "price": item.salesPrice,
+        "id": item.basePid,
         "mpcomid": '0_' + index
       }
-    }, [_c('span', [_vm._v("赚" + _vm._s(item.earnMoney))])])
+    }, [_c('span', [_vm._v("赚:" + _vm._s(item.earnMoney))])])
   }))])]) : _vm._e(), _vm._v(" "), (_vm.swiperDetailInfo.res_code === 1004) ? _c('div', {
     staticClass: "noGoods"
   }, [_c('img', {
