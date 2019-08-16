@@ -3,6 +3,11 @@ export default {
     //命名空间
     namespaced: true,
     state: {
+<<<<<<< HEAD
+=======
+    },
+    actions: {
+>>>>>>> a3b5fa25eb4519ddb1cd9be188f0ff9ecc67d83a
         homeLists: [],
         homeProducts: [],
         categories: [], //分类标题

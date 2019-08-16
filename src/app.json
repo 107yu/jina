@@ -1,15 +1,10 @@
 {
-<<<<<<< HEAD
   "pages": [
     "pages/home/main",
     "pages/login/main",
     "pages/canvas/main",
-    "pages/paint/main",
-=======
-  "pages": [ 
-    "pages/home/main", 
     "pages/share/main",
->>>>>>> yu
+    "pages/paint/main",
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -21,9 +16,7 @@
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
-  
     "pages/commodityDetail/main",
-    "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main",
   ],

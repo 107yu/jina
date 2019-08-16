@@ -9,10 +9,7 @@ import sepcialList from './modules/sepcialList'
 import productCoupon from './modules/productCoupon'
 import recommend from './modules/recommend'
 import login from './modules/login'
-
-
 Vue.use(Vuex)
-
 export default new Vuex.Store({
     modules:{
         home,

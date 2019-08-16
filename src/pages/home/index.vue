@@ -40,9 +40,7 @@
         :hotimg="homeLists[12] && homeLists[12]"
         :homeLi="homeLists[13] && homeLists[13].items"
       ></HomeRecommend>
-      <homeList
-          :homeProducts="homeProducts"
-      ></homeList>
+      <homeList :homeProducts="homeProducts"></homeList>
     </scroll-view>
   </div>
 </template>
@@ -54,9 +52,6 @@ export default {
   },
 
   components: {},
-  data() {
-    return {};
-  },
   computed: {
     ...mapState({
       homeLists: state => state.home.homeLists,
@@ -101,5 +96,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

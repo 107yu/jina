@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App'
 
 
-
 //引入组件
 import TapTitle from "./components/tap/tapTitle.vue"
 import MySwiper from "./components/mySwiper/mySwiper.vue"
