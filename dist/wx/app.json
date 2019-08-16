@@ -1,6 +1,6 @@
 {
-  "pages": [ 
-    "pages/home/main", 
+  "pages": [
+    "pages/home/main",
     "pages/share/main",
     "pages/search/main",
     "pages/myOrder/main",
@@ -13,7 +13,6 @@
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
-  
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
@@ -52,5 +51,6 @@
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

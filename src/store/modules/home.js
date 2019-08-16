@@ -12,7 +12,6 @@ export default {
         homeProducts: [],
         categories: [], //分类标题
         swiperDetailInfo:{}, //轮播图详情
-        goodsid:"",//商品id
     },
     mutations: {
         categoryList(state,payload){     //获取首页专题的头部信息
@@ -36,7 +35,6 @@ export default {
     actions: {
         async getCategoryLists({commit},payload){  //获取所有的分类标题
             let data = await getCategories(payload)
-          
             if(data.res_code===1){
                 commit("categoryList",data.result)
             }

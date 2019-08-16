@@ -27,7 +27,7 @@ export let getGoodsDetail = code =>{
 
 //获取某商品的产品详情图：
 export let getGoodsDetailPicture = code =>{
-    return fly.post('/api/open/product/detailpicture/1.0.0',code)
+    return fly.post('/api/open/product/detailPicture/1.0.0',code)
 }
 
 //获取某商品的sku属性

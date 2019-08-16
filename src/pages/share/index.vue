@@ -34,7 +34,7 @@ export default {
     },
     computed:{
         ...mapState({
-            goodsDetail: state=>state.home.goodsDetail
+            goodsDetail: state=>state.productDetail.goodsDetail
         })
     },
     methods:{

@@ -1,8 +1,7 @@
 <template>
     <div class="wrap">
       <scroll-view scroll-y style="height:100%">
-        <div class="swiper" >
-          <!-- <img src="../../../static/images/1.jpg" alt=""> -->
+        <div class="swiper">
           <swiper 
            indicator-dots="true" 
            autoplay="true" 
@@ -10,13 +9,13 @@
            duration="1000"
            indicator-active-color="#fff"
            v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length>0"
-        >
+           >
             <block v-for="(val,index) in goodsDetail.supplierProductPictureVoList" :key="index">
                 <swiper-item>
                     <image :src="val.imgUrl" class="slide-image" style='overflow:show'/>
                 </swiper-item>
             </block>
-        </swiper>
+          </swiper>
         <img v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length===0" :src="goodsDetail.mainImgUrl" alt="" >
         </div>
         <div class="tit">
@@ -73,7 +72,11 @@ export default {
     },
     methods:{
       ...mapActions({
-        getGoodsInfo: "productDetail/getGoodsInfo"
+        getGoodsInfo: "productDetail/getGoodsInfo",
+        getSku: "productDetail/getSku",
+        getDetailPicture: "productDetail/getDetailPicture",
+        templates: "productDetail/templates",
+        coupon: "productDetail/coupon"
       }),
       changshare(){
            wx.navigateTo({
@@ -84,10 +87,30 @@ export default {
     created(){
 
     },
-    mounted(){
-      this.getGoodsInfo({
+    async mounted(){
+      let data = await this.getGoodsInfo({   //商品信息
         pid: this.$root.$root.$mp.query.id
       })
+      if(data.res_code===1){
+         this.getDetailPicture({   //产品图
+          pid: this.$root.$root.$mp.query.id,
+          basePid:this.goodsDetail.basePid,
+          userIdentity:this.goodsDetail.userIdentity
+        })
+        this.templates({   //运费模板
+          sstid: this.goodsDetail.sstid
+        })
+        this.coupon({   //优惠信息
+          pid: this.$root.$root.$mp.query.id,
+          bid: this.goodsDetail.bid,
+          uid: this.goodsDetail.uid,
+          usiid:this.goodsDetail.usiid,
+        })
+      }
+      this.getSku({   //sku属性
+        pid: this.$root.$root.$mp.query.id
+      })
+      
     }
 }
 </script>
@@ -97,16 +120,15 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-
-.swiper {
-  width: 100%;
-  height: 400rpx;
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-}
+// .swiper {
+//   width: 100%;
+//   height: 500rpx;
+//   img {
+//     width: 100%;
+//     height: 100%;
+    
+//   }
+// }
 
 .tit {
   display: flex;

@@ -80,7 +80,6 @@ export default {
       let businessId = str2.substring(0, str2.indexOf("&"));
       let str3 = item.jumpUrl.substring(item.jumpUrl.indexOf("uiType") + 7);
       let uiType = str3;
-      console.log(123, businessId, uiType, 456);
       wx.navigateTo({
         url:
           "/pages/introduceDetail/main?sild=" + businessId + "&uiType=" + uiType
