@@ -7410,11 +7410,13 @@ module.exports = function (it) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_sepcialList__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_productCoupon__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__modules_recommend__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__modules_productDetail__ = __webpack_require__(292);
 
 
 
 
 //引入模块：
+
 
 
 
@@ -7433,7 +7435,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
         orider: __WEBPACK_IMPORTED_MODULE_6__modules_orider__["a" /* default */],
         sepcialList: __WEBPACK_IMPORTED_MODULE_7__modules_sepcialList__["a" /* default */],
         productCoupon: __WEBPACK_IMPORTED_MODULE_8__modules_productCoupon__["a" /* default */],
-        recommend: __WEBPACK_IMPORTED_MODULE_9__modules_recommend__["a" /* default */]
+        recommend: __WEBPACK_IMPORTED_MODULE_9__modules_recommend__["a" /* default */],
+        productDetail: __WEBPACK_IMPORTED_MODULE_10__modules_productDetail__["a" /* default */]
     },
     plugins: [__WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger___default()()]
 }));
@@ -9860,8 +9863,7 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
         homeProducts: [],
         categories: [], //分类标题
         swiperDetailInfo: {}, //轮播图详情
-        goodsid: "", //商品id
-        goodsDetail: {} // 商品详情信息
+        goodsid: "" //商品id
     },
     mutations: {
         categoryList: function categoryList(state, payload) {
@@ -9884,11 +9886,6 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
             //轮播图的详细信息
             state.swiperDetailInfo = payload;
             // console.log("state.swiperDetailInfo",state.swiperDetailInfo)
-        },
-        goodsDetail: function goodsDetail(state, payload) {
-            //获取商品详情
-            state.goodsDetail = payload;
-            // console.log("state.goodsDetail",state.goodsDetail)
         }
     },
     actions: {
@@ -10001,34 +9998,6 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
                         }
                     }
                 }, _callee4, _this4);
-            }))();
-        },
-        getGoodsInfo: function getGoodsInfo(_ref5, payload) {
-            var _this5 = this;
-
-            var commit = _ref5.commit;
-            return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee5() {
-                var data;
-                return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
-                    while (1) {
-                        switch (_context5.prev = _context5.next) {
-                            case 0:
-                                _context5.next = 2;
-                                return Object(__WEBPACK_IMPORTED_MODULE_2__service_index__["getGoodsDetail"])(payload);
-
-                            case 2:
-                                data = _context5.sent;
-
-                                if (data.res_code === 1) {
-                                    commit("goodsDetail", data.result);
-                                }
-
-                            case 4:
-                            case "end":
-                                return _context5.stop();
-                        }
-                    }
-                }, _callee5, _this5);
             }))();
         }
     }
@@ -10866,6 +10835,10 @@ module.exports = function (engine) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getSwiperDetail; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getGoodsDetail; });
+/* unused harmony export getGoodsDetailPicture */
+/* unused harmony export getGoodSku */
+/* unused harmony export getTemplates */
+/* unused harmony export getCoupon */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_request__ = __webpack_require__(13);
 
 
@@ -10892,6 +10865,26 @@ var getSwiperDetail = function getSwiperDetail(code) {
 //获取商品详情：
 var getGoodsDetail = function getGoodsDetail(code) {
     return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/info/1.0.0', code);
+};
+
+//获取某商品的产品详情图：
+var getGoodsDetailPicture = function getGoodsDetailPicture(code) {
+    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/detailpicture/1.0.0', code);
+};
+
+//获取某商品的sku属性
+var getGoodSku = function getGoodSku(code) {
+    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/sku/attrs/1.0.0', code);
+};
+
+//获取某商品的运费模板
+var getTemplates = function getTemplates(code) {
+    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/shipping/templates/info/1.0.0', code);
+};
+
+//获取某商品的产品优惠券
+var getCoupon = function getCoupon(code) {
+    return __WEBPACK_IMPORTED_MODULE_0__utils_request__["a" /* default */].post('/api/open/product/coupon/productCouponList/1.0.0', code);
 };
 
 /***/ }),
@@ -11159,10 +11152,10 @@ var actions = {};
                             case 2:
                                 data = _context.sent;
 
-                                console.log(data.result, "2222222222222222222222222222222222");
+                                // console.log(data.result,"2222222222222222222222222222222222")
                                 commit('upstate', { list: data.result });
 
-                            case 5:
+                            case 4:
                             case "end":
                                 return _context.stop();
                         }
@@ -12227,6 +12220,96 @@ function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_index__ = __webpack_require__(17);
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    //命名空间
+    namespaced: true,
+    state: {
+        goodsid: "", //商品id
+        goodsDetail: {} // 商品详情信息
+    },
+    mutations: {
+        goodsDetail: function goodsDetail(state, payload) {
+            //获取商品详情
+            state.goodsDetail = payload;
+            // console.log("state.goodsDetail",state.goodsDetail)
+        }
+    },
+    actions: {
+        getGoodsInfo: function getGoodsInfo(_ref, payload) {
+            var _this = this;
+
+            var commit = _ref.commit;
+            return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+                var data;
+                return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                _context.next = 2;
+                                return Object(__WEBPACK_IMPORTED_MODULE_2__service_index__["getGoodsDetail"])(payload);
+
+                            case 2:
+                                data = _context.sent;
+
+                                if (data.res_code === 1) {
+                                    commit("goodsDetail", data.result);
+                                }
+
+                            case 4:
+                            case "end":
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, _this);
+            }))();
+        }
+    }
+});
 
 /***/ })
 ]);

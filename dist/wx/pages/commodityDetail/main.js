@@ -159,11 +159,11 @@ if (false) {(function () {
 
   computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["d" /* mapState */])({
     goodsDetail: function goodsDetail(state) {
-      return state.home.goodsDetail;
+      return state.productDetail.goodsDetail;
     }
   })),
   methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
-    getGoodsInfo: "home/getGoodsInfo"
+    getGoodsInfo: "productDetail/getGoodsInfo"
   }), {
     changshare: function changshare() {
       wx.navigateTo({

@@ -17,7 +17,7 @@ export default {
     actions: {
         async getSepcialData({commit},payload){ 
             let data = await getSepcial(payload.siid)
-            console.log(data.result,"2222222222222222222222222222222222")
+            // console.log(data.result,"2222222222222222222222222222222222")
                 commit('upstate',{list:data.result})
         },
     

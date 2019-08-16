@@ -10,7 +10,7 @@ import orider from "./modules/orider"
 import sepcialList from './modules/sepcialList'
 import productCoupon from './modules/productCoupon'
 import recommend from './modules/recommend'
-
+import productDetail from "./modules/productDetail"
 
 Vue.use(Vuex)
 
@@ -22,7 +22,8 @@ export default new Vuex.Store({
         orider,
         sepcialList,
         productCoupon,
-        recommend
+        recommend,
+        productDetail
     },
     plugins: [CreateLogger()]
 })
