@@ -1,15 +1,7 @@
 {
-<<<<<<< HEAD
   "pages": [
     "pages/home/main",
-    "pages/login/main",
-    "pages/canvas/main",
-    "pages/paint/main",
-=======
-  "pages": [ 
-    "pages/home/main", 
     "pages/share/main",
->>>>>>> yu
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -21,15 +13,15 @@
     "pages/flashSale/main",
     "pages/hotimgDetail/main",
     "pages/special/main",
-  
     "pages/commodityDetail/main",
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main",
+    "pages/recommend/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#56D2BF",
     "navigationBarTitleText": "积纳有品",
     "navigationBarTextStyle": "black"
   },
@@ -42,22 +34,23 @@
       {
         "text": "首页",
         "pagePath": "pages/home/main",
-        "iconPath": "/static/tabs/shouye_active.png",
-        "selectedIconPath": "static/tabs/shouye_active.png"
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
       },
       {
         "text": "购物车",
         "pagePath": "pages/shoppingcar/main",
-        "iconPath": "/static/tabs/dsh.png",
-        "selectedIconPath": "static/tabs/dsh.png"
+        "iconPath": "static/tabs/orders.png",
+        "selectedIconPath": "static/tabs/orders-active.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/my/main",
-        "iconPath": "/static/tabs/my_active.png",
-        "selectedIconPath": "static/tabs/my_active.png"
+        "iconPath": "static/tabs/orders.png",
+        "selectedIconPath": "static/tabs/orders-active.png"
       }
     ],
     "position": "bottom"
-  }
+  },
+  "sitemapLocation": "sitemap31.json"
 }
