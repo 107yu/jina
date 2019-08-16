@@ -11,23 +11,26 @@ export default {
     state: {
         goodsid:"",//商品id
         goodsDetail: {}, // 商品详情信息
-
+        goodsSku: {},    //商品sku属性
+        goodsDetailPicture: {},  //商品的产品详情图
+        goodsTemplates: {},    //商品运费模板
+        goodsCoupon: {},      //产品优惠券
     },
     mutations: {
         goodsDetail(state,payload){  //获取商品详情
             state.goodsDetail = payload
         },
         goodsSku(state,payload){  //获取商品sku属性
-            state.goodsDetail = payload
+            state.goodsSku = payload
         },
         goodsDetailPicture(state,payload){   //获取商品的产品详情图
-            state.goodsDetail = payload
+            state.goodsDetailPicture = payload
         },
         goodsTemplates(state,payload){  //获取商品运费模板
-            state.goodsDetail = payload
+            state.goodsTemplates = payload
         },
         goodsCoupon(state,payload){  //获取商品de产品优惠券
-            state.goodsDetail = payload
+            state.goodsCoupon = payload
         },
     },
     actions: {

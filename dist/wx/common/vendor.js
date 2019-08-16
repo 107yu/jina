@@ -11462,8 +11462,11 @@ var actions = {
     namespaced: true,
     state: {
         goodsid: "", //商品id
-        goodsDetail: {} // 商品详情信息
-
+        goodsDetail: {}, // 商品详情信息
+        goodsSku: {}, //商品sku属性
+        goodsDetailPicture: {}, //商品的产品详情图
+        goodsTemplates: {}, //商品运费模板
+        goodsCoupon: {} //产品优惠券
     },
     mutations: {
         goodsDetail: function goodsDetail(state, payload) {
@@ -11472,19 +11475,19 @@ var actions = {
         },
         goodsSku: function goodsSku(state, payload) {
             //获取商品sku属性
-            state.goodsDetail = payload;
+            state.goodsSku = payload;
         },
         goodsDetailPicture: function goodsDetailPicture(state, payload) {
             //获取商品的产品详情图
-            state.goodsDetail = payload;
+            state.goodsDetailPicture = payload;
         },
         goodsTemplates: function goodsTemplates(state, payload) {
             //获取商品运费模板
-            state.goodsDetail = payload;
+            state.goodsTemplates = payload;
         },
         goodsCoupon: function goodsCoupon(state, payload) {
             //获取商品de产品优惠券
-            state.goodsDetail = payload;
+            state.goodsCoupon = payload;
         }
     },
     actions: {

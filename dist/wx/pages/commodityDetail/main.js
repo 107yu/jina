@@ -165,7 +165,19 @@ if (false) {(function () {
   computed: __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["d" /* mapState */])({
     goodsDetail: function goodsDetail(state) {
       return state.productDetail.goodsDetail;
-    }
+    }, //商品详情：
+    goodsSku: function goodsSku(state) {
+      return state.productDetail.goodsSku;
+    }, //商品sku属性
+    goodsDetailPicture: function goodsDetailPicture(state) {
+      return state.productDetail.goodsDetailPicture;
+    }, //商品的产品详情图
+    goodsTemplates: function goodsTemplates(state) {
+      return state.productDetail.goodsTemplates;
+    }, //商品运费模板
+    goodsCoupon: function goodsCoupon(state) {
+      return state.productDetail.goodsCoupon;
+    } //产品优惠券
   })),
   methods: __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["b" /* mapActions */])({
     getGoodsInfo: "productDetail/getGoodsInfo",
@@ -237,6 +249,8 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrap"
+  }, [_c('div', {
+    staticClass: "main"
   }, [_c('scroll-view', {
     staticStyle: {
       "height": "100%"
@@ -312,7 +326,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "src": "../../../static/images/下一步.svg",
       "alt": ""
     }
-  })])]), _vm._v(" "), _c('li', [_vm._v("\n          说明:" + _vm._s(_vm.goodsDetail.description) + "\n        ")])], 1), _vm._v(" "), _c('div', {
+  })])]), _vm._v(" "), _c('li', [_vm._v("说明:" + _vm._s(_vm.goodsDetail.description))])], 1)], 1)], 1), _vm._v(" "), _c('div', {
     staticClass: "footer"
   }, [_c('button', {
     attrs: {
@@ -321,7 +335,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.changshare
     }
-  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)], 1)
+  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)])
 }
 var staticRenderFns = []
 render._withStripped = true

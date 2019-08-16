@@ -1,5 +1,6 @@
 <template>
-    <div class="wrap">
+  <div class="wrap">
+    <div class="main">
       <scroll-view scroll-y style="height:100%">
         <div class="swiper">
           <swiper 
@@ -12,11 +13,11 @@
            >
             <block v-for="(val,index) in goodsDetail.supplierProductPictureVoList" :key="index">
                 <swiper-item>
-                    <image :src="val.imgUrl" class="slide-image" style='overflow:show'/>
+                  <image :src="val.imgUrl" class="slide-image" style='overflow:show'/>
                 </swiper-item>
             </block>
           </swiper>
-        <img v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length===0" :src="goodsDetail.mainImgUrl" alt="" >
+          <img v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length===0" :src="goodsDetail.mainImgUrl" alt="" >
         </div>
         <div class="tit">
           <div class="ones">
@@ -28,9 +29,9 @@
         </div>
         <div class="title">
           <div class="names">{{goodsDetail.title}}</div>
-        <p>
-            <span>快递包邮</span>
-        </p>
+          <p>
+              <span>快递包邮</span>
+          </p>
         </div>
         <ul class="list">
           <li class="lis">
@@ -40,15 +41,14 @@
               <img src="../../../static/images/下一步.svg" alt="">
             </div>
           </li>
-          <li>
-            说明:{{goodsDetail.description}}
-          </li>
+          <li>说明:{{goodsDetail.description}}</li>
         </ul>
-        <div class="footer">
-          <button @click="changshare">分享赚1.98</button>
-          <button>立即购买</button>
-        </div>  
       </scroll-view>
+    </div>
+    <div class="footer">
+      <button @click="changshare">分享赚1.98</button>
+      <button>立即购买</button>
+    </div>  
   </div>
 </template>
 <script>
@@ -62,12 +62,16 @@ export default {
     },
     data(){
         return {
-          
+         
         }
     },
     computed:{
       ...mapState({
-        goodsDetail: state=>state.productDetail.goodsDetail
+        goodsDetail: state=>state.productDetail.goodsDetail,   //商品详情：
+        goodsSku: state=>state.productDetail.goodsSku,       //商品sku属性
+        goodsDetailPicture: state=>state.productDetail.goodsDetailPicture,  //商品的产品详情图
+        goodsTemplates: state=>state.productDetail.goodsTemplates,     //商品运费模板
+        goodsCoupon: state=>state.productDetail.goodsCoupon,      //产品优惠券
       })
     },
     methods:{
@@ -91,7 +95,7 @@ export default {
       let data = await this.getGoodsInfo({   //商品信息
         pid: this.$root.$root.$mp.query.id
       })
-      if(data.res_code===1){
+      if(data.res_code === 1){
          this.getDetailPicture({   //产品图
           pid: this.$root.$root.$mp.query.id,
           basePid:this.goodsDetail.basePid,
@@ -118,18 +122,42 @@ export default {
 .wrap {
   width: 100%;
   height: 100%;
+  display:flex;
+  flex-direction: column;
   overflow: hidden;
 }
-// .swiper {
-//   width: 100%;
-//   height: 500rpx;
-//   img {
-//     width: 100%;
-//     height: 100%;
-    
-//   }
-// }
-
+.main{
+  width:100%;
+  flex:1;
+  overflow:hidden;
+}
+.footer{
+  width:100%;
+  height: 100rpx;
+  border-top: 1rpx solid #ccc;
+  text-align: center;
+  display: flex;
+  background:#fc5d7b ;
+  .lefts {
+    width: 30%;
+    p {
+      font-size: 32rpx;
+    }
+    img {
+      width: 34rpx;
+      height: 32rpx;
+    }
+  }
+  button {
+    width: 70%;
+    background: #fc5d7b;
+    font-size: 38rpx;
+    color: #fff;
+  }
+  .colos {
+    color: #FFF;
+  }
+}
 .tit {
   display: flex;
   justify-content: space-between;
@@ -237,36 +265,4 @@ export default {
   display: block;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100rpx;
-  border-top: 1rpx solid #ccc;
-  text-align: center;
-  display: flex;
-  background:#fc5d7b ;
-
-  .lefts {
-    width: 30%;
-    p {
-      font-size: 32rpx;
-    }
-    img {
-      width: 34rpx;
-      height: 32rpx;
-    }
-  }
-
-  button {
-    width: 70%;
-    background: #fc5d7b;
-    font-size: 38rpx;
-    color: #fff;
-  }
-
-  .colos {
-    color: #FFF;
-  }
-}
 </style>
