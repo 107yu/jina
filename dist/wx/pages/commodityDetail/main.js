@@ -171,8 +171,8 @@ if (false) {(function () {
     getGoodsInfo: "productDetail/getGoodsInfo",
     getSku: "productDetail/getSku",
     getDetailPicture: "productDetail/getDetailPicture",
-    templates: "productDetail/templates",
-    coupon: "productDetail/coupon"
+    getTemplates: "productDetail/getTemplates",
+    getCoupon: "productDetail/getCoupon"
   }), {
     changshare: function changshare() {
       wx.navigateTo({
@@ -204,10 +204,10 @@ if (false) {(function () {
                   basePid: _this.goodsDetail.basePid,
                   userIdentity: _this.goodsDetail.userIdentity
                 });
-                _this.templates({ //运费模板
+                _this.getTemplates({ //运费模板
                   sstid: _this.goodsDetail.sstid
                 });
-                _this.coupon({ //优惠信息
+                _this.getCoupon({ //优惠信息
                   pid: _this.$root.$root.$mp.query.id,
                   bid: _this.goodsDetail.bid,
                   uid: _this.goodsDetail.uid,

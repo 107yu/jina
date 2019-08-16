@@ -36,11 +36,11 @@ export let getGoodSku = code =>{
 }
 
 //获取某商品的运费模板
-export let getTemplates = code =>{
+export let getGoodsTemplates = code =>{
     return fly.post('/api/open/shipping/templates/info/1.0.0',code)
 }
 
 //获取某商品的产品优惠券
-export let getCoupon = code =>{
+export let getGoodsCoupon = code =>{
     return fly.post('/api/open/product/coupon/productCouponList/1.0.0',code)
 }

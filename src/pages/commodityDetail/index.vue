@@ -75,8 +75,8 @@ export default {
         getGoodsInfo: "productDetail/getGoodsInfo",
         getSku: "productDetail/getSku",
         getDetailPicture: "productDetail/getDetailPicture",
-        templates: "productDetail/templates",
-        coupon: "productDetail/coupon"
+        getTemplates: "productDetail/getTemplates",
+        getCoupon: "productDetail/getCoupon"
       }),
       changshare(){
            wx.navigateTo({
@@ -97,10 +97,10 @@ export default {
           basePid:this.goodsDetail.basePid,
           userIdentity:this.goodsDetail.userIdentity
         })
-        this.templates({   //运费模板
+        this.getTemplates({   //运费模板
           sstid: this.goodsDetail.sstid
         })
-        this.coupon({   //优惠信息
+        this.getCoupon({   //优惠信息
           pid: this.$root.$root.$mp.query.id,
           bid: this.goodsDetail.bid,
           uid: this.goodsDetail.uid,

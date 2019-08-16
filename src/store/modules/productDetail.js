@@ -2,23 +2,33 @@ import {
     getGoodsDetail,
     getGoodSku,
     getGoodsDetailPicture,
-    getTemplates,
-    getCoupon,
+    getGoodsTemplates,
+    getGoodsCoupon,
 } from "../../service/index"
 export default {
     //命名空间
     namespaced: true,
     state: {
         goodsid:"",//商品id
-        basePid:"",
-        bid:"",
-        uid:"",
         goodsDetail: {}, // 商品详情信息
+
     },
     mutations: {
         goodsDetail(state,payload){  //获取商品详情
             state.goodsDetail = payload
-        }
+        },
+        goodsSku(state,payload){  //获取商品sku属性
+            state.goodsDetail = payload
+        },
+        goodsDetailPicture(state,payload){   //获取商品的产品详情图
+            state.goodsDetail = payload
+        },
+        goodsTemplates(state,payload){  //获取商品运费模板
+            state.goodsDetail = payload
+        },
+        goodsCoupon(state,payload){  //获取商品de产品优惠券
+            state.goodsDetail = payload
+        },
     },
     actions: {
         async getGoodsInfo({commit},payload){   //获取商品的详情
@@ -31,29 +41,33 @@ export default {
         async getSku({commit},payload){   //获取商品sku属性
             let data = await getGoodSku(payload)
             console.log(data,"sku")
+            commit("goodsSku",data)
             // if(data.res_code===1){
-            //     commit("goodsDetail",data.result)
+               
             // }
         },
         async getDetailPicture({commit},payload){   //获取商品的产品详情图
             let data = await getGoodsDetailPicture(payload)
             console.log("getDetailPicture",data)
+            commit("goodsDetailPicture",data)
             // if(data.res_code===1){
-            //     commit("goodsDetail",data.result)
+                
             // }
         },
-        async templates({commit},payload){   //获取商品运费模板
-            let data = await getTemplates(payload)
+        async getTemplates({commit},payload){   //获取商品运费模板
+            let data = await getGoodsTemplates(payload)
             console.log("templates",data)
+            commit("goodsTemplates",data)
             // if(data.res_code===1){
-            //     commit("goodsDetail",data.result)
+               
             // }
         },
-        async coupon({commit},payload){   //获取商品de产品优惠券
-            let data = await getCoupon(payload)
+        async getCoupon({commit},payload){   //获取商品de产品优惠券
+            let data = await getGoodsCoupon(payload)
             console.log("coupon",data)
+            commit("goodsCoupon",data)
             // if(data.res_code===1){
-            //     commit("goodsDetail",data.result)
+                
             // }
         },
     }
