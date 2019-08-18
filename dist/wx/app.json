@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/main",
     "pages/share/main",
+    "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -52,5 +52,5 @@
     ],
     "position": "bottom"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap2.json"
 }
