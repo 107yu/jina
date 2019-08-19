@@ -5,7 +5,7 @@
     </view>
     <view class="_dd data-v-c3a7b040">
       <view class="_p data-v-c3a7b040">{{title}}</view>
-      <view class="_b data-v-c3a7b040">￥{{price}}</view> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
+      <view class="_b data-v-c3a7b040">￥{{price}}</view> <label class="_span data-v-c3a7b040">赚{{earnMoney}}</label> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
     </view>
   </view>
 </template>

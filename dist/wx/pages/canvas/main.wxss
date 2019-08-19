@@ -2,5 +2,5 @@
 
 .wrap ._canvas.data-v-6a343830 {
   width: 100%;
-  border: 2rpx solid #000;
+  background: #f8f8f8;
 }

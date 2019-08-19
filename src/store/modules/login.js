@@ -6,16 +6,17 @@ export default {
     state: {
         current: {
             phone: '',
-            auth: '',
-            flag: true
+            auth: ''
         },
         countDown: '',
         verifyCodeTime: '获取验证码'
     },
     mutations: {
+        //接口返回验证码
         updateCountDown(state, payload) {
             state.countDown = payload
         },
+        //60秒倒计时
         countdown(state, payload) {
             var c = 60;
             var intervalId = setInterval(function () {

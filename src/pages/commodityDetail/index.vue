@@ -1,82 +1,122 @@
 <template>
-    <div class="wrap">
-    <div class="swiper" >
-      <img src="../../../static/images/1.jpg" alt="">
-    </div>
-    <div class="tit">
-      <div class="ones">
-        <p>￥</p>
-        <p class="price">22.9</p>
-        <s class="num">￥18.88</s>
+  <div class="wrap">
+    <scroll-view scroll-y style="height:100%">
+      <div class="swiper">
+        <swiper
+          indicator-dots="true"
+          autoplay="true"
+          interval="2000"
+          duration="1000"
+          indicator-active-color="#fff"
+          v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length>0"
+        >
+          <block v-for="(val,index) in goodsDetail.supplierProductPictureVoList" :key="index">
+            <swiper-item>
+              <image :src="val.imgUrl" class="slide-image" style="overflow:show" />
+            </swiper-item>
+          </block>
+        </swiper>
+        <img
+          v-if="goodsDetail.supplierProductPictureVoList && goodsDetail.supplierProductPictureVoList.length===0"
+          :src="goodsDetail.mainImgUrl"
+          alt
+        />
       </div>
-      <p class="times">分享赚：￥499.00</p>
-    </div>
-    <div class="title">
-       <div class="names">帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤</div>
-    <p>
-        <span>快递包邮</span>
-    </p>
-    </div>
-    <ul class="list">
-      <li class="lis">
-        <span>选择 规格</span>
-        <div class="rights" @click="toShow">
-          <span>颜色 尺码</span>
-          <img src="../../../static/images/下一步.svg" alt="">
+      <div class="tit">
+        <div class="ones">
+          <p>￥</p>
+          <p class="price">{{goodsDetail.salesPrice}}</p>
+          <s class="num">￥{{goodsDetail.vipPrice}}</s>
         </div>
-      </li>
-    </ul>
-    <div class="footer">
-      <button @click="changshare">分享赚1.98</button>
-      <button>立即购买</button>
-    </div>
+        <p class="times" @click="changshare">分享赚：￥{{goodsDetail.memberDiscountPrice}}</p>
+      </div>
+      <div class="title">
+        <div class="names">{{goodsDetail.title}}</div>
+        <p>
+          <span>快递包邮</span>
+        </p>
+      </div>
+      <ul class="list">
+        <li class="lis">
+          <span>选择 规格</span>
+          <div class="rights" @click="toShow">
+            <span>颜色 尺码</span>
+            <img src="../../../static/images/下一步.svg" alt />
+          </div>
+        </li>
+        <li>说明:{{goodsDetail.description}}</li>
+      </ul>
+      <div class="footer">
+        <button @click="changshare">分享赚1.98</button>
+        <button>立即购买</button>
+      </div>
+    </scroll-view>
   </div>
 </template>
 <script>
+import { mapState, mapMutations, mapActions } from "vuex";
 export default {
-    props:{
-
-    },
-    components:{
-
-    },
-    data(){
-        return {
-
-        }
-    },
-    computed:{
-
-    },
-    methods:{
-      changshare(){
-           wx.navigateTo({
-                url: "/pages/share/main"
-          });
-      }
-    },
-    created(){
-
-    },
-    mounted(){
-
+  props: {},
+  components: {},
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapState({
+      goodsDetail: state => state.productDetail.goodsDetail
+    })
+  },
+  methods: {
+    ...mapActions({
+      getGoodsInfo: "productDetail/getGoodsInfo",
+      getSku: "productDetail/getSku",
+      getDetailPicture: "productDetail/getDetailPicture",
+      templates: "productDetail/templates",
+      coupon: "productDetail/coupon"
+    }),
+    changshare() {
+      wx.navigateTo({
+        url: "/pages/share/main"
+      });
     }
-}
+  },
+  created() {},
+  async mounted() {
+    let data = await this.getGoodsInfo({
+      //商品信息
+      pid: this.$root.$root.$mp.query.id
+    });
+    if (data.res_code === 1) {
+      this.getDetailPicture({
+        //产品图
+        pid: this.$root.$root.$mp.query.id,
+        basePid: this.goodsDetail.basePid,
+        userIdentity: this.goodsDetail.userIdentity
+      });
+      this.templates({
+        //运费模板
+        sstid: this.goodsDetail.sstid
+      });
+      this.coupon({
+        //优惠信息
+        pid: this.$root.$root.$mp.query.id,
+        bid: this.goodsDetail.bid,
+        uid: this.goodsDetail.uid,
+        usiid: this.goodsDetail.usiid
+      });
+    }
+    this.getSku({
+      //sku属性
+      pid: this.$root.$root.$mp.query.id
+    });
+  }
+};
 </script>
 <style lang="scss" scope>
 .wrap {
   width: 100%;
   height: 100%;
-}
-
-.swiper {
-  width: 100%;
-  height: 400rpx;
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
+  overflow: hidden;
 }
 
 .tit {
@@ -86,8 +126,8 @@ export default {
   box-sizing: border-box;
   height: 84rpx;
   line-height: 84rpx;
-  background: #FFF;
-  color: #CCC;
+  background: #fff;
+  color: #ccc;
 }
 
 .tit .ones {
@@ -105,7 +145,7 @@ export default {
 
   .num {
     height: 84rpx;
-    color:rgb(168, 120, 50);
+    color: rgb(168, 120, 50);
     line-height: 84rpx;
   }
 }
@@ -194,7 +234,7 @@ export default {
   border-top: 1rpx solid #ccc;
   text-align: center;
   display: flex;
-  background:#fc5d7b ;
+  background: #fc5d7b;
 
   .lefts {
     width: 30%;
@@ -215,7 +255,7 @@ export default {
   }
 
   .colos {
-    color: #FFF;
+    color: #fff;
   }
 }
 </style>

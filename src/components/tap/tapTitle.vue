@@ -28,7 +28,7 @@ export default {
     ...mapActions({
       getCountData: "recommend/getCountData"
     }),
-    //tap切换
+    //tab切换
     changeTitle(index, cid) {
       //首页样式联动分类页样式
       this.tabNav({ index: index - 1, id: cid });

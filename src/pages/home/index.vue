@@ -11,7 +11,7 @@
         <dl
           v-for="(item,index) in  homeLists[1] &&  homeLists[1].items"
           :key="index"
-          @click="introduceChange(item)"
+          @click="introduceChange(item,index)"
         >
           <dt>
             <img :src="item.imgUrl" alt />
@@ -40,6 +40,7 @@
         :hotimg="homeLists[12] && homeLists[12]"
         :homeLi="homeLists[13] && homeLists[13].items"
       ></HomeRecommend>
+      <homeList :homeProducts="homeProducts"></homeList>
     </scroll-view>
   </div>
 </template>
@@ -57,7 +58,8 @@ export default {
   computed: {
     ...mapState({
       homeLists: state => state.home.homeLists,
-      categories: state => state.home.categories
+      categories: state => state.home.categories,
+      homeProducts: state => state.home.homeProducts,
     })
   },
   methods: {
@@ -73,18 +75,28 @@ export default {
       });
     },
     //专题
-    introduceChange(item) {
+    introduceChange(item, index) {
       let str2 = item.jumpUrl.substring(
         item.jumpUrl.indexOf("businessId") + 11
       );
       let businessId = str2.substring(0, str2.indexOf("&"));
       let str3 = item.jumpUrl.substring(item.jumpUrl.indexOf("uiType") + 7);
       let uiType = str3;
-      console.log(123, businessId, uiType, 456);
-      wx.navigateTo({
-        url:
-          "/pages/introduceDetail/main?sild=" + businessId + "&uiType=" + uiType
-      });
+      // console.log(123, businessId, uiType, 456);
+      if (index == 3) {
+        wx.navigateTo({
+          url:
+            "/pages/remoteRegion/main?sild=" + businessId + "&uiType=" + uiType
+        });
+      } else {
+        wx.navigateTo({
+          url:
+            "/pages/introduceDetail/main?sild=" +
+            businessId +
+            "&uiType=" +
+            uiType
+        });
+      }
     }
   },
   created() {},

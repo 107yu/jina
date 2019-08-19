@@ -1,3 +1,3 @@
 <template name="b4393238">
-  <view class="_div data-v-6a343830 wrap"><canvas style="width: 320px; height: 520px;" canvas-id="canvas" class="_canvas data-v-6a343830"></canvas></view>
+  <view class="_div data-v-6a343830 wrap"><canvas canvas-id="share" style="width: 320px; height:568px;" class="_canvas data-v-6a343830"></canvas></view>
 </template>

@@ -1,4 +1,9 @@
-import {getCategories,getList,getProducts,getSwiperDetail} from "../../service/index"
+import {
+    getCategories,
+    getList,
+    getProducts,
+    getSwiperDetail,
+} from "../../service/index"
 export default {
     //命名空间
     namespaced: true,
@@ -9,23 +14,23 @@ export default {
         swiperDetailInfo:{}, //轮播图详情
     },
     mutations: {
-        categoryList(state,payload){
+        categoryList(state,payload){     //获取首页专题的头部信息
             payload.unshift({cname:"今日推荐"})
             state.categories = payload;
             // console.log(" categories",state.categories)
         },  
-        homeList(state,payload){
+        homeList(state,payload){     //获取首页大部分数据
             state.homeLists = payload;
             console.log("homeLists",state.homeLists)
         },
-        homeProducts(state,payload){
+        homeProducts(state,payload){   //获取首页底部数据
             state.homeProducts = payload
             // console.log("homeProducts",state.homeProducts)
         },
         swiperDetail(state,payload){   //轮播图的详细信息
             state.swiperDetailInfo = payload;
             console.log("state.swiperDetailInfo",state.swiperDetailInfo)
-        }
+        },
     },
     actions: {
         async getCategoryLists({commit},payload){  //获取所有的分类标题
@@ -43,12 +48,11 @@ export default {
         },
         async getHomeList({commit}){       //获取首页大部分数据
             let data = await getList()
-            console.log(data.result,"404040404")
             if(data.res_code === 1){
                 commit("homeList",data.result)
             }
         },
-        async swiperDetail({commit},payload){ //轮播图的详情
+        async swiperDetail({commit},payload){  //轮播图的详情
             let data = await getSwiperDetail(payload)
             commit("swiperDetail",data)
         }

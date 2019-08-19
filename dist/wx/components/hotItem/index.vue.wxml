@@ -1,13 +1,11 @@
 <template name="1479e3ae">
   <view class="_div data-v-3a51dab4">
-    <view wx:key="index" key="{{index}}" wx:for="{{products}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-3a51dab4">
+    <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{products && products}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-3a51dab4">
       <view class="_dt data-v-3a51dab4">
         <image src="{{item.mainImgUrl}}" alt class="_img data-v-3a51dab4"></image>
       </view>
       <view class="_dd data-v-3a51dab4">
-        <view class="_p data-v-3a51dab4 titleBox">
-          {{item.title}}
-        </view>
+        <view class="_p data-v-3a51dab4 titleBox">{{item.title}}</view>
         <view class="_div data-v-3a51dab4 moneySpanBox"><label for class="_label data-v-3a51dab4 span1"> ￥ <label class="_span data-v-3a51dab4">{{item.salesPrice}}</label></label> <label for class="_label data-v-3a51dab4 span2"> 赚￥ <label class="_span data-v-3a51dab4">{{item.memberDiscountPrice}}</label></label></view>
       </view>
     </view>

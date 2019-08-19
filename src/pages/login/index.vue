@@ -9,7 +9,6 @@
         验证码
         <input type="text" placeholder="请输入验证码" />
         <span @click="getauth">{{verifyCodeTime}}</span>
-        <!-- <span v-else @click="getauth">{{verifyCodeTime}}</span> -->
       </li>
     </ul>
     <section>
@@ -65,7 +64,7 @@ export default {
     },
     //登录
     getPhoneNumber(e) {
-      console.log(e)
+      console.log(e);
       // wx.openSetting({
       //     success(res) {
       //       console.log(res.authSetting);

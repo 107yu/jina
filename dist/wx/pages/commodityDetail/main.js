@@ -1,15 +1,15 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([19],{
+global.webpackJsonpMpvue([20],{
 
-/***/ 169:
+/***/ 174:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(175);
 
 
 
@@ -25,16 +25,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 170:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_f6962b48_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_template_compiler_index_id_data_v_f6962b48_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_2_0_1_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(178);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(171)
+  __webpack_require__(176)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,17 +79,27 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 171:
+/***/ 176:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 172:
+/***/ 177:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vuex__ = __webpack_require__(2);
+
+
+
 //
 //
 //
@@ -124,57 +134,182 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    props: {},
-    components: {},
-    data: function data() {
-        return {};
-    },
+  props: {},
+  components: {},
+  data: function data() {
+    return {};
+  },
 
-    computed: {},
-    methods: {
-        changshare: function changshare() {
-            wx.navigateTo({
-                url: "/pages/share/main"
-            });
+  computed: __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["d" /* mapState */])({
+    goodsDetail: function goodsDetail(state) {
+      return state.productDetail.goodsDetail;
+    }
+  })),
+  methods: __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends___default()({}, Object(__WEBPACK_IMPORTED_MODULE_3_vuex__["b" /* mapActions */])({
+    getGoodsInfo: "productDetail/getGoodsInfo",
+    getSku: "productDetail/getSku",
+    getDetailPicture: "productDetail/getDetailPicture",
+    templates: "productDetail/templates",
+    coupon: "productDetail/coupon"
+  }), {
+    changshare: function changshare() {
+      wx.navigateTo({
+        url: "/pages/share/main"
+      });
+    }
+  }),
+  created: function created() {},
+  mounted: function mounted() {
+    var _this = this;
+
+    return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+      var data;
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _this.getGoodsInfo({
+                //商品信息
+                pid: _this.$root.$root.$mp.query.id
+              });
+
+            case 2:
+              data = _context.sent;
+
+              if (data.res_code === 1) {
+                _this.getDetailPicture({
+                  //产品图
+                  pid: _this.$root.$root.$mp.query.id,
+                  basePid: _this.goodsDetail.basePid,
+                  userIdentity: _this.goodsDetail.userIdentity
+                });
+                _this.templates({
+                  //运费模板
+                  sstid: _this.goodsDetail.sstid
+                });
+                _this.coupon({
+                  //优惠信息
+                  pid: _this.$root.$root.$mp.query.id,
+                  bid: _this.goodsDetail.bid,
+                  uid: _this.goodsDetail.uid,
+                  usiid: _this.goodsDetail.usiid
+                });
+              }
+              _this.getSku({
+                //sku属性
+                pid: _this.$root.$root.$mp.query.id
+              });
+
+            case 5:
+            case "end":
+              return _context.stop();
+          }
         }
-    },
-    created: function created() {},
-    mounted: function mounted() {}
+      }, _callee, _this);
+    }))();
+  }
 });
 
 /***/ }),
 
-/***/ 173:
+/***/ 178:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "wrap"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('scroll-view', {
+    staticStyle: {
+      "height": "100%"
+    },
+    attrs: {
+      "scroll-y": ""
+    }
+  }, [_c('div', {
+    staticClass: "swiper"
+  }, [(_vm.goodsDetail.supplierProductPictureVoList && _vm.goodsDetail.supplierProductPictureVoList.length > 0) ? _c('swiper', {
+    attrs: {
+      "indicator-dots": "true",
+      "autoplay": "true",
+      "interval": "2000",
+      "duration": "1000",
+      "indicator-active-color": "#fff"
+    }
+  }, _vm._l((_vm.goodsDetail.supplierProductPictureVoList), function(val, index) {
+    return _c('block', {
+      key: index
+    }, [_c('swiper-item', {
+      attrs: {
+        "mpcomid": '0_' + index
+      }
+    }, [_c('image', {
+      staticClass: "slide-image",
+      staticStyle: {
+        "overflow": "show"
+      },
+      attrs: {
+        "src": val.imgUrl
+      }
+    })])], 1)
+  })) : _vm._e(), _vm._v(" "), (_vm.goodsDetail.supplierProductPictureVoList && _vm.goodsDetail.supplierProductPictureVoList.length === 0) ? _c('img', {
+    attrs: {
+      "src": _vm.goodsDetail.mainImgUrl,
+      "alt": ""
+    }
+  }) : _vm._e()], 1), _vm._v(" "), _c('div', {
     staticClass: "tit"
   }, [_c('div', {
     staticClass: "ones"
   }, [_c('p', [_vm._v("￥")]), _vm._v(" "), _c('p', {
     staticClass: "price"
-  }, [_vm._v("22.9")]), _vm._v(" "), _c('s', {
+  }, [_vm._v(_vm._s(_vm.goodsDetail.salesPrice))]), _vm._v(" "), _c('s', {
     staticClass: "num"
-  }, [_vm._v("￥18.88")])], 1), _vm._v(" "), _c('p', {
-    staticClass: "times"
-  }, [_vm._v("分享赚：￥499.00")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("￥" + _vm._s(_vm.goodsDetail.vipPrice))])], 1), _vm._v(" "), _c('p', {
+    staticClass: "times",
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.changshare
+    }
+  }, [_vm._v("分享赚：￥" + _vm._s(_vm.goodsDetail.memberDiscountPrice))])], 1), _vm._v(" "), _c('div', {
     staticClass: "title"
   }, [_c('div', {
     staticClass: "names"
-  }, [_vm._v("帮宝适啦啦库加大号XL128超薄透气婴儿纸尿裤非纸尿裤")]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")])])], 1), _vm._v(" "), _c('ul', {
+  }, [_vm._v(_vm._s(_vm.goodsDetail.title))]), _vm._v(" "), _c('p', [_c('span', [_vm._v("快递包邮")])])], 1), _vm._v(" "), _c('ul', {
     staticClass: "list"
   }, [_c('li', {
     staticClass: "lis"
   }, [_c('span', [_vm._v("选择 规格")]), _vm._v(" "), _c('div', {
     staticClass: "rights",
     attrs: {
-      "eventid": '0'
+      "eventid": '1'
     },
     on: {
       "click": _vm.toShow
@@ -184,27 +319,18 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "src": "../../../static/images/下一步.svg",
       "alt": ""
     }
-  })])])], 1), _vm._v(" "), _c('div', {
+  })])]), _vm._v(" "), _c('li', [_vm._v("说明:" + _vm._s(_vm.goodsDetail.description))])], 1), _vm._v(" "), _c('div', {
     staticClass: "footer"
   }, [_c('button', {
     attrs: {
-      "eventid": '1'
+      "eventid": '2'
     },
     on: {
       "click": _vm.changshare
     }
-  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)
+  }, [_vm._v("分享赚1.98")]), _vm._v(" "), _c('button', [_vm._v("立即购买")])], 1)], 1)], 1)
 }
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "swiper"
-  }, [_c('img', {
-    attrs: {
-      "src": "../../../static/images/1.jpg",
-      "alt": ""
-    }
-  })])
-}]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -217,4 +343,4 @@ if (false) {
 
 /***/ })
 
-},[169]);
+},[174]);

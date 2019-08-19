@@ -84,39 +84,6 @@ page {
 .title>._span.data-v-86853e6c {
   color: red;
 }
-._dl.data-v-c3a7b040 {
-  width: 30%;
-  font-size: 28rpx;
-  background: #fff;
-  border-radius: 10rpx;
-  margin: 10rpx 0 0 8rpx;
-  padding: 8rpx;
-}
-._dt.data-v-c3a7b040 {
-  width: 100%;
-  height: 200rpx;
-  text-align: center;
-}
-._img.data-v-c3a7b040 {
-  width: 100%;
-  height: 100%;
-}
-._p.data-v-c3a7b040 {
-  width: 100%;
-  line-height: 40rpx;
-  text-overflow: -o-ellipsis-lastline;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  font-size: 24rpx;
-  margin: 10rpx 0;
-}
-._b.data-v-c3a7b040 {
-  color: red;
-}
 .hotInfo.data-v-7a6779e0 {
   width: 100%;
   height: 200rpx;
@@ -287,4 +254,71 @@ page {
   color: #fc5d7b;
   margin-left: 20rpx;
   background: #fbe1ec;
+}
+.homeList.data-v-10df2502 {
+  width: 100%;
+}
+.homedl.data-v-10df2502 {
+  width: 100%;
+}
+.homedl ._dl.data-v-10df2502 {
+  display: flex;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  margin: 20rpx 0;
+}
+.homedl ._dl ._dt ._img.data-v-10df2502 {
+  width: 200rpx;
+  height: 216rpx;
+  margin: 0 20rpx;
+}
+.homedl ._dl ._dd.data-v-10df2502 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  line-height: 2;
+  margin-bottom: 10rpx;
+}
+.homedl ._dl ._dd .span.data-v-10df2502 {
+  border: 2rpx solid #fc5d7b;
+  color: #fc5d7b;
+  font-size: 20rpx;
+  padding: 2rpx 6rpx;
+  box-sizing: border-box;
+  margin: 0 10rpx;
+}
+.homedl ._dl ._dd .jia.data-v-10df2502 {
+  color: #fc5d7b;
+  line-height: 2;
+}
+.homedl ._dl ._dd .jia .qian.data-v-10df2502 {
+  font-size: 28rpx;
+}
+.homedl ._dl ._dd .jia .shu.data-v-10df2502 {
+  font-size: 44rpx;
+}
+.homedl ._dl ._dd .jia .mony.data-v-10df2502 {
+  margin-left: 10rpx;
+  color: #a87831;
+  font-size: 20rpx;
+}
+.homedl ._dl ._dd .jia ._img.data-v-10df2502 {
+  width: 42rpx;
+  height: 20rpx;
+  margin: 0 6rpx;
+}
+.homedl ._dl ._dd .jia .zhuan.data-v-10df2502 {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #fc5d7b;
+  line-height: 24rpx;
+  background: #ffe8ed;
+  margin-left: 10rpx;
+  padding: 4rpx 0;
+  box-sizing: border-box;
 }

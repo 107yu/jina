@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/home/main",
     "pages/canvas/main",
     "pages/login/main",
+    "pages/home/main",
     "pages/search/main",
     "pages/myOrder/main",
     "pages/gopay/main",
@@ -19,7 +19,8 @@
     "pages/my/main",
     "pages/swiperDetail/main",
     "pages/shoppingcar/main",
-    "pages/recommend/main"
+    "pages/recommend/main",
+    "pages/remoteRegion/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

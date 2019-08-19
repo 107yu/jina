@@ -3,15 +3,7 @@
 .wrap {
   width: 100%;
   height: 100%;
-}
-.swiper {
-  width: 100%;
-  height: 400rpx;
-}
-.swiper ._img {
-  width: 100%;
-  height: 100%;
-  display: block;
+  overflow: hidden;
 }
 .tit {
   display: flex;
@@ -20,8 +12,8 @@
   box-sizing: border-box;
   height: 84rpx;
   line-height: 84rpx;
-  background: #FFF;
-  color: #CCC;
+  background: #fff;
+  color: #ccc;
 }
 .tit .ones {
   display: flex;
@@ -130,5 +122,5 @@
   color: #fff;
 }
 .footer .colos {
-  color: #FFF;
+  color: #fff;
 }

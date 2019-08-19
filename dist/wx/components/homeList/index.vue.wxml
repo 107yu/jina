@@ -1,0 +1,18 @@
+<import src="/components/homeBar/homeBar.vue.wxml" /><template name="271efa4b">
+  <view class="_div data-v-10df2502 homeList"><template homeBarHot="为你精选" describe="等你来抢" more="true" data="{{...$root[$kk+'0'], $root}}" is="a5f1d978"></template>
+    <view class="_div data-v-10df2502 homedl">
+      <view wx:key="index" key="{{index}}" wx:for="{{homeProducts && homeProducts}}" wx:for-index="index" wx:for-item="item" class="_dl data-v-10df2502">
+        <view class="_dt data-v-10df2502">
+          <image src="{{item.productVo.mainImgUrl}}" alt class="_img data-v-10df2502"></image>
+        </view>
+        <view class="_dd data-v-10df2502">
+          <view class="_p data-v-10df2502 shuo">{{item.productVo.title}}</view>
+          <view class="_p data-v-10df2502"><label class="_span data-v-10df2502 span">包邮</label> <label class="_span data-v-10df2502 span">包税</label></view>
+          <view class="_p data-v-10df2502 jia"><label class="_span data-v-10df2502 qian">￥</label> <label class="_span data-v-10df2502 shu">{{item.productVo.salesPrice}}</label> <label class="_span data-v-10df2502 mony">￥{{item.productVo.vipPrice}}</label>
+            <image src="/static/images/黑卡.svg" alt class="_img data-v-10df2502"></image> <label class="_span data-v-10df2502 zhuan">赚￥{{item.productVo.earnMoney}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

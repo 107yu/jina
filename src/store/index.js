@@ -11,7 +11,7 @@ import sepcialList from './modules/sepcialList'
 import productCoupon from './modules/productCoupon'
 import recommend from './modules/recommend'
 import login from './modules/login'
-
+import productDetail from "./modules/productDetail"
 
 Vue.use(Vuex)
 
@@ -24,7 +24,8 @@ export default new Vuex.Store({
         sepcialList,
         productCoupon,
         recommend,
-        login
+        login,
+        productDetail
     },
     plugins: [CreateLogger()]
 })

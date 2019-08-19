@@ -1,0 +1,14 @@
+<import src="/components/dlList/dlList.vue.wxml" /><template name="704c8134">
+  <scroll-view scroll-y="true" class="_scroll-view data-v-709e8572 listWrap">
+    <view class="_div data-v-709e8572 sessionCont">
+      <image id="{{scal === true ? 'actives':'banners'}}" src="{{banner}}" alt mode="widthFix" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_img data-v-709e8572"></image>
+      <scroll-view class="_scroll-view data-v-709e8572 nav" scroll-x="true"><label wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_span data-v-709e8572 {{index == ind ? 'active title' : 'title'}}">{{item.anchorDesc}}</label></scroll-view>
+    </view>
+    <view wx:key="key" key="{{key}}" wx:for="{{list}}" wx:for-index="key" wx:for-item="val" class="_div data-v-709e8572">
+      <view class="_div data-v-709e8572 cake"><label class="_span data-v-709e8572"></label>
+        <view class="_p data-v-709e8572">{{val.anchorName}}</view> <label class="_span data-v-709e8572"></label>
+      </view>
+      <view class="_div data-v-709e8572 hot"><template wx:key="index" data="{{...$root[$kk+'0_'+key+'-'+index], $root}}" is="98c28b58" wx:for="{{val.products}}" wx:for-index="index" wx:for-item="item"></template></view>
+    </view>
+  </scroll-view>
+</template>

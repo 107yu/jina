@@ -17,7 +17,7 @@ import OriderList from "./components/oriderList/oriderList.vue"
 import OriderDl from "./components/oriderList/oriderDl.vue"
 import specialItem from './components/specialItem'
 import recommendItem from './components/recommendItem'
-
+import homeList from './components/homeList'
 
 //挂载：
 Vue.component("TapTitle",TapTitle)
@@ -31,6 +31,7 @@ Vue.component("OriderList",OriderList)
 Vue.component("OriderDl",OriderDl)
 Vue.component('specialItem', specialItem)
 Vue.component('recommendItem', recommendItem)
+Vue.component('homeList', homeList)
 
 
 //挂载store
